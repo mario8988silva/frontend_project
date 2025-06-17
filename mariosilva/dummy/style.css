@@ -1,0 +1,175 @@
+
+:root{
+    /* variables */
+
+    /* ---------------------------------------- */
+    /* COLOURS */
+    /* shades */
+    --shade00: #fff;
+    --shade01: #ccc;
+    --shade02: #aaa;
+    --shade03: #888;
+    --shade04: #666;
+    --shade05: #444;
+    --shade06: #333;
+    --shade07: #222;
+    --shade08: #111;
+    --shade09: #8080;
+    --shade10: #000;
+
+    /* filter colours */
+    --c-branding: #00ADEE;
+    --c-illustration: #EC008D;
+    --c-packaging: #FDB018;
+    --c-editorial: #EE1C25;
+    --c-communication: #00A651;
+    --c-uxui-design: #303192;
+    --c-photography: #B3B3B3;
+    --c-web-dev: #B7B7B7;
+    --c-edit: #FFDD06;
+    --c-flag: #E74B11;
+    --c-iefp: #32A055;
+    --c-work: #35BDEF;
+    --c-academic: #73DF40;
+    --c-sideproject: #E03A3A;
+    --c-internship: #DFDF40;
+   
+
+    /* ---------------------------------------- */
+    /* FONTS */
+    --font-main: Helvetica, Arial, sans-serif;
+
+    /* font-sizes */
+    --font-size-4xl: 3rem; /* logo */
+    --font-size-3xl: 1.8rem; /* h1 */
+    --font-size-2xl: 1.6rem; /* h2 */
+    --font-size-xl: 1.5rem; /* h3 */
+    --font-size-l: 1.16rem; /* botões, links, */
+    --font-size-m: 1rem; /* corpo de texto, */ 
+    --font-size-s: .8rem; /* notas de rodapé */
+
+    /* line-height */
+    --line-height-3xl: calc(var(--f-size-3xl) * 1.5);
+    --line-height-2xl: calc(var(--f-size-2xl) * 1.5);
+    --line-height-xl: calc(var(--f-size-xl) * 1.5);
+    --line-height-l: calc(var(--f-size-l) * 1.5);
+    --line-height-m: calc(var(--f-size-m) * 1.5);
+    --line-height-s: calc(var(--f-size-s) * 1.5);
+
+    /* font-weight */
+    --font-weight-2xl: 900;
+    --font-weight-xl: 750;
+    --font-weight-l: 600;
+
+
+    /* ---------------------------------------- */
+    /* SPACING */
+    --space-3xl: 6rem;
+    --space-2xl: 4rem;
+    --space-xl: 2rem;
+    --space-l: 1.33rem; /* padding vertical dos botões, margem entre botões do header */
+    --space-m: 1rem;
+    --space-s: .5rem;
+    --space-xs: .25rem;
+
+
+    /* ---------------------------------------- */
+    /* LINE-WEIGHT */
+
+    --border-bottom: var(--space-xs) solid var(--shade06);
+
+
+    /* ---------------------------------------- */
+    /* grid & layout */
+    /* aplicar valores das grids e possivelmente dos breakpoints
+    /* ---------------------------------------- */
+    /* z-index */
+    /* caso faça sentido, para trabalhar na parte dos resultados dos filtros
+    /* ---------------------------------------- */
+    /* transitions & animations */
+    /* a modos de manter coerência em todo o projecto */
+}
+
+/* reset css */
+a{
+    text-decoration: none;
+    color: var(--shade10);
+
+    font-size: var(--font-size-l);
+    padding: var(--space-m) var(--space-l);
+}
+
+li{
+    list-style: none;
+}
+
+/* html */
+html{
+    background-color: var(--shade01);
+
+    font-family: var(--font-main);
+    font-size: 18px;
+    color: var(--shade06);
+
+    /*
+    width: 80%;
+    display: flex;
+    justify-self: center;
+    */
+}
+
+/* elements */
+.logo{
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-2xl);
+}
+
+/* header */
+header{
+    width: 100%;
+    height: 10vh;
+    padding-top: var(--space-l);
+
+    display: flex;
+    gap: var(--space-l);
+    
+    background-color: #00A651;
+}
+
+header > ul {
+    width: 100%;
+
+    display: flex;
+
+    gap: var(--space-l);
+    justify-content: right;
+    align-items: center;
+
+    background-color: yellow;
+}
+
+.btn{
+    background-color: red;
+}
+
+/* banner */
+.banner{
+    background-color: #35BDEF;
+
+    height: 80vh;
+    display: flex;
+}
+
+.banner aside.currentPath{
+    width: 100%;
+    text-align: right;
+    background-color: red;
+}
+
+
+/* main */
+/* filters */
+/* projects */
+/* servicesAndPath */
+/* valuesAndMethods */
+/* footer */
