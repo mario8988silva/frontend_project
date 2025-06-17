@@ -34,47 +34,60 @@
         <section class="filters">
             <h2>filters</h2>
                 <ul>
-                    <li>
+                    <li class="filtersContainer">
                         <h3>fields:</h3>
                         <ul>
-                            <li><button><img>Branding</button></li>
-                            <li><button><img>Communication Design</button></li>
-                            <li><button><img>Editorial Design</button></li>
-                            <li><button><img>Illustration</button></li>
-                            <li><button><img>Packaging</button></li>
-                            <li><button><img>Photography</button></li>
-                            <li><button><img>UX/UI Design</button></li>
-                            <li><button><img>Web Development</button></li>
+                            <li><button class="IconTextBtn"><img class="icon">Branding</button></li>
+                            <li><button class="IconTextBtn"><img class="icon">Communication Design</button></li>
+                            <li><button class="IconTextBtn"><img class="icon">Editorial Design</button></li>
+                            <li><button class="IconTextBtn"><img class="icon">Illustration</button></li>
+                            <li><button class="IconTextBtn"><img class="icon">Packaging</button></li>
+                            <li><button class="IconTextBtn"><img class="icon">Photography</button></li>
+                            <li><button class="IconTextBtn"><img class="icon">UX/UI Design</button></li>
+                            <li><button class="IconTextBtn"><img class="icon">Web Development</button></li>
                         </ul>
                     </li>                    
                     <li>
                         <h3>schools:</h3>
                         <ul>
-                            <li><button><img>IEFP</button></li>
-                            <li><button><img>Flag</button></li>
-                            <li><button><img>Edit</button></li>
+                            <li><button><img class="icon">IEFP</button></li>
+                            <li><button><img class="icon">Flag</button></li>
+                            <li><button><img class="icon">Edit</button></li>
                         </ul>
                     </li>
                     <li>
                         <h3>context:</h3>
                         <ul>
-                            <li><button><img>Academic</button></li>
-                            <li><button><img>Internship</button></li>
-                            <li><button><img>Work</button></li>
-                            <li><button><img>Side Project</button></li>
+                            <li><button><img class="icon">Academic</button></li>
+                            <li><button><img class="icon">Internship</button></li>
+                            <li><button><img class="icon">Work</button></li>
+                            <li><button><img class="icon">Side Project</button></li>
                         </ul>
                     </li>                    
                 </ul>                
         </section>
 
         <!-- schools, with cards inside -->
-         <section class="projects">
-            <nav>
-                <h2>2019-2021; IEFP Setúbal · EFA Multimedia Technician (1945h)</h2>
-                <a href="">project #01</a>
-                <a href="">project #02</a>
-                <a href="">project #03</a>
-            </nav>
+        <section class="projects">
+            <article class="projectsSchools">
+                <header class="IconTextBtn">
+                    <img class="icon">
+                    <h2>
+                        <span id="schoolPeriod">2019-2021</span>
+                        <span> · </span>
+                        <span id="schoolName">IEFP Setúbal</span>
+                        <span> · </span>
+                        <span id="schoolCourse">EFA Multimedia Technician</span>
+                        <span id="courseHours">(1945h)</span> 
+                    </h2>
+                </header>
+
+                <nav class="projectCardContainer">
+                    <a href="" class="projectCardMinimal">project #01</a>
+                    <a href="">project #02</a>
+                    <a href="">project #03</a>
+                </nav>
+            </article>
 
             <nav>
                 <h2>2021 – 2022; Flag · Flagprofessional graphic designer (351h)</h2>
@@ -127,23 +140,38 @@
     </section>
 
     <footer>
-      <article>
-        <h2>"quote API"</h2>
-      </article>      
+        <article>
+            <h2>"quote API"</h2>
+        </article>      
             
-      <nav>
-        <a href=""><img>Contact Me</a>
-        <ul>
-          <li><a href=""><img src="" alt="linkedIn"></a></li>
-          <li><a href=""><img src="" alt="behance"></a></li>
-          <li><a href=""><img src="" alt="instagram"></a></li>
-        </ul>
-      </nav>
+        <address class="">
+            <a href="" class="IconTextBtn">
+                <img src="" alt="mail" class="icon">Contact Me
+            </a>
 
-      <div>
-        <a href="">Ø</a>
-        <aside>2025</aside>
-      </div>      
+            <ul class="socialMediaContainer">
+                <li>
+                    <a href="" class="IconTextBtn">
+                        <img src="" alt="linkedIn" class="icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="IconTextBtn">
+                        <img src="" alt="behance" class="icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="IconTextBtn">
+                        <img src="" alt="instagram" class="icon">
+                    </a>
+                </li>
+            </ul>
+        </address>
+        
+        <div class="logoContainer">
+            <a href="#" class="logo">Ø</a>
+            <aside>2025</aside>
+        </div>      
     </footer>    
 </body>
 </html>

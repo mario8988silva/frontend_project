@@ -72,10 +72,16 @@
     --space-s: .5rem;
     --space-xs: .25rem;
 
+    /* height */
+    --banner-heigh: 60vh;
+    --section-heigh: 75vh;
+
+    /* width */
+    --component-width-3xl: 100%;
+
 
     /* ---------------------------------------- */
     /* LINE-WEIGHT */
-
     --border-bottom: var(--space-xs) solid var(--shade06);
 
 
@@ -91,12 +97,16 @@
 }
 
 /* reset css */
-a{
+a, button, address{
     text-decoration: none;
     color: var(--shade10);
 
     font-size: var(--font-size-l);
+
     padding: var(--space-m) var(--space-l);
+    border: none;
+
+    cursor: pointer;
 }
 
 li{
@@ -126,8 +136,8 @@ html{
 
 /* header */
 header{
-    width: 100%;
-    height: 10vh;
+    width: var(--component-width-3xl);
+
     padding-top: var(--space-l);
 
     display: flex;
@@ -137,7 +147,7 @@ header{
 }
 
 header > ul {
-    width: 100%;
+    width: var(--component-width-3xl);
 
     display: flex;
 
@@ -148,6 +158,10 @@ header > ul {
     background-color: yellow;
 }
 
+header a{
+    text-transform: uppercase;
+}
+
 .btn{
     background-color: red;
 }
@@ -156,20 +170,123 @@ header > ul {
 .banner{
     background-color: #35BDEF;
 
-    height: 80vh;
     display: flex;
+    gap: var(--space-3xl);
+    flex-direction: column;
+    justify-content: end;
+
+    /* a lembrar! deve respeitar grid de 12 colunas */
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+    height: var(--banner-heigh);    
 }
 
 .banner aside.currentPath{
-    width: 100%;
+    width: var(--component-width-3xl);
     text-align: right;
+    background-color: red;
+}
+
+.banner article p{
+    max-width: 50ch;
     background-color: red;
 }
 
 
 /* main */
 /* filters */
+.icon{
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    background-color: red;
+}
+
+.IconTextBtn{
+    display: flex;
+    align-items:center;
+        
+    flex-direction: row;
+    gap: var(--space-s);
+}
+
+.IconTextBtnReversed{
+    flex-direction: row-reverse;
+}
+
+.filtersContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: green;
+}
+
+.filtersContainer > h3{
+    background-color: red;
+}
+
+.filtersContainer > ul{
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-s);
+    flex-wrap: wrap;
+}
+
 /* projects */
+.projects .icon{
+    /* anteção que está a distorcer mediante zoom. definir icones para valores fixos? ou meter valores minimos? */
+    border-radius: 999px;
+}
+
+.projectCardMinimal{
+    height: 158px;
+    width:  158px;
+
+    background-color: red;
+    
+}
+
 /* servicesAndPath */
 /* valuesAndMethods */
 /* footer */
+
+footer{
+    background-color: var(--shade06);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: var(--space-l);
+
+    height: var(--section-heigh);
+    padding: var(--space-2xl) var(--space-xl);
+}
+
+footer *{
+    color: var(--shade01);
+}
+
+address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul.socialMediaContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: green;
+}
+
+/* logo */
+div.logoContainer{
+
+    display: inline-block;
+    justify-items: center;
+
+    padding: var(--space-s);
+}
+
