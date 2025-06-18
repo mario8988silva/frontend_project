@@ -61,6 +61,10 @@
     --font-weight-xl: 750;
     --font-weight-l: 600;
 
+    /* character counter */
+    --character-counter-l: 200ch;
+    --character-counter-m: 100ch;
+    --character-counter-s: 50ch;
 
     /* ---------------------------------------- */
     /* SPACING */
@@ -75,6 +79,7 @@
     /* height */
     --banner-heigh: 60vh;
     --section-heigh: 75vh;
+    --footer-heigh: 70vh;
 
     /* width */
     --component-width-3xl: 100%;
@@ -109,16 +114,18 @@ a, button, address{
     cursor: pointer;
 }
 
-li{
+ul{
     list-style: none;
+    padding-left: 0;
 }
+
 
 /* html */
 html{
     background-color: var(--shade01);
 
     font-family: var(--font-main);
-    font-size: 18px;
+    font-size: 20px;
     color: var(--shade06);
 
     /*
@@ -132,6 +139,16 @@ html{
 .logo{
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-2xl);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+    min-height: var(--section-heigh);
 }
 
 /* header */
@@ -169,16 +186,11 @@ header a{
 /* banner */
 .banner{
     background-color: #35BDEF;
-
-    display: flex;
-    gap: var(--space-3xl);
-    flex-direction: column;
-    justify-content: end;
+    
+    gap: var(--space-3xl);   
 
     /* a lembrar! deve respeitar grid de 12 colunas */
-    padding: var(--space-3xl);
-    padding-bottom: var(--space-xl);
-    height: var(--banner-heigh);    
+    min-height: var(--banner-heigh);    
 }
 
 .banner aside.currentPath{
@@ -188,7 +200,7 @@ header a{
 }
 
 .banner article p{
-    max-width: 50ch;
+    max-width: var(--character-counter-s);
     background-color: red;
 }
 
@@ -202,6 +214,33 @@ header a{
     padding: var(--space-s);
 
     background-color: red;
+}
+
+.iconL{    
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    background-color: red;
+}
+
+.iconM{    
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    background-color: yellow;
+}
+
+.iconS{    
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    background-color: blue;
 }
 
 .IconTextBtn{
@@ -248,9 +287,41 @@ header a{
 }
 
 /* servicesAndPath */
-/* valuesAndMethods */
-/* footer */
+.servicesAndPath{
+    background-color: var(--shade01);
 
+    background-image: url(portraid.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 70%;
+    background-attachment: fixed;
+
+    justify-content: center;
+
+    min-height: 250vh;
+    
+}
+
+.servicesAndPath p{
+    max-width: var(--character-counter-s);
+}
+
+/* valuesAndMethods */
+.valuesAndMethods{
+    background-color: yellow;
+
+    display: flex; /* section */
+    flex-direction: column; /* section */
+    align-items: center; /* section */
+    justify-content: end; /* section */       
+}
+
+.valuesAndMethods p{
+    max-width: var(--character-counter-s);
+}
+
+
+/* footer */
 footer{
     background-color: var(--shade06);
 
@@ -260,7 +331,7 @@ footer{
     justify-content: end;
     gap: var(--space-l);
 
-    height: var(--section-heigh);
+    min-height: var(--footer-heigh);
     padding: var(--space-2xl) var(--space-xl);
 }
 
@@ -272,11 +343,13 @@ address{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--space-l);
+    background-color: blue;
 }
 ul.socialMediaContainer{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-items: center;
 
     background-color: green;
 }
