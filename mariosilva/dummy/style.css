@@ -163,6 +163,7 @@ header{
     background-color: #00A651;
 }
 
+/* rever o que pode ser universalizado */
 header > ul {
     width: var(--component-width-3xl);
 
@@ -207,6 +208,7 @@ header a{
 
 /* main */
 /* filters */
+/* DEFINIR ICONES EM PX, JÁ COM RESIZE PARA OS CARIOS BREAKPOINTS */
 .icon{
     width: var(--font-size-3xl);
     height: var(--font-size-3xl);
@@ -243,6 +245,7 @@ header a{
     background-color: blue;
 }
 
+/* MUDAR Icon... PARA icon... !!!!! */
 .IconTextBtn{
     display: flex;
     align-items:center;
@@ -273,11 +276,28 @@ header a{
 }
 
 /* projects */
-.projects .icon{
+div.timeline {
+    position: absolute;
+    top:  var(--font-size-3xl);
+    left: calc(var(--font-size-3xl)/2);
+    width: var(--space-xs);
+    height: 120%;
+    background-color: var(--shade06);
+    z-index: 0;
+}
+
+section.projects .icon{
     /* anteção que está a distorcer mediante zoom. definir icones para valores fixos? ou meter valores minimos? */
     border-radius: 999px;
 }
 
+header.IconTextBtn{
+    padding-top: 0;
+    background-color: yellow;
+}
+
+
+/*
 .projectCardMinimal{
     height: 158px;
     width:  158px;
@@ -285,21 +305,26 @@ header a{
     background-color: red;
     
 }
+*/
+
+article.projectsSchools {
+    position: relative;
+}
+
 
 /* servicesAndPath */
 .servicesAndPath{
     background-color: var(--shade01);
 
     background-image: url(portraid.png);
-    background-size: contain;
+    background-size: contain; /* reajustar, dado que altura fica minuscula quando se reduz altura do viewport */
     background-repeat: no-repeat;
     background-position: 70%;
     background-attachment: fixed;
 
     justify-content: center;
 
-    min-height: 250vh;
-    
+    min-height: 250vh;    
 }
 
 .servicesAndPath p{
