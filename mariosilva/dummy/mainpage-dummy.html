@@ -6,20 +6,24 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <title>Main Page</title>
 </head>
 <body>
-    <header>
-        <a href="" class="logo">Ø</a>
+    <header id="headerNav" class="headerNav">
+        <a href="#" class="logo">Ø</a>
         <ul>
-            <li><a href="" class="btn">projects</a></li>
-            <li><a href="" class="btn">about</a></li>
-            <li><a href="" class="btn">values & methods</a></li>
-            <li><a href="" class="btn">contact</a></li>
+            <li><a href="#filters" class="btn">projects</a></li>
+            <li><a href="#servicesAndPath" class="btn">about</a></li>
+            <li><a href="#valuesAndMethods" class="btn">values & methods</a></li>
+            <li><a href="#footer" class="btn">contact</a></li>
         </ul>
     </header>
 
     <section class="banner">
+        <!-- considerar: https://tympanus.net/codrops/2019/09/25/mouse-flowmap-deformation-with-ogl/ -->
       <article>
         <h1>Have a Good Morning</h1>
         <p>Welcome to my little corner of the web — a collection of projects I’ve crafted over the past few years.</p>
@@ -31,37 +35,111 @@
     </section>
 
     <main>
-        <section class="filters">
+        <section id="filters" class="filters">
             <h2>filters</h2>
                 <ul>
                     <li class="filtersContainer">
                         <h3>fields:</h3>
                         <ul>
-                            <li><button class="IconTextBtn"><img class="icon">Branding</button></li>
-                            <li><button class="IconTextBtn"><img class="icon">Communication Design</button></li>
-                            <li><button class="IconTextBtn"><img class="icon">Editorial Design</button></li>
-                            <li><button class="IconTextBtn"><img class="icon">Illustration</button></li>
-                            <li><button class="IconTextBtn"><img class="icon">Packaging</button></li>
-                            <li><button class="IconTextBtn"><img class="icon">Photography</button></li>
-                            <li><button class="IconTextBtn"><img class="icon">UX/UI Design</button></li>
-                            <li><button class="IconTextBtn"><img class="icon">Web Development</button></li>
+                            <li>
+                                <button class="IconTextBtn">
+                                    <span class="icon material-symbols-outlined">kid_star</span>
+                                    Branding
+                                </button>
+                            </li>
+                            <li>
+                                <button class="IconTextBtn">
+                                    <span class="icon material-symbols-outlined">chat_bubble</span>
+                                    Communication Design</button>
+                                </li>
+                            <li>
+                                <button class="IconTextBtn">
+                                    <span class="icon material-symbols-outlined">import_contacts</span>
+                                    Editorial Design
+                                </button>
+                            </li>
+                            <li>
+                                <button class="IconTextBtn">
+                                    <span class="icon material-symbols-outlined">palette</span>
+                                    Illustration
+                                </button>
+                                </li>
+                            <li>
+                                <button class="IconTextBtn">
+                                    <span class="icon material-symbols-outlined">package_2</span>
+                                    Packaging
+                                </button>
+                            </li>
+                            <li>
+                                <button class="IconTextBtn">
+                                    <span class="icon material-symbols-outlined">photo_camera</span>
+                                    Photography
+                                </button>
+                            </li>
+                            <li>
+                                <button class="IconTextBtn">
+                                    <span class="icon material-symbols-outlined">stylus_note</span>
+                                    UX/UI Design
+                                </button>
+                            </li>
+                            <li>
+                                <button class="IconTextBtn">
+                                    <span class="icon material-symbols-outlined">code</span>
+                                    Web Development
+                                </button>
+                            </li>
                         </ul>
                     </li>                    
                     <li>
                         <h3>schools:</h3>
                         <ul>
-                            <li><button><img class="icon">IEFP</button></li>
-                            <li><button><img class="icon">Flag</button></li>
-                            <li><button><img class="icon">Edit</button></li>
+                            <li>
+                                <button>
+                                    <span class="icon material-symbols-outlined">school</span>
+                                    IEFP
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <span class="icon material-symbols-outlined">school</span>
+                                    Flag
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <span class="icon material-symbols-outlined">school</span>
+                                    Edit
+                                </button>
+                            </li>
                         </ul>
                     </li>
                     <li>
                         <h3>context:</h3>
                         <ul>
-                            <li><button><img class="icon">Academic</button></li>
-                            <li><button><img class="icon">Internship</button></li>
-                            <li><button><img class="icon">Work</button></li>
-                            <li><button><img class="icon">Side Project</button></li>
+                            <li>
+                                <button>
+                                    <span class="icon material-symbols-outlined">school</span>
+                                    Academic
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <span class="icon material-symbols-outlined">badge</span>
+                                    Internship
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <span class="icon material-symbols-outlined">work</span>
+                                    Work
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <span class="icon material-symbols-outlined">person</span>
+                                    Side Project
+                                </button>
+                            </li>
                         </ul>
                     </li>                    
                 </ul>                
@@ -88,17 +166,17 @@
 
                 <nav class="projectCardContainer">
 
-                    <a href="" class="projectCard">
+                    <article href="" class="projectCard">
                         <h4 class="pName">project #01</h4>
-                        <p class="pDescription"></p>
-                        <a href="" class="pInnerLink"></a>
+                        <p class="pDescription">Lorem ipsum dolor sit amet consectetur. Nibh amet tristique purus enim eleifend risus etiam fermentum dictum. Aliquam felis feugiat lacus commodo eget aliquet.</p>
+                        <a href="" class="pInnerLink">pInnerLink</a>
                         <div class="pTools">
                             <span></span><span></span><span></span>
                         </div>
                         <div class="pFilters">
                             <span></span><span></span><span></span>
                         </div>
-                    </a>
+                    </article>
 
                     <!--
                     <a href="">project #02</a>
@@ -137,7 +215,7 @@
         </section>
     </main>    
     
-    <section class="servicesAndPath">
+    <section id="servicesAndPath" class="servicesAndPath">
         <article>
             <h2>Hello, my name is Mario</h2>
             <p>and I move quite comfortably across the fields of Graphic Design, UX/UI Design and Front-End Development, crafting solutions that blend aesthetics with function; I believe in delivering visual clarity and usability.</p>
@@ -148,7 +226,7 @@
 
     </section>
 
-    <section class="valuesAndMethods">
+    <section id="valuesAndMethods" class="valuesAndMethods">
         <p>My process usually begins by understanding the core idea or challenge of a project.</p>
         <p>From there, I break it down into key stages:
         research, structure, design, content, development, and testing.</p>
@@ -156,17 +234,21 @@
         <p>I work in tight feedback loops, regularly presenting progress to clients or stakeholders to ensure alignment throughout. Each round informs the next — whether that means refining wireframes, adjusting layouts, or rethinking functionality.
         This loop continues until we reach a polished, functional result — or until the deadline calls for delivery.</p>
 
-        <a href="" class="IconTextBtn"><img class="icon">Download Resume</a>
+        <a href="" class="IconTextBtn">
+            <span class="icon material-symbols-outlined">download</span>
+            Download Resume
+        </a>
     </section>
 
-    <footer>
+    <footer id="footer">
         <article>
             <h2>"quote API"</h2>
         </article>      
             
         <address class="">
             <a href="" class="IconTextBtn">
-                <img src="" alt="mail" class="icon">Contact Me
+                <span class="icon material-symbols-outlined">mail</span>
+                Contact Me
             </a>
 
             <ul class="socialMediaContainer">

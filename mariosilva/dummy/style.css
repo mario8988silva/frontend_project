@@ -78,7 +78,7 @@
 
     /* height */
     --banner-heigh: 60vh;
-    --section-heigh: 75vh;
+    --section-heigh: 80vh;
     --footer-heigh: 70vh;
 
     /* width */
@@ -108,6 +108,7 @@ a, button, address{
 
     font-size: var(--font-size-l);
 
+    display: inline-flex;
     padding: var(--space-m) var(--space-l);
     border: none;
 
@@ -135,7 +136,18 @@ html{
     */
 }
 
+
 /* elements */
+
+.material-symbols-outlined{
+    background-color: yellow;
+    font-variation-settings:
+    'FILL' 0, /* 0=outlined; 1=filled; */
+    'wght' 400, /* weight */
+    'GRAD' 0, /* grade */
+    'opsz' 24, /* size */;
+}
+
 .logo{
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-2xl);
@@ -163,11 +175,17 @@ header{
     background-color: #00A651;
 }
 
+.headerNav{
+    position: fixed;
+    z-index: 9;   
+}
+
 /* rever o que pode ser universalizado */
 header > ul {
     width: var(--component-width-3xl);
 
     display: flex;
+    flex-wrap: wrap;
 
     gap: var(--space-l);
     justify-content: right;
@@ -191,7 +209,7 @@ header a{
     gap: var(--space-3xl);   
 
     /* a lembrar! deve respeitar grid de 12 colunas */
-    min-height: var(--banner-heigh);    
+    min-height: var(--section-heigh);    
 }
 
 .banner aside.currentPath{
@@ -208,16 +226,21 @@ header a{
 
 /* main */
 /* filters */
-/* DEFINIR ICONES EM PX, JÁ COM RESIZE PARA OS CARIOS BREAKPOINTS */
+/* DEFINIR ICONES EM PX, JÁ COM RESIZE PARA OS VARIOS BREAKPOINTS */
 .icon{
     width: var(--font-size-3xl);
     height: var(--font-size-3xl);
 
     padding: var(--space-s);
 
+    display: inline-flex;
+    align-content: center;
+
+    text-align: center;
+
     background-color: red;
 }
-
+/*
 .iconL{    
     width: var(--font-size-3xl);
     height: var(--font-size-3xl);
@@ -244,7 +267,7 @@ header a{
 
     background-color: blue;
 }
-
+*/
 /* MUDAR Icon... PARA icon... !!!!! */
 .IconTextBtn{
     display: flex;
@@ -311,20 +334,48 @@ article.projectsSchools {
     position: relative;
 }
 
+/* Project Card */
+.projectCard{
+    /*
+    background-image: url(Free_A4_Brochure_Mockup_02.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    */
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: end;
+
+    width: calc(var(--space-2xl) * 4);
+
+    padding: var(--space-l);
+
+    background-color: red;
+}
+
+.pDescription{
+    padding-top: calc(var(--space-2xl) * 2);
+}
+
+.pInnerLink{
+    background-color: yellow;
+}
 
 /* servicesAndPath */
 .servicesAndPath{
     background-color: var(--shade01);
 
+    /*ajustar altura. meter para baixo*/
     background-image: url(portraid.png);
-    background-size: contain; /* reajustar, dado que altura fica minuscula quando se reduz altura do viewport */
+    background-size: 40%; /* reajustar, dado que altura fica minuscula quando se reduz altura do viewport */
     background-repeat: no-repeat;
-    background-position: 70%;
+    background-position: 70% 100%;
     background-attachment: fixed;
 
     justify-content: center;
 
-    min-height: 250vh;    
+    height: 250vh;
 }
 
 .servicesAndPath p{
