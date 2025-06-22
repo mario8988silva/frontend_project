@@ -346,6 +346,25 @@ header a{
 
 /* filters ------------------------------------------*/
 /* DEFINIR ICONES EM PX, JÁ COM RESIZE PARA OS VARIOS BREAKPOINTS */
+
+.filtersMenuContainer{
+    display: flex;
+    justify-content: space-between;
+
+    position: sticky;
+
+    top: calc(var(--space-2xl) * 2);
+    background-color: orange;
+
+    z-index: 3;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    .filtersMenuContainer{
+        display: none;
+    }
+}
+
 .icon{
     width: var(--font-size-3xl);
     height: var(--font-size-3xl);
@@ -390,7 +409,7 @@ header a{
 
 .iconTextBtn{
     display: flex;
-    align-items:center;
+    align-items: center;
         
     flex-direction: row;
     gap: var(--space-xs);
@@ -412,21 +431,38 @@ header a{
 
     font-size: var(--font-size-s);
 
-
     padding: var(--space-s);
     
     background-color: red;
 }
 
-/* TEM QUE SER FEITO UM MENU SIMILAR AO TOOGLE MENU */
+
 .filtersContainer > ul{
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-s);
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+        .filtersContainer > ul{
+            display: flex;
+            flex-direction: row;
+            gap: var(--space-s);
+            flex-wrap: wrap;
+        }
 }
 
-/* projects */
+.filters{
+    display: none;
+
+    background-color: blue;    
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    .filters{
+    display: flex;
+}
+}
+
+/* projects -------------------------------------------- */
 div.timeline {
     position: absolute;
     top: var(--font-size-3xl);
@@ -451,7 +487,22 @@ span.timelineDot{
 
 header.iconTextBtn{
     padding-top: 0;
+    
     background-color: yellow;
+}
+
+.projectsSchools header.schoolContainer{
+    gap: var(--space-m);
+    justify-content: left;
+
+    display: flex;
+
+    position: sticky;
+
+    background-color: blue;
+
+
+
 }
 
 
