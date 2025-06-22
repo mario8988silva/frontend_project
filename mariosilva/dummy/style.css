@@ -65,6 +65,8 @@
     --character-counter-l: 200ch;
     --character-counter-m: 65ch;
     --character-counter-s: 50ch;
+    --character-counter-xs: 40ch;
+
 
     /* ---------------------------------------- */
     /* SPACING */
@@ -172,7 +174,7 @@ section{
     min-height: var(--section-heigh);
 }
 
-/* header */
+/* header ------------------------------------------ */
 header{
     width: var(--component-width-3xl);
     height: fit-content;
@@ -188,23 +190,6 @@ header{
     
     background-color: #00A651;
 }
-
-.openHeader{
-    width: var(--component-width-3xl);
-    height: 90vh;
-
-    padding-top: var(--space-l);
-    padding-bottom: var(--space-2xl);
-
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-2xl);
-    
-    background-color: #00A651;
-}
-
 /* breakpoint: tablet */
 @media (min-width: 768px){
     header{
@@ -222,6 +207,22 @@ header{
     
     background-color: #00A651;
 }
+}
+
+.openHeader{
+    width: var(--component-width-3xl);
+    height: 90vh;
+
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-2xl);
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2xl);
+    
+    background-color: #00A651;
 }
 
 .headerNav{
@@ -313,7 +314,7 @@ header a{
     background-color: red;
 }
 
-/* banner */
+/* banner ------------------------------------- */
 .banner{
     background-color: #35BDEF;
     
@@ -330,13 +331,20 @@ header a{
 }
 
 .banner article p{
+    max-width: var(--character-counter-xs);
+    background-color: red;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    .banner article p{
     max-width: var(--character-counter-s);
     background-color: red;
 }
+}
 
+/* main -------------------------------------------- */
 
-/* main */
-/* filters */
+/* filters ------------------------------------------*/
 /* DEFINIR ICONES EM PX, JÁ COM RESIZE PARA OS VARIOS BREAKPOINTS */
 .icon{
     width: var(--font-size-3xl);
@@ -410,6 +418,7 @@ header a{
     background-color: red;
 }
 
+/* TEM QUE SER FEITO UM MENU SIMILAR AO TOOGLE MENU */
 .filtersContainer > ul{
     display: flex;
     flex-direction: row;
