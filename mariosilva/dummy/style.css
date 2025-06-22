@@ -109,6 +109,8 @@ a, button, address{
     font-size: var(--font-size-l);
 
     display: inline-flex;
+    justify-content: center;
+
     padding: var(--space-m) var(--space-l);
     border: none;
 
@@ -339,27 +341,57 @@ article.projectsSchools {
     /*
     background-image: url(Free_A4_Brochure_Mockup_02.jpg);
     background-size: cover;
+    background-position-x: center;
     background-repeat: no-repeat;
-    */
+
+    opacity: 0.5;
+    */   
+    
 
     display: flex;
     flex-direction: column;
     justify-items: center;
+    gap: var(--space-s);
     align-content: end;
 
     width: calc(var(--space-2xl) * 4);
 
     padding: var(--space-l);
 
+    /*
     background-color: red;
+    */
 }
 
+.projectCard figure{
+    height: auto;
+    background-image: url(Free_A4_Brochure_Mockup_02.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.5;
+
+}
+
+.projectCard h4{
+    text-transform: uppercase;
+}
 .pDescription{
     padding-top: calc(var(--space-2xl) * 2);
 }
 
 .pInnerLink{
+    margin-bottom: var(--space-m);    
     background-color: yellow;
+}
+
+.pTools{    
+    background-color: green;
+}
+
+.pFilters{
+    background-color: blue;
 }
 
 /* servicesAndPath */
