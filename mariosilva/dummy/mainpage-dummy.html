@@ -14,18 +14,25 @@
 <body>
     <header id="headerNav" class="headerNav">
         <a href="#" class="logo">Ø</a>
-        <ul class="navMenu">
+        <ul class="navMenu"><!-- usar a class close quando está em mobile sem menu aberto -->
             <li><a href="#filters" class="btn">projects</a></li>
             <li><a href="#servicesAndPath" class="btn">about</a></li>
             <li><a href="#valuesAndMethods" class="btn">values & methods</a></li>
-            <li><a href="#footer" class="btn">contact</a></li>
-            <li><a href="" class="navClose">
-            <span class="icon material-symbols-outlined">close</span>
-        </a></li>
+            <li><a href="#footer" class="btn">contact</a></li>            
         </ul>
-        <a href="" class="navIcon">
-            <span class="icon material-symbols-outlined">menu</span>
-        </a>
+
+        <ul class="headerMenuToogle">
+            <li>
+                <a href="" class="navOpen">
+                    <span class="icon material-symbols-outlined">menu</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="navClose close">
+                    <span class="icon material-symbols-outlined ">close</span>
+                </a>
+            </li>
+        </ul>        
     </header>
 
     <section class="banner">

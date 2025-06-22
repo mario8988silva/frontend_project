@@ -144,6 +144,7 @@ html{
 }
 
 
+
 /* elements */
 span.material-symbols-outlined{
     font-variation-settings:
@@ -174,23 +175,44 @@ section{
 /* header */
 header{
     width: var(--component-width-3xl);
+    height: fit-content;
 
     padding-top: var(--space-l);
+    padding-bottom: 0;
 
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: var(--space-l);
     
     background-color: #00A651;
 }
+
+.openHeader{
+    width: var(--component-width-3xl);
+    height: 90vh;
+
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-2xl);
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2xl);
+    
+    background-color: #00A651;
+}
+
 /* breakpoint: tablet */
 @media (min-width: 768px){
     header{
     width: var(--component-width-3xl);
+    height: fit-content;
 
     padding-top: var(--space-l);
+    padding-bottom: 0;
 
     display: flex;
     flex-direction: row;
@@ -209,51 +231,64 @@ header{
 
 
 /* breakpoint: mobile */
-a.navIcon{
-    display: inline;
-    display: none;
+ul.headerMenuToogle{
+    display: flex;
+    justify-content: right;
+    width: var(--component-width-3xl);
+
+    background-color: blue;
 }
 /* breakpoint: tablet */
 @media (min-width: 768px){
-    a.navIcon{
+    ul.headerMenuToogle{
+        display: none;
+
+        background-color: blue;
+    }
+}
+
+/* breakpoint: mobile */
+a.navOpen{
+    display: flex;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    a.navOpen{
     display: none;    
     }
 }
 
 /* breakpoint: mobile */
-a.navClose{
+.navClose{
     display: flex;
-    justify-content: right;   
-
-    width: 100%;
-    background-color: red;
 }
 /* breakpoint: tablet */
 @media (min-width: 768px){
-    a.navClose{
+    .navClose{
     display: none;    
     }
 }
-
 
 
 /* breakpoint: mobile */
 /* rever o que pode ser universalizado !!!!!! */
-header > ul.navMenu {
-    width: var(--component-width-3xl);
+.navMenu {
+        width: var(--component-width-3xl);
+        height: 100%;
 
-    display: flex;
-    flex-direction: column-reverse;
+        display: flex;
+        display: none;
+        flex-direction: column;
 
-    gap: var(--space-l);
-    justify-content: right;
-    align-items: center;
+        gap: var(--space-l);
+        justify-content: end;
+        align-items: center;
 
-    background-color: yellow;
+        background-color: yellow;
 }
 /* breakpoint: tablet */
 @media (min-width: 768px){
-    header > ul.navMenu {
+.navMenu{
         width: var(--component-width-3xl);
 
         display: flex;
@@ -595,4 +630,10 @@ div.logoContainer{
 
 div.logoContainer a.logo{
     padding-bottom: var(--space-xs);
+}
+
+/* specs */
+
+.close{
+    display: none;
 }
