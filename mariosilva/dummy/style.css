@@ -76,6 +76,10 @@
     --space-s: .5rem;
     --space-xs: .25rem;
 
+    --space-fixed-l: 56px;
+    --space-fixed-m: 36px;
+    --space-fixed-s: 36px;
+
     /* height */
     --banner-heigh: 60vh;
     --section-heigh: 80vh;
@@ -141,13 +145,15 @@ html{
 
 /* elements */
 
-.material-symbols-outlined{
-    background-color: yellow;
+span.material-symbols-outlined{
     font-variation-settings:
     'FILL' 0, /* 0=outlined; 1=filled; */
     'wght' 400, /* weight */
     'GRAD' 0, /* grade */
     'opsz' 24, /* size */;
+    
+
+    background-color: yellow;
 }
 
 .logo{
@@ -303,17 +309,24 @@ header a{
 /* projects */
 div.timeline {
     position: absolute;
-    top:  var(--font-size-3xl);
-    left: calc(var(--font-size-3xl)/2);
+    top: var(--font-size-3xl);
+    left: calc( var(--space-fixed-l)/2 - var(--space-xs)/2); /* distancia da esquerda = metade da largura do circulo (.timelineDot) -(menos) metade da largura da espessura da linha (para fazer o acerto ao centro desta); */
+
     width: var(--space-xs);
     height: 120%;
     background-color: var(--shade06);
     z-index: 0;
 }
 
-section.projects .icon{
-    /* anteção que está a distorcer mediante zoom. definir icones para valores fixos? ou meter valores minimos? */
-    border-radius: 999px;
+span.timelineDot{
+    background-color: red;
+
+    width: var(--space-fixed-l);
+    height: var(--space-fixed-l);
+    border-radius: 99px;
+    
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 header.IconTextBtn{
@@ -342,8 +355,9 @@ nav.projectCardContainer{
     flex-wrap: wrap;
     gap: var(--space-m);
 
-    padding: var(--space-m) var(--space-xl);
+    padding: 0 var(--space-2xl); /* padding com 0 de altura, dado que o header.IconTextBtn já tem uma margem considerável */
 }
+
 /* Project Card */
 .projectCard{
     /*
