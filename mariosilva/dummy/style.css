@@ -40,7 +40,7 @@
     --font-main: Helvetica, Arial, sans-serif;
 
     /* font-sizes */
-    --font-size-4xl: 3rem; /* logo */
+    --font-size-4xl: 4rem; /* logo */
     --font-size-3xl: 1.8rem; /* h1 */
     --font-size-2xl: 1.6rem; /* h2 */
     --font-size-xl: 1.5rem; /* h3 */
@@ -63,7 +63,7 @@
 
     /* character counter */
     --character-counter-l: 200ch;
-    --character-counter-m: 100ch;
+    --character-counter-m: 65ch;
     --character-counter-s: 50ch;
 
     /* ---------------------------------------- */
@@ -204,6 +204,8 @@ header > ul {
 
 header a{
     text-transform: uppercase;
+
+    font-size: var(--font-size-m);
 }
 
 .btn{
@@ -276,16 +278,16 @@ header a{
     background-color: blue;
 }
 */
-/* MUDAR Icon... PARA icon... !!!!! */
-.IconTextBtn{
+
+.iconTextBtn{
     display: flex;
     align-items:center;
         
     flex-direction: row;
-    gap: var(--space-s);
+    gap: var(--space-xs);
 }
 
-.IconTextBtnReversed{
+.iconTextBtnReversed{
     flex-direction: row-reverse;
 }
 
@@ -296,6 +298,14 @@ header a{
 }
 
 .filtersContainer > h3{
+    text-transform: uppercase;
+    text-align: right;
+
+    font-size: var(--font-size-s);
+
+
+    padding: var(--space-s);
+    
     background-color: red;
 }
 
@@ -329,7 +339,7 @@ span.timelineDot{
     flex-grow: 0;
 }
 
-header.IconTextBtn{
+header.iconTextBtn{
     padding-top: 0;
     background-color: yellow;
 }
@@ -355,7 +365,7 @@ nav.projectCardContainer{
     flex-wrap: wrap;
     gap: var(--space-m);
 
-    padding: 0 var(--space-2xl); /* padding com 0 de altura, dado que o header.IconTextBtn já tem uma margem considerável */
+    padding: 0 var(--space-2xl); /* padding com 0 de altura, dado que o header.iconTextBtn já tem uma margem considerável */
 }
 
 /* Project Card */
@@ -480,13 +490,24 @@ footer *{
     color: var(--shade01);
 }
 
-address{
+footer h2{
+    text-align: center;
+    width: var(--character-counter-m);
+}
+
+footer address{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--space-l);
     background-color: blue;
 }
+
+footer address a{
+    text-decoration: none;
+}
+
+
 ul.socialMediaContainer{
     display: flex;
     flex-direction: row;
@@ -502,5 +523,11 @@ div.logoContainer{
     justify-items: center;
 
     padding: var(--space-s);
+
+    margin-top: var(--space-fixed-l);
+}
+
+div.logoContainer a.logo{
+    padding-bottom: var(--space-xs);
 }
 
