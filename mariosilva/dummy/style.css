@@ -336,6 +336,14 @@ article.projectsSchools {
     position: relative;
 }
 
+nav.projectCardContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+
+    padding: var(--space-m) var(--space-xl);
+}
 /* Project Card */
 .projectCard{
     /*
@@ -346,7 +354,8 @@ article.projectsSchools {
 
     opacity: 0.5;
     */   
-    
+    position: relative;
+    overflow: hidden;
 
     display: flex;
     flex-direction: column;
@@ -358,24 +367,34 @@ article.projectsSchools {
 
     padding: var(--space-l);
 
-    /*
-    background-color: red;
-    */
+    background-color: var(--shade00);    
 }
 
 .projectCard figure{
-    height: auto;
+    position: absolute;
+    
     background-image: url(Free_A4_Brochure_Mockup_02.jpg);
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
 
-    opacity: 0.5;
+    inset: 0; /* shorthand para top, right, bottom, left */
+    margin: 0; /* ignora o padding definido para a card */
+    z-index: 0;
+    opacity: .5;
+}
 
+/* todo e qualquer elemento que não seja o .pMainImage, terá um z-index de 1, para se sobrepor a este */
+.projectCard > *:not(.pMainImage){
+  position: relative;
+  z-index: 1;
 }
 
 .projectCard h4{
     text-transform: uppercase;
+    /*
+    cursor: pointer;
+    */
 }
 .pDescription{
     padding-top: calc(var(--space-2xl) * 2);
