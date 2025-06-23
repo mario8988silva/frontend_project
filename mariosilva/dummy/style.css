@@ -70,6 +70,7 @@
 
     /* ---------------------------------------- */
     /* SPACING */
+    --space-4xl: calc(var(--space-2xl) * 2); /* serve para alinhar elementos à linha inferior do header */ 
     --space-3xl: 6rem;
     --space-2xl: 4rem;
     --space-xl: 2rem;
@@ -83,6 +84,7 @@
     --space-fixed-s: 36px;
 
     /* height */
+    --total-heigh: 100vh;
     --banner-heigh: 60vh;
     --section-heigh: 80vh;
     --footer-heigh: 70vh;
@@ -353,7 +355,7 @@ header a{
 
     position: sticky;
 
-    top: calc(var(--space-2xl) * 2);
+    top: var(--space-4xl);
     background-color: orange;
 
     z-index: 3;
@@ -613,7 +615,7 @@ nav.projectCardContainer{
     */
 }
 .pDescription{
-    padding-top: calc(var(--space-2xl) * 2);
+    padding-top: var(--space-4xl);
 }
 
 .pInnerLink{
@@ -629,25 +631,72 @@ nav.projectCardContainer{
     background-color: blue;
 }
 
-/* servicesAndPath */
-.servicesAndPath{
-    background-color: var(--shade01);
+/* servicesAndPath ---------------------------- */
+.servicesAndPath figure{
+  position: sticky;
+  top: var(--space-4xl);
+  /*
+  flex: 0 0 auto;*/
+  height: var(--total-heigh);
 
-    /*ajustar altura. meter para baixo*/
-    background-image: url(portraid.png);
-    background-size: 40%; /* reajustar, dado que altura fica minuscula quando se reduz altura do viewport */
-    background-repeat: no-repeat;
-    background-position: 70% 100%;
-    background-attachment: fixed;
+ 
+  background-color: red;
 
-    justify-content: center;
 
-    height: 250vh;
+  display: flex;
+  justify-content: left;
+
+  overflow: visible;
+}
+
+.servicesAndPath img{   
+  height: 100%;
 }
 
 .servicesAndPath p{
     max-width: var(--character-counter-s);
+    bottom: 10px;
+    
 }
+
+.servicesAndPath{
+    background-color: var(--shade01);
+
+    /*ajustar altura. meter para baixo*/
+    /*
+    background-image: url(portraid.png);
+    background-size: 40%; /* reajustar, dado que altura fica minuscula quando se reduz altura do viewport *//*
+    background-repeat: no-repeat;
+    background-position: 70% 100%;
+    background-attachment: fixed;
+    */
+
+    justify-content: center;
+
+    height: 250vh;
+
+    display: flex;
+
+
+    
+
+    background-color: blue;
+
+}
+/* breakpoint: tablet *//*
+@media (min-width: 768px){
+    .servicesAndPath{        
+        background-size: 65%;
+    }
+}
+/* laptop *//*
+@media (min-width: 1024px){
+    .servicesAndPath{
+        background-size: 40%;
+    }
+}
+    */
+
 
 /* valuesAndMethods */
 .valuesAndMethods{
@@ -661,6 +710,7 @@ nav.projectCardContainer{
 
 .valuesAndMethods p{
     max-width: var(--character-counter-s);
+    text-align: center;
 }
 
 
