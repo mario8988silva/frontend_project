@@ -462,7 +462,7 @@ header a{
 }
 }
 
-/* projects -------------------------------------------- */
+/* results -------------------------------------------- */
 div.timeline {
     position: absolute;
     top: var(--font-size-3xl);
@@ -497,13 +497,15 @@ header.iconTextBtn{
 
     display: flex;
 
+    /*
     position: sticky;
 
+    top: calc(var(--space-2xl) * 4);
+
+    */
     background-color: blue;
-
-
-
 }
+
 
 
 /*
@@ -527,6 +529,24 @@ nav.projectCardContainer{
     gap: var(--space-m);
 
     padding: 0 var(--space-2xl); /* padding com 0 de altura, dado que o header.iconTextBtn já tem uma margem considerável */
+
+    background-color: red;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    nav.projectCardContainer{
+
+    flex-wrap: nowrap;
+
+    background-color: red;
+
+    overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory; /* Optional: for smooth card snapping */
+  -webkit-overflow-scrolling: touch;
+
+}
 }
 
 /* Project Card */
