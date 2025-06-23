@@ -528,7 +528,7 @@ nav.projectCardContainer{
     flex-wrap: wrap;
     gap: var(--space-m);
 
-    padding: 0 var(--space-2xl); /* padding com 0 de altura, dado que o header.iconTextBtn já tem uma margem considerável */
+    padding: 0 var(--space-2xl); /* padding com 0 de altura, dado que o header.iconTextBtn já tem uma "margem/line-height" considerável */
 
     background-color: red;
 }
@@ -541,13 +541,23 @@ nav.projectCardContainer{
     background-color: red;
 
     overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  scroll-snap-type: x mandatory; /* Optional: for smooth card snapping */
-  -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;   
+    }
 
+    .projectCardContainer::-webkit-scrollbar{
+    display: none;
+    }
 }
+
+/* laptop */
+@media (min-width: 1024px){
+    nav.projectCardContainer{
+    flex-wrap: wrap;
+
+    background-color: red;
+    }
 }
+
 
 /* Project Card */
 .projectCard{
@@ -568,11 +578,12 @@ nav.projectCardContainer{
     gap: var(--space-s);
     align-content: end;
 
+    flex-shrink: 0;
     width: calc(var(--space-2xl) * 4);
 
     padding: var(--space-l);
 
-    background-color: var(--shade00);    
+    background-color: var(--shade00);
 }
 
 .projectCard figure{
