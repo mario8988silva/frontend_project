@@ -85,8 +85,8 @@
 
     /* height */
     --total-heigh: 100vh;
-    --banner-heigh: 60vh;
     --section-heigh: 80vh;
+    --banner-heigh: 60vh;    
     --footer-heigh: 70vh;
 
     /* width */
@@ -632,73 +632,55 @@ nav.projectCardContainer{
 }
 
 /* servicesAndPath ---------------------------- */
-.servicesAndPath figure{
-  position: sticky;
-  top: var(--space-4xl);
-  /*
-  flex: 0 0 auto;*/
-  height: var(--total-heigh);
+/* propósito é que as "letras" adoptem uma cor negativa mediante a cor do fundo *//*
+.servicesAndPath article{ 
+/*
+  backdrop-filter: invert(100%);
 
- 
-  background-color: red;
-
-
-  display: flex;
-  justify-content: left;
-
-  overflow: visible;
+  mix-blend-mode: difference;
+  *//*
 }
-
-.servicesAndPath img{   
-  height: 100%;
-}
+*/
 
 .servicesAndPath p{
     max-width: var(--character-counter-s);
     bottom: 10px;
-    
 }
 
 .servicesAndPath{
     background-color: var(--shade01);
 
-    /*ajustar altura. meter para baixo*/
-    /*
     background-image: url(portraid.png);
-    background-size: 40%; /* reajustar, dado que altura fica minuscula quando se reduz altura do viewport *//*
-    background-repeat: no-repeat;
-    background-position: 70% 100%;
+    background-size: 100vh;
+    background-repeat: no-repeat;  
+    background-position: 70% -100%;
     background-attachment: fixed;
-    */
 
     justify-content: center;
 
     height: 250vh;
 
-    display: flex;
+    display: flex;    
 
-
-    
-
+    /*
     background-color: blue;
-
+    */
 }
-/* breakpoint: tablet *//*
+/* breakpoint: tablet */
 @media (min-width: 768px){
-    .servicesAndPath{        
-        background-size: 65%;
+    .servicesAndPath{   
+        background-position: 70% -120%;
     }
 }
-/* laptop *//*
+/* laptop */
 @media (min-width: 1024px){
     .servicesAndPath{
-        background-size: 40%;
+        background-position: 70% -150%;
     }
-}
-    */
+}    
 
 
-/* valuesAndMethods */
+/* valuesAndMethods ------------------------------ */
 .valuesAndMethods{
     background-color: yellow;
 
