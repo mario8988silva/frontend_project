@@ -1,0 +1,762 @@
+
+:root{
+    /* variables */
+
+    /* ---------------------------------------- */
+    /* COLOURS */
+    /* shades */
+    --shade00: #fff;
+    --shade01: #ccc;
+    --shade02: #aaa;
+    --shade03: #888;
+    --shade04: #666;
+    --shade05: #444;
+    --shade06: #333;
+    --shade07: #222;
+    --shade08: #111;
+    --shade09: #8080;
+    --shade10: #000;
+
+    /* filter colours */
+    --c-branding: #00ADEE;
+    --c-illustration: #EC008D;
+    --c-packaging: #FDB018;
+    --c-editorial: #EE1C25;
+    --c-communication: #00A651;
+    --c-uxui-design: #303192;
+    --c-photography: #B3B3B3;
+    --c-web-dev: #B7B7B7;
+    --c-edit: #FFDD06;
+    --c-flag: #E74B11;
+    --c-iefp: #32A055;
+    --c-work: #35BDEF;
+    --c-academic: #73DF40;
+    --c-sideproject: #E03A3A;
+    --c-internship: #DFDF40;
+   
+
+    /* ---------------------------------------- */
+    /* FONTS */
+    --font-main: Helvetica, Arial, sans-serif;
+
+    /* font-sizes */
+    --font-size-4xl: 4rem; /* logo */
+    --font-size-3xl: 1.8rem; /* h1 */
+    --font-size-2xl: 1.6rem; /* h2 */
+    --font-size-xl: 1.5rem; /* h3 */
+    --font-size-l: 1.16rem; /* botões, links, */
+    --font-size-m: 1rem; /* corpo de texto, */ 
+    --font-size-s: .8rem; /* notas de rodapé */
+
+    /* line-height */
+    --line-height-3xl: calc(var(--f-size-3xl) * 1.5);
+    --line-height-2xl: calc(var(--f-size-2xl) * 1.5);
+    --line-height-xl: calc(var(--f-size-xl) * 1.5);
+    --line-height-l: calc(var(--f-size-l) * 1.5);
+    --line-height-m: calc(var(--f-size-m) * 1.5);
+    --line-height-s: calc(var(--f-size-s) * 1.5);
+
+    /* font-weight */
+    --font-weight-2xl: 900;
+    --font-weight-xl: 750;
+    --font-weight-l: 600;
+
+    /* character counter */
+    --character-counter-l: 200ch;
+    --character-counter-m: 65ch;
+    --character-counter-s: 50ch;
+    --character-counter-xs: 40ch;
+
+
+    /* ---------------------------------------- */
+    /* SPACING */
+    --space-4xl: calc(var(--space-2xl) * 2); /* serve para alinhar elementos à linha inferior do header */ 
+    --space-3xl: 6rem;
+    --space-2xl: 4rem;
+    --space-xl: 2rem;
+    --space-l: 1.33rem; /* padding vertical dos botões, margem entre botões do header */
+    --space-m: 1rem;
+    --space-s: .5rem;
+    --space-xs: .25rem;
+
+    --space-fixed-l: 56px;
+    --space-fixed-m: 36px;
+    --space-fixed-s: 36px;
+
+    /* height */
+    --total-heigh: 100vh;
+    --section-heigh: 80vh;
+    --banner-heigh: 60vh;    
+    --footer-heigh: 70vh;
+
+    /* width */
+    --component-width-3xl: 100%;
+
+
+    /* ---------------------------------------- */
+    /* LINE-WEIGHT */
+    --border-bottom: var(--space-xs) solid var(--shade06);
+
+
+    /* ---------------------------------------- */
+    /* grid & layout */
+    /* aplicar valores das grids e possivelmente dos breakpoints
+    /* ---------------------------------------- */
+    /* z-index */
+    /* caso faça sentido, para trabalhar na parte dos resultados dos filtros
+    /* ---------------------------------------- */
+    /* transitions & animations */
+    /* a modos de manter coerência em todo o projecto */
+}
+
+/* reset css */
+a, button, address{
+    text-decoration: none;
+    color: var(--shade10);
+
+    font-size: var(--font-size-l);
+
+    display: inline-flex;
+    justify-content: center;
+
+    padding: var(--space-m) var(--space-l);
+    border: none;
+
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+
+/* html */
+html{
+    background-color: var(--shade01);
+
+    font-size: clamp(16px, 1.5vw, 20px); /* ao invés de usar @media(min-width){...} para ajustar o tamanho da fonte, este serve para um reajuste mais fluído do resize */
+
+    font-family: var(--font-main);
+    color: var(--shade06);
+
+    /*
+    width: 80%;
+    display: flex;
+    justify-self: center;
+    */
+}
+
+
+
+/* elements */
+span.material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0, /* 0=outlined; 1=filled; */
+    'wght' 400, /* weight */
+    'GRAD' 0, /* grade */
+    'opsz' 24, /* size */;
+    
+
+    background-color: yellow;
+}
+
+.logo{
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-2xl);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    padding: clamp(var(--space-xl), 1.5vw, var(--space-3xl));
+    padding-bottom: var(--space-xl);
+    min-height: var(--section-heigh);
+}
+
+/* header ------------------------------------------ */
+header{
+    width: var(--component-width-3xl);
+    height: fit-content;
+
+    padding-top: var(--space-l);
+    padding-bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-l);
+    
+    background-color: #00A651;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    header{
+    width: var(--component-width-3xl);
+    height: fit-content;
+
+    padding-top: var(--space-l);
+    padding-bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-l);
+    
+    background-color: #00A651;
+}
+}
+
+.openHeader{
+    width: var(--component-width-3xl);
+    height: 90vh;
+
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-2xl);
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2xl);
+    
+    background-color: #00A651;
+}
+
+.headerNav{
+    position: fixed;
+    z-index: 9;   
+}
+
+
+/* breakpoint: mobile */
+ul.headerMenuToogle{
+    display: flex;
+    justify-content: right;
+    width: var(--component-width-3xl);
+
+    background-color: blue;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    ul.headerMenuToogle{
+        display: none;
+
+        background-color: blue;
+    }
+}
+
+/* breakpoint: mobile */
+a.navOpen{
+    display: flex;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    a.navOpen{
+    display: none;    
+    }
+}
+
+/* breakpoint: mobile */
+.navClose{
+    display: flex;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    .navClose{
+    display: none;    
+    }
+}
+
+
+/* breakpoint: mobile */
+/* rever o que pode ser universalizado !!!!!! */
+.navMenu {
+        width: var(--component-width-3xl);
+        height: 100%;
+
+        display: flex;
+        display: none;
+        flex-direction: column;
+
+        gap: var(--space-l);
+        justify-content: end;
+        align-items: center;
+
+        background-color: yellow;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+.navMenu{
+        width: var(--component-width-3xl);
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        gap: var(--space-l);
+        justify-content: right;
+        align-items: center;
+
+        background-color: yellow;
+    }
+}
+
+header a{
+    text-transform: uppercase;
+
+    font-size: var(--font-size-m);
+}
+
+.btn{
+    background-color: red;
+}
+
+/* banner ------------------------------------- */
+.banner{
+    background-color: #35BDEF;
+    
+    gap: var(--space-3xl);   
+
+    /* a lembrar! deve respeitar grid de 12 colunas */
+    min-height: var(--section-heigh);    
+}
+
+.banner aside.currentPath{
+    width: var(--component-width-3xl);
+    text-align: right;
+    background-color: red;
+}
+
+.banner article p{
+    max-width: var(--character-counter-xs);
+    background-color: red;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    .banner article p{
+    max-width: var(--character-counter-s);
+    background-color: red;
+}
+}
+
+/* main -------------------------------------------- */
+
+/* filters ------------------------------------------*/
+/* DEFINIR ICONES EM PX, JÁ COM RESIZE PARA OS VARIOS BREAKPOINTS */
+
+.filtersMenuContainer{
+    display: flex;
+    justify-content: space-between;
+
+    position: sticky;
+
+    top: var(--space-4xl);
+    background-color: orange;
+
+    z-index: 3;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    .filtersMenuContainer{
+        display: none;
+    }
+}
+
+.icon{
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    display: inline-flex;
+    align-content: center;
+
+    text-align: center;
+
+    background-color: red;
+}
+/*
+.iconL{    
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    background-color: red;
+}
+
+.iconM{    
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    background-color: yellow;
+}
+
+.iconS{    
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    background-color: blue;
+}
+*/
+
+.iconTextBtn{
+    display: flex;
+    align-items: center;
+        
+    flex-direction: row;
+    gap: var(--space-xs);
+}
+
+.iconTextBtnReversed{
+    flex-direction: row-reverse;
+}
+
+.filtersContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: green;
+}
+
+.filtersContainer > h3{
+    text-transform: uppercase;
+    text-align: right;
+
+    font-size: var(--font-size-s);
+
+    padding: var(--space-s);
+    
+    background-color: red;
+}
+
+
+.filtersContainer > ul{
+    flex-direction: column;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+        .filtersContainer > ul{
+            display: flex;
+            flex-direction: row;
+            gap: var(--space-s);
+            flex-wrap: wrap;
+        }
+}
+
+.filters{
+    display: none;
+
+    background-color: blue;    
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    .filters{
+    display: flex;
+}
+}
+
+/* results -------------------------------------------- */
+div.timeline {
+    position: absolute;
+    top: var(--font-size-3xl);
+    left: calc( var(--space-fixed-l)/2 - var(--space-xs)/2); /* distancia da esquerda = metade da largura do circulo (.timelineDot) -(menos) metade da largura da espessura da linha (para fazer o acerto ao centro desta); */
+
+    width: var(--space-xs);
+    height: 120%;
+    background-color: var(--shade06);
+    z-index: 0;
+}
+
+span.timelineDot{
+    background-color: red;
+
+    width: var(--space-fixed-l);
+    height: var(--space-fixed-l);
+    border-radius: 99px;
+    
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+header.iconTextBtn{
+    padding-top: 0;
+    
+    background-color: yellow;
+}
+
+.projectsSchools header.schoolContainer{
+    gap: var(--space-m);
+    justify-content: left;
+
+    display: flex;
+
+    /*
+    position: sticky;
+
+    top: calc(var(--space-2xl) * 4);
+
+    */
+    background-color: blue;
+}
+
+
+
+/*
+.projectCardMinimal{
+    height: 158px;
+    width:  158px;
+
+    background-color: red;
+    
+}
+*/
+
+article.projectsSchools {
+    position: relative;
+}
+
+nav.projectCardContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+
+    padding: 0 var(--space-2xl); /* padding com 0 de altura, dado que o header.iconTextBtn já tem uma "margem/line-height" considerável */
+
+    background-color: red;
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    nav.projectCardContainer{
+
+    flex-wrap: nowrap;
+
+    background-color: red;
+
+    overflow-x: auto;
+    overflow-y: hidden;   
+    }
+
+    .projectCardContainer::-webkit-scrollbar{
+    display: none;
+    }
+}
+
+/* laptop */
+@media (min-width: 1024px){
+    nav.projectCardContainer{
+    flex-wrap: wrap;
+
+    background-color: red;
+    }
+}
+
+
+/* Project Card */
+.projectCard{
+    /*
+    background-image: url(Free_A4_Brochure_Mockup_02.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.5;
+    */   
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: var(--space-s);
+    align-content: end;
+
+    flex-shrink: 0;
+    width: calc(var(--space-2xl) * 4);
+
+    padding: var(--space-l);
+
+    background-color: var(--shade00);
+}
+
+.projectCard figure{
+    position: absolute;
+    
+    background-image: url(Free_A4_Brochure_Mockup_02.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+
+    inset: 0; /* shorthand para top, right, bottom, left */
+    margin: 0; /* ignora o padding definido para a card */
+    z-index: 0;
+    opacity: .5;
+}
+
+/* todo e qualquer elemento que não seja o .pMainImage, terá um z-index de 1, para se sobrepor a este */
+.projectCard > *:not(.pMainImage){
+  position: relative;
+  z-index: 1;
+}
+
+.projectCard h4{
+    text-transform: uppercase;
+    /*
+    cursor: pointer;
+    */
+}
+.pDescription{
+    padding-top: var(--space-4xl);
+}
+
+.pInnerLink{
+    margin-bottom: var(--space-m);    
+    background-color: yellow;
+}
+
+.pTools{    
+    background-color: green;
+}
+
+.pFilters{
+    background-color: blue;
+}
+
+/* servicesAndPath ---------------------------- */
+/* propósito é que as "letras" adoptem uma cor negativa mediante a cor do fundo *//*
+.servicesAndPath article{ 
+/*
+  backdrop-filter: invert(100%);
+
+  mix-blend-mode: difference;
+  *//*
+}
+*/
+
+.servicesAndPath p{
+    max-width: var(--character-counter-s);
+    bottom: 10px;
+}
+
+.servicesAndPath{
+    background-color: var(--shade01);
+
+    background-image: url(portraid.png);
+    background-size: 100vh;
+    background-repeat: no-repeat;  
+    background-position: 70% -100%;
+    background-attachment: fixed;
+
+    justify-content: center;
+
+    height: 250vh;
+
+    display: flex;    
+
+    /*
+    background-color: blue;
+    */
+}
+/* breakpoint: tablet */
+@media (min-width: 768px){
+    .servicesAndPath{   
+        background-position: 70% -120%;
+    }
+}
+/* laptop */
+@media (min-width: 1024px){
+    .servicesAndPath{
+        background-position: 70% -150%;
+    }
+}    
+
+
+/* valuesAndMethods ------------------------------ */
+.valuesAndMethods{
+    background-color: yellow;
+
+    display: flex; /* section */
+    flex-direction: column; /* section */
+    align-items: center; /* section */
+    justify-content: end; /* section */       
+}
+
+.valuesAndMethods p{
+    max-width: var(--character-counter-s);
+    text-align: center;
+}
+
+
+/* footer */
+footer{
+    background-color: var(--shade06);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: var(--space-l);
+
+    min-height: var(--footer-heigh);
+    padding: var(--space-2xl) var(--space-xl);
+}
+
+footer *{
+    color: var(--shade01);
+}
+
+footer h2{
+    text-align: center;
+    width: var(--character-counter-m);
+}
+
+footer address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-l);
+    background-color: blue;
+}
+
+footer address a{
+    font-style: normal;
+}
+
+
+ul.socialMediaContainer{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+
+    background-color: green;
+}
+
+/* logo */
+div.logoContainer{
+
+    display: inline-block;
+    justify-items: center;
+
+    padding: var(--space-s);
+
+    margin-top: var(--space-fixed-l);
+}
+
+div.logoContainer a.logo{
+    padding-bottom: var(--space-xs);
+}
+
+/* specs */
+
+.close{
+    display: none;
+}
