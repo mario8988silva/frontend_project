@@ -1,0 +1,30 @@
+[
+    {
+        "id": 0,
+        "course": "EFA Multimedia Technician",
+        "hours": 1945,
+        "school": "IEFP Setúbal",
+        "period": "2019 – 2021"
+    },
+    {
+        "id": 1,
+        "course": "Flagprofessional Graphic Designer",
+        "hours": 351,
+        "school": "Flag",
+        "period": "2021 – 2022"
+    },
+    {
+        "id": 2,
+        "course": "User Experience & User Interface",
+        "hours": 216,
+        "school": "Edit",
+        "period": "2023"
+    },
+    {
+        "id": 2,
+        "course": "Flagprofessional Fullstack Web Development",
+        "hours": 363,
+        "school": "Flag",
+        "period": "2024 – 2025 "
+    }
+]

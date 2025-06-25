@@ -1,0 +1,205 @@
+[
+    {
+        "id": 0,
+        "label": "Flash",
+        "category": "tools",
+        "type": "local-svg",
+        "value": "/icons/tools/adobe-flash.svg"
+    },
+    {
+        "id": 1,
+        "label": "Illustrator",
+        "category": "tools",
+        "type": "local-svg",
+        "value": "/icons/tools/adobe-illustrator.svg"
+    },
+    {
+        "id": 2,
+        "label": "InDesign",
+        "category": "tools",
+        "type": "local-svg",
+        "value": "/icons/tools/adobe-indesign.svg"
+    },
+    {
+        "id": 3,
+        "label": "Photoshop",
+        "category": "tools",
+        "type": "local-svg",
+        "value": "/icons/tools/adobe-photoshop.svg"
+    },
+    {
+        "id": 4,
+        "label": "Premier",
+        "category": "tools",
+        "type": "local-svg",
+        "value": "/icons/tools/adobe-premierpro.svg"
+    },
+    {
+        "id": 5,
+        "label": "CSS",
+        "category": "tools",
+        "type": "local-svg",
+        "value": "/icons/tools/css3.svg"
+    },
+    {
+        "id": 6,
+        "label": "Figma",
+        "category": "tools",
+        "type": "local-svg",
+        "value": "/icons/tools/figma.svg"
+    },
+    {
+        "id": 7,
+        "label": "HTML",
+        "category": "tools",
+        "type": "local-svg",
+        "value": "/icons/tools/html5.svg"
+    },
+    {
+        "id": 8,
+        "label": "JavaScript",
+        "category": "tools",
+        "type": "local-svg",
+        "value": "/icons/tools/javascript.svg"
+    },
+    {
+        "id": 9,
+        "label": "PHP",
+        "category": "tools",
+        "type": "local-svg",
+        "value": "/icons/tools/php.svg"
+    },
+    {
+        "id": 10,
+        "label": "React",
+        "category": "tools",
+        "type": "local-svg",
+        "value": "/icons/tools/react.svg"
+    },
+    {
+        "id": 11,
+        "label": "Photography",
+        "category": "fields",
+        "type": "fonts-google",
+        "value": "photo_camera"
+    },
+    {
+        "id": 12,
+        "label": "Packaging",
+        "category": "fields",
+        "type": "fonts-google",
+        "value": "package_2"
+    },
+    {
+        "id": 13,
+        "label": "Illustration",
+        "category": "fields",
+        "type": "fonts-google",
+        "value": "palette"
+    },
+    {
+        "id": 14,
+        "label": "Branding",
+        "category": "fields",
+        "type": "fonts-google",
+        "value": "kid_star"
+    },
+    {
+        "id": 15,
+        "label": "Communication Design",
+        "category": "fields",
+        "type": "fonts-google",
+        "value": "chat_bubble"
+    },
+    {
+        "id": 16,
+        "label": "Editorial design",
+        "category": "fields",
+        "type": "fonts-google",
+        "value": "import_contacts"
+    },
+    {
+        "id": 17,
+        "label": "UX/UI Design / web Design",
+        "category": "fields",
+        "type": "fonts-google",
+        "value": "stylus_note"
+    },
+    {
+        "id": 18,
+        "label": "Web Development",
+        "category": "fields",
+        "type": "fonts-google",
+        "value": "code"
+    },
+    {
+        "id": 19,
+        "label": "IEFP",
+        "category": "schools",
+        "type": "fonts-google",
+        "value": "school"
+    },
+    {
+        "id": 20,
+        "label": "Flag",
+        "category": "schools",
+        "type": "fonts-google",
+        "value": "school"
+    },
+    {
+        "id": 21,
+        "label": "Edit",
+        "category": "schools",
+        "type": "fonts-google",
+        "value": "school"
+    },
+    {
+        "id": 22,
+        "label": "Work",
+        "category": "context",
+        "type": "fonts-google",
+        "value": "work"
+    },
+    {
+        "id": 23,
+        "label": "Academic",
+        "category": "context",
+        "type": "fonts-google",
+        "value": "school"
+    },
+    {
+        "id": 24,
+        "label": "Side Project",
+        "category": "context",
+        "type": "fonts-google",
+        "value": "person"
+    },
+    {
+        "id": 25,
+        "label": "Internship",
+        "category": "context",
+        "type": "fonts-google",
+        "value": "badge"
+    },
+    {
+        "id": 26,
+        "label": "Behance",
+        "category": "contact",
+        "type": "local-svg",
+        "value": "/icons/contact/behance.svg"
+    },
+    {
+        "id": 27,
+        "label": "Instagram",
+        "category": "contact",
+        "type": "local-svg",
+        "value": "/icons/contact/instagram.svg"
+    },
+    {
+        "id": 28,
+        "label": "LinkedIn",
+        "category": "contact",
+        "type": "local-svg",
+        "value": "/icons/contact/linkedin.svg"
+    }
+]
