@@ -1,6 +1,6 @@
 const ProjectsFilters = () => {
-    return(
-                <section id="filters" className="filters">           
+    return (
+        <section id="filters" className="filters">
 
             <ul>
                 <li className="filtersContainer">
@@ -27,13 +27,13 @@ const ProjectsFilters = () => {
                         <li>
                             <button className="iconTextBtn">
                                 <span className="icon material-symbols-outlined">palette</span>
-                                    Illustration
+                                Illustration
                             </button>
-                            </li>
+                        </li>
                         <li>
                             <button className="iconTextBtn">
                                 <span className="icon material-symbols-outlined">package_2</span>
-                                    Packaging
+                                Packaging
                             </button>
                         </li>
                         <li>
@@ -55,7 +55,7 @@ const ProjectsFilters = () => {
                             </button>
                         </li>
                     </ul>
-                </li> 
+                </li>
 
                 <li>
                     <h3>schools:</h3>
@@ -109,8 +109,8 @@ const ProjectsFilters = () => {
                             </button>
                         </li>
                     </ul>
-                </li>                    
-            </ul>                
+                </li>
+            </ul>
         </section>
     )
 }

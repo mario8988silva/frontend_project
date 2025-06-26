@@ -1,20 +1,20 @@
 const ProjectsResults = () => {
-    return(
-                <section class="results">                
+    return (
+        <section class="results">
 
             <article class="projectsSchools">
 
-                <div class="timeline"></div> 
-                
+                <div class="timeline"></div>
+
                 <header class="iconTextBtn schoolContainer">
                     <span class="timelineDot"></span>
                     <h2>
                         <span id="schoolPeriod">2019-2021</span>
                         <span> · </span>
-                        <span id="schoolName">IEFP Setúbal</span>
+                        <span id="schoolName">IEFP Setubal</span>
                         <span> · </span>
                         <span id="schoolCourse">EFA Multimedia Technician</span>
-                        <span id="courseHours">(1945h)</span> 
+                        <span id="courseHours">(1945h)</span>
                     </h2>
                 </header>
 

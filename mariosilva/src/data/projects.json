@@ -26,32 +26,6 @@
         ]
     },
     {
-        "id": 0,
-        "pName": "Afghan Girl",
-        "pSlug": "afghan-girl",
-        "pDescription": "Portrait Vectorization using Adobe Flash. \n Sharbat Gula, photo by Steve McCurry.",
-        "pBriefingProblem": "In the 2D animation module, we were assigned a facial vectorization project to be developed throughout the course and delivered before its end.",
-        "pBriefingSolution": "I chose the iconic photograph by Steve McCurry to take on this challenge.",
-        "pRole": null,
-        "pProcess": "Given that we had nearly a year to work on this project, it was expected that we would achieve something visually compelling. Eventually, just weeks after the assignment was submitted, we entered lockdown due to COVID-19, and the course was put on hold for several weeks. This was one of the projects I dedicated myself to throughout that entire period of isolation.",
-        "pAnalysisAndNotes": null,
-        "pInnerLink": null,
-        "pOutLink": null,
-        "pClientName": "IEFP Setubal",
-        "pClientLink": "https://www.iefp.pt/",
-        "pClientDescription": "The IEFP is the national public employment service. Its mission is to promote job creation and quality employment while combating unemployment, through the implementation of active employment policies, including professional training programs.",
-        "pTools": "Flash",
-        "pFilters": "academic",
-        "pDuration": "2019",
-        "pImages": [
-            "projects/afghan-girl/images/1.jpg",
-            "projects/afghan-girl/images/2.jpg",
-            "projects/afghan-girl/images/3.jpg",
-            "projects/afghan-girl/images/4.jpg",
-            "projects/afghan-girl/images/1.jpg"
-        ]
-    },
-    {
         "id": 1,
         "pName": "Amazon In Flames",
         "pSlug": "amazon-in-flames",
@@ -135,7 +109,7 @@
         "pBriefingProblem": "This project focuses primarily on topics related to video conception and editing, image editing and manipulation, and also web pages creation. The deliverables include a personal film of up to eight minutes in length and a promotional poster, both presented on a webpage built from scratch.",
         "pBriefingSolution": "For this project, I decided to create a stop-motion animation based on an idea I had a few years ago, which I never fully developed beyond some sketches of characters and story context. Although the stop-motion technique is somewhat outside the typical Multimedia course theme, it requires careful and delicate pre- and post-production work—processes that incorporate many of the skills I acquired during the course.",
         "pRole": null,
-        "pProcess": "In a Simulated Practice context, given the impossibility of completing the Work-Based Training component in the EFA-NS Multimedia Technician course 006 at IEFP Setúbal—due to complications related to the current pandemic situation—We were required to complete an individual Final Project aimed at demonstrating the skills acquired throughout the course.\n\nAll of this was carried out under the guidance of instructor Ana Filipa Mendes over approximately six weeks, fulfilling the required 210 hours for this purpose.",
+        "pProcess": "In a Simulated Practice context, given the impossibility of completing the Work-Based Training component in the EFA-NS Multimedia Technician course 006 at IEFP Setúbal — due to complications related to the current pandemic situation—We were required to complete an individual Final Project aimed at demonstrating the skills acquired throughout the course.\n\nAll of this was carried out under the guidance of instructor Ana Filipa Mendes over approximately six weeks, fulfilling the required 210 hours for this purpose.",
         "pAnalysisAndNotes": null,
         "pInnerLink": "https://www.youtube.com/watch?v=dCyLvDY2pSs, report",
         "pOutLink": "https://www.youtube.com/watch?v=_KBjhY2Rz50",
@@ -229,7 +203,7 @@
     },
     {
         "id": 8,
-        "pName": "Red Bull Air Race Setúbal",
+        "pName": "Red Bull Air Race Setubal",
         "pSlug": "red-bull-air-race-setubal",
         "pDescription": "Poster and Facebook Cover Design\nCreation of a poster and a Facebook cover for a real event, using fictional date and location at our discretion.",
         "pBriefingProblem": null,
