@@ -1,25 +1,31 @@
+import React from "react";
+import courses from "../data/courses.json";
+
+console.log(courses);
+
 const ProjectsResults = () => {
+    
     return (
-        <section class="results">
+        <section className="results">
+            {courses.map((course) => (
+            <article key={course.id} className="projectsSchools">
 
-            <article class="projectsSchools">
+                <div className="timeline"></div>
 
-                <div class="timeline"></div>
-
-                <header class="iconTextBtn schoolContainer">
-                    <span class="timelineDot"></span>
+                <header className="iconTextBtn schoolContainer">
+                    <span className="timelineDot"></span>
                     <h2>
-                        <span id="schoolPeriod">2019-2021</span>
+                        <span id="schoolPeriod">{course.period}</span>
                         <span> · </span>
-                        <span id="schoolName">IEFP Setubal</span>
+                        <span id="schoolName">{course.school}</span>
                         <span> · </span>
-                        <span id="schoolCourse">EFA Multimedia Technician</span>
-                        <span id="courseHours">(1945h)</span>
+                        <span id="schoolCourse">{course.course}</span>
+                        <span id="courseHours"> ({course.hours}h)</span>
                     </h2>
                 </header>
 
-                <nav class="projectCardContainer">
-
+                <nav className="projectCardContainer">
+{/*
                     <article href="" class="projectCard">
                         <figure class="pMainImage"></figure>
                         <h4 class="pName">pName</h4>
@@ -49,53 +55,12 @@ const ProjectsResults = () => {
                             <span class="material-symbols-outlined">person</span>
                         </div>
                     </article>
+                    */}
 
-                    <article href="" class="projectCard">
-                        <figure class="pMainImage"></figure>
-                        <h4 class="pName">pName</h4>
-                        <p class="pDescription">Lorem ipsum dolor sit amet consectetur. Nibh amet tristique purus enim eleifend risus etiam fermentum dictum. Aliquam felis feugiat lacus commodo eget aliquet.</p>
-                        <a href="" class="pInnerLink">pInnerLink</a>
-                        <div class="pTools">
-                            <span class="material-symbols-outlined">person</span>
-                            <span class="material-symbols-outlined">person</span>
-                        </div>
-                        <div class="pFilters">
-                            <span class="material-symbols-outlined">person</span>
-                            <span class="material-symbols-outlined">person</span>
-                        </div>
-                    </article>
-
-                    <article href="" class="projectCard">
-                        <figure class="pMainImage"></figure>
-                        <h4 class="pName">pName</h4>
-                        <p class="pDescription">Lorem ipsum dolor sit amet consectetur. Nibh amet tristique purus enim eleifend risus etiam fermentum dictum. Aliquam felis feugiat lacus commodo eget aliquet.</p>
-                        <a href="" class="pInnerLink">pInnerLink</a>
-                        <div class="pTools">
-                            <span class="material-symbols-outlined">person</span>
-                            <span class="material-symbols-outlined">person</span>
-                        </div>
-                        <div class="pFilters">
-                            <span class="material-symbols-outlined">person</span>
-                            <span class="material-symbols-outlined">person</span>
-                        </div>
-                    </article>
-
-                    <article href="" class="projectCard">
-                        <figure class="pMainImage"></figure>
-                        <h4 class="pName">pName</h4>
-                        <p class="pDescription">Lorem ipsum dolor sit amet consectetur. Nibh amet tristique purus enim eleifend risus etiam fermentum dictum. Aliquam felis feugiat lacus commodo eget aliquet.</p>
-                        <a href="" class="pInnerLink">pInnerLink</a>
-                        <div class="pTools">
-                            <span class="material-symbols-outlined">person</span>
-                            <span class="material-symbols-outlined">person</span>
-                        </div>
-                        <div class="pFilters">
-                            <span class="material-symbols-outlined">person</span>
-                            <span class="material-symbols-outlined">person</span>
-                        </div>
-                    </article>
+                    
                 </nav>
             </article>
+            ))}
 
         </section>
     )

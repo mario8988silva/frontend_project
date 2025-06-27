@@ -1,3 +1,13 @@
+/*
+import courses from '../data/courses.json';
+import filters from '../data/filters.json';
+import projects from '../data/projects.json';
+
+console.log(courses);
+console.log(filters);
+console.log(projects);
+*/
+
 const ProjectsFilters = () => {
     return (
         <section id="filters" className="filters">
