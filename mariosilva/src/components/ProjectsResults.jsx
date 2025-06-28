@@ -7,20 +7,20 @@ const ProjectsResults = () => {
     
     return (
         <section className="results">
-            {courses.map((course) => (
-            <article key={course.id} className="projectsSchools">
+            {courses.map(({ id, period, school, course, hours }) => (
+            <article key={id} className="projectsSchools">
 
                 <div className="timeline"></div>
 
                 <header className="iconTextBtn schoolContainer">
                     <span className="timelineDot"></span>
                     <h2>
-                        <span id="schoolPeriod">{course.period}</span>
+                        <span id="schoolPeriod">{period}</span>
                         <span> · </span>
-                        <span id="schoolName">{course.school}</span>
+                        <span id="schoolName">{school}</span>
                         <span> · </span>
-                        <span id="schoolCourse">{course.course}</span>
-                        <span id="courseHours"> ({course.hours}h)</span>
+                        <span id="schoolCourse">{course}</span>
+                        <span id="courseHours"> ({hours}h)</span>
                     </h2>
                 </header>
 
