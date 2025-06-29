@@ -1,30 +1,30 @@
 [
     {
         "id": 0,
-        "course": "EFA Multimedia Technician",
-        "hours": 1945,
-        "school": "IEFP Setubal",
-        "period": "2019 – 2021"
+        "cCourse": "EFA Multimedia Technician",
+        "cHours": 1945,
+        "cSchool": "IEFP Setubal",
+        "cPeriod": "2019 – 2021"
     },
     {
         "id": 1,
-        "course": "Flagprofessional Graphic Designer",
-        "hours": 351,
-        "school": "Flag",
-        "period": "2021 – 2022"
+        "cCourse": "Flagprofessional Graphic Designer",
+        "cHours": 351,
+        "cSchool": "Flag",
+        "cPeriod": "2021 – 2022"
     },
     {
         "id": 2,
-        "course": "User Experience & User Interface",
-        "hours": 216,
-        "school": "Edit",
-        "period": "2023"
+        "cCourse": "User Experience & User Interface",
+        "cHours": 216,
+        "cSchool": "Edit",
+        "cPeriod": "2023"
     },
     {
-        "id": 2,
-        "course": "Flagprofessional Fullstack Web Development",
-        "hours": 363,
-        "school": "Flag",
-        "period": "2024 – 2025 "
+        "id": 3,
+        "cCourse": "Flagprofessional Fullstack Web Development",
+        "cHours": 363,
+        "cSchool": "Flag",
+        "cPeriod": "2024 – 2025 "
     }
 ]

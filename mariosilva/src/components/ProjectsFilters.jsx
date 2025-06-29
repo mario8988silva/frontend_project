@@ -1,23 +1,23 @@
 import React from "react";
-import filters from '../data/filters.json';
+import icons from '../data/icons.json';
 
-console.log(filters);
+console.log(icons);
 
-const filterGroups = filters.reduce((acc, filter) => {
-    if (filter.category === "contact") return acc;
+const iconsGroups = icons.reduce((acc, icon) => {
+    if (icon.category === "contact") return acc;
 
-    if (!acc[filter.category]) {
-        acc[filter.category] = [];
+    if (!acc[icon.category]) {
+        acc[icon.category] = [];
     }
 
-    acc[filter.category].push(filter);
+    acc[icon.category].push(icon);
     return acc;
 }, {});
 
 
 const FilterItems = (items =>
     items.map(({ id, label, value }) => (
-        <li key={{ id }}>
+        <li key={id}>
             <button className="iconTextBtn">
                 <span className="icon material-symbols-outlined">{value}</span>
                 {label}
@@ -27,7 +27,7 @@ const FilterItems = (items =>
 )
 
 
-const filtersList = Object.entries(filterGroups).map(([category, items]) => (
+const filtersList = Object.entries(iconsGroups).map(([category, items]) => (
     <li key={category} className="filtersContainer">
         <h3>{category}:</h3>
         <ul>{FilterItems(items)}</ul>
