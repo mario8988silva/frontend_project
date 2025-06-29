@@ -1,10 +1,14 @@
+import {getGreetings } from "../app/greetings";
+
 const Banner = () => {
-    return (
+    const message = getGreetings();
+
+    return (       
 
         <section className="banner">
 
             <article>
-                <h1>Have a Good Morning</h1>
+                <h1>{message}</h1>
                 <p>Welcome to my little corner of the web — a collection of projects I’ve crafted over the past few years.</p>
             </article>
 
@@ -13,6 +17,10 @@ const Banner = () => {
             </article>
         </section>
     )
+
+    
 }
+
+
 
 export default Banner;
