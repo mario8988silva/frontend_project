@@ -3,24 +3,42 @@ import courses from '../data/courses.json';
 import projects from '../data/projects.json';
 
 import ProjectCard from "./ProjectCard";
+import { useFilters } from '../app/store';
 
 console.log("courses: ", courses);
 console.log("projects: ", projects);
 
 const ProjectsResults = () => {
-    const selectedCourse = courses.map((course) => {
-        const matchingProjects = projects.filter(
-            (project) => project.pCourse === course.cCourse
-        );
+    const { activeFilters } = useFilters();
 
-        return {
-            ...course,
-            projects: matchingProjects,
-        };
-    })
+    /*
+    console.log("Filter values:", activeFilters);
+    projects.forEach(p => {
+        console.log("→", p.pName, "| TOOLS:", p.pTools, "| FILTERS:", p.pFilters);
+    });
+    */
 
-    // esconde container/header que não contenha projectos:
-    .filter(course => course.projects.length > 0);
+    const selectedCourse = courses
+        .map(course => {
+            const matchingProjects = projects.filter(project => {
+                const isSameCourse = project.pCourse === course.cCourse;
+                const matchesFilter =
+                    activeFilters.length === 0 ||
+                    activeFilters.some(filter =>
+                        (project.pFilters || []).includes(filter) ||
+                        (project.pTools || []).includes(filter)
+                    );
+                return isSameCourse && matchesFilter;
+            });
+
+            return {
+                ...course,
+                projects: matchingProjects,
+            };
+        })
+
+        // esconde container/header que não contenha projectos:
+        .filter(course => course.projects.length > 0);
 
     return (
         <section className="results">

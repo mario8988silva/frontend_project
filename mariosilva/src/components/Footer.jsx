@@ -5,26 +5,26 @@ const Footer = () => {
                 <h2>"quote API"</h2>
             </article>
 
-            <address className="">
-                <a href="" target="_blank" className="iconTextBtn">
+            <address className={null} >
+                <a href={null}  target="_blank" className="iconTextBtn">
                     <span className="icon material-symbols-outlined">mail</span>
                     Contact Me
                 </a>
 
                 <ul className="socialMediaContainer">
                     <li>
-                        <a href="" target="_blank" className="iconTextBtn">
-                            <img src="" alt="linkedIn" className="icon" />
+                        <a href={null} target="_blank" className="iconTextBtn">
+                            <img src={null}  alt="linkedIn" className="icon" />
                         </a>
                     </li>
                     <li>
-                        <a href="" target="_blank" className="iconTextBtn">
-                            <img src="" alt="behance" className="icon" />
+                        <a href={null}  target="_blank" className="iconTextBtn">
+                            <img src={null}  alt="behance" className="icon" />
                         </a>
                     </li>
                     <li>
-                        <a href="" target="_blank" className="iconTextBtn">
-                            <img src="" alt="instagram" className="icon" />
+                        <a href={null}  target="_blank" className="iconTextBtn">
+                            <img src={null}  alt="instagram" className="icon" />
                         </a>
                     </li>
                 </ul>

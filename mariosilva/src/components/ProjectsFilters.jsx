@@ -1,46 +1,59 @@
+
 import React from "react";
 import icons from '../data/icons.json';
+import { useFilters } from '../app/store';
 
 console.log(icons);
 
+const ProjectsFilters = () => {
+  const { activeFilters, setActiveFilters } = useFilters();
+
+  const toggleFilter = (value) => {
+    
+console.log("Clicked:", value);
+
+
+
+    setActiveFilters((prev) =>
+      prev.includes(value) ? prev.filter((f) => f !== value) : [...prev, value]
+    );
+    console.log("activeFilters in Filters component:", activeFilters);
+  };
+
+  
 const iconsGroups = icons.reduce((acc, icon) => {
     if (icon.category === "contact") return acc;
-
-    if (!acc[icon.category]) {
-        acc[icon.category] = [];
-    }
-
+    acc[icon.category] = acc[icon.category] || [];
     acc[icon.category].push(icon);
     return acc;
-}, {});
+  }, {});
 
-
-const FilterItems = (items =>
-    items.map(({ id, label, value }) => (
-        <li key={id}>
-            <button className="iconTextBtn">
-                <span className="icon material-symbols-outlined">{value}</span>
-                {label}
-            </button>
-        </li>
-    ))
-)
-
-
-const filtersList = Object.entries(iconsGroups).map(([category, items]) => (
-    <li key={category} className="filtersContainer">
-        <h3>{category}:</h3>
-        <ul>{FilterItems(items)}</ul>
-    </li>
-));
-
-
-const ProjectsFilters = () => {
-    return (
-        <section id="filters" className="filters">
-            <ul>{filtersList}</ul>
-        </section>
-    )
-}
+  return (
+    <section id="filters" className="filters">
+      <ul>
+        {Object.entries(iconsGroups).map(([category, items]) => (
+          <li key={category} className="filtersContainer">
+            <h3>{category}:</h3>
+            <ul>
+              {items.map(({ id, label, value }) => (
+                <li key={id}>
+                  <button
+                      className={`iconTextBtn ${
+                      activeFilters.includes(label) ? "active" : ""
+                    }`}
+                    onClick={() => toggleFilter(label)}
+                  >
+                    <span className="icon material-symbols-outlined">{value}</span>
+                    {label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
 export default ProjectsFilters;

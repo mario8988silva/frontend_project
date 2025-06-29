@@ -9,7 +9,7 @@ const ProjectCard = ({ projects }) => {
     return (
         <>
             {projects.map(({ id, pName, pDescription, pInnerLink }) => (
-                <article key={id} href="" className="projectCard">
+                <article key={id} href={null} className="projectCard">
                     {/* aplicar img dentro do figure? ou aplicar background image ao article? */}
                     <figure className="pMainImage"></figure>
                     <h4 className="pName">{pName}</h4>

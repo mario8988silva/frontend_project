@@ -15,8 +15,8 @@
         "pClientLink": "https://www.iefp.pt/",
         "pClientDescription": "The IEFP is the national public employment service. Its mission is to promote job creation and quality employment while combating unemployment, through the implementation of active employment policies, including professional training programs.",
         "pCourse": "EFA Multimedia Technician",
-        "pTools": "Flash",
-        "pFilters": "academic",
+        "pTools": ["Flash"],
+        "pFilters": ["academic"],
         "pDuration": "2019",
         "pImages": [
             "projects/afghan-girl/images/1.jpg",
@@ -42,8 +42,8 @@
         "pClientLink": "https://www.iefp.pt/",
         "pClientDescription": "The IEFP is the national public employment service. Its mission is to promote job creation and quality employment while combating unemployment, through the implementation of active employment policies, including professional training programs.",
         "pCourse": "EFA Multimedia Technician",
-        "pTools": "Photoshop",
-        "pFilters": "academic",
+        "pTools": ["Photoshop"],
+        "pFilters": ["academic"],
         "pDuration": "2020",
         "pImages": [
             "projects/amazon-in-flames/images/1.jpg",
@@ -68,8 +68,8 @@
         "pClientLink": "https://www.iefp.pt/",
         "pClientDescription": "The IEFP is the national public employment service. Its mission is to promote job creation and quality employment while combating unemployment, through the implementation of active employment policies, including professional training programs.",
         "pCourse": "EFA Multimedia Technician",
-        "pTools": "Illustrator, Photoshop",
-        "pFilters": "academic",
+        "pTools": ["Illustrator", "Photoshop"],
+        "pFilters": ["academic"],
         "pDuration": "2021",
         "pImages": [
             "projects/jaco-pastorius/images/1.jpg",
@@ -94,8 +94,8 @@
         "pClientLink": "https://www.iefp.pt/",
         "pClientDescription": "The IEFP is the national public employment service. Its mission is to promote job creation and quality employment while combating unemployment, through the implementation of active employment policies, including professional training programs., Pothos would be a physical and online store dedicated to sell classic video games. It also includes a retro console repairs and organizes vintage gaming events and tournaments.",
         "pCourse": "EFA Multimedia Technician",
-        "pTools": "Illustrator",
-        "pFilters": "academic",
+        "pTools": ["Illustrator"],
+        "pFilters": ["academic"],
         "pDuration": "2021",
         "pImages": [
             "projects/pothos/images/1.jpg",
@@ -121,8 +121,8 @@
         "pClientLink": "https://www.iefp.pt/",
         "pClientDescription": "The IEFP is the national public employment service. Its mission is to promote job creation and quality employment while combating unemployment, through the implementation of active employment policies, including professional training programs.",
         "pCourse": "EFA Multimedia Technician",
-        "pTools": "Premier",
-        "pFilters": "academic, internship",
+        "pTools": ["Premier"],
+        "pFilters": ["academic", "internship"],
         "pDuration": "2021",
         "pImages": [
             "projects/fill-me-up/images/1.jpg"
@@ -144,8 +144,8 @@
         "pClientLink": "https://flag.pt/",
         "pClientDescription": "A market leader in training for individuals and companies, FLAG specializes in technologies related to the development of visual and interactive arts/media across print, web, and motion fields in Portugal. With facilities in Lisbon and Porto, and over 30 years of experience, it offers one of the most up-to-date and comprehensive training programs available today.",
         "pCourse": "Flagprofessional Graphic Designer",
-        "pTools": "Illustrator",
-        "pFilters": "academic",
+        "pTools": ["Illustrator"],
+        "pFilters": ["academic"],
         "pDuration": "2022",
         "pImages": [
             "projects/kimmidoll-haruyo/images/1.jpg",
@@ -171,8 +171,8 @@
         "pClientLink": "https://www.behance.net/ricardomfvenancio",
         "pClientDescription": "A market leader in training for individuals and companies, FLAG specializes in technologies related to the development of visual and interactive arts/media across print, web, and motion fields in Portugal. With facilities in Lisbon and Porto, and over 30 years of experience, it offers one of the most up-to-date and comprehensive training programs available today.",
         "pCourse": "Flagprofessional Graphic Designer",
-        "pTools": "Photoshop",
-        "pFilters": "academic",
+        "pTools": ["Photoshop"],
+        "pFilters": ["academic"],
         "pDuration": "2022",
         "pImages": [
             "projects/musashi-tiger/images/1.jpg"
@@ -194,8 +194,8 @@
         "pClientLink": "https://reativ.com/pt",
         "pClientDescription": "A market leader in training for individuals and companies, FLAG specializes in technologies related to the development of visual and interactive arts/media across print, web, and motion fields in Portugal. With facilities in Lisbon and Porto, and over 30 years of experience, it offers one of the most up-to-date and comprehensive training programs available today.; Reativ is a company that develops software solutions.",
         "pCourse": "Flagprofessional Graphic Designer",
-        "pTools": "Illustrator",
-        "pFilters": "academic",
+        "pTools": ["Illustrator"],
+        "pFilters": ["academic"],
         "pDuration": "2022",
         "pImages": [
             "projects/reativ/images/1.jpg",
@@ -225,8 +225,8 @@
         "pClientLink": null,
         "pClientDescription": "Flag is a market leader in training for individuals and companies, specializing in technologies related to the development of visual and interactive arts/media across print, web, and motion fields in Portugal. With facilities in Lisbon and Porto, and over 30 years of experience, it offers one of the most up-to-date and comprehensive training programs available today.",
         "pCourse": "Flagprofessional Graphic Designer",
-        "pTools": "Photoshop",
-        "pFilters": "academic",
+        "pTools": ["Photoshop"],
+        "pFilters": ["academic"],
         "pDuration": "2022",
         "pImages": [
             "projects/red-bull-air-race-setubal/images/1.jpg",
@@ -252,8 +252,8 @@
         "pClientLink": "https://flag.pt/",
         "pClientDescription": "Flag is a market leader in training for individuals and companies, specializing in technologies related to the development of visual and interactive arts/media across print, web, and motion fields in Portugal. With facilities in Lisbon and Porto, and over 30 years of experience, it offers one of the most up-to-date and comprehensive training programs available today.",
         "pCourse": "Flagprofessional Graphic Designer",
-        "pTools": "Photoshop, InDesign",
-        "pFilters": "academic",
+        "pTools": ["Photoshop", "InDesign"],
+        "pFilters": ["academic"],
         "pDuration": "2022",
         "pImages": [
             "projects/vinhos-e-adegas/images/1.jpg",
@@ -280,8 +280,8 @@
         "pClientLink": "https://weareedit.io/",
         "pClientDescription": "A school specialized in Digital offering courses in UX, Digital Design, Digital Marketing, Data Science, and Programming in Lisbon, Porto, Madrid, and São Paulo.",
         "pCourse": "User Experience & User Interface",
-        "pTools": "Figma",
-        "pFilters": "academic",
+        "pTools": ["Figma"],
+        "pFilters": ["academic"],
         "pDuration": "2023",
         "pImages": [
             "projects/cookidoo/images/1.png"
