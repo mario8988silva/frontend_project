@@ -5,8 +5,8 @@ import projects from '../data/projects.json';
 import ProjectCard from "./ProjectCard";
 import { useFilters } from '../app/store';
 
-console.log("courses: ", courses);
-console.log("projects: ", projects);
+//console.log("courses: ", courses);
+//console.log("projects: ", projects);
 
 const ProjectsResults = () => {
     const { activeFilters } = useFilters();

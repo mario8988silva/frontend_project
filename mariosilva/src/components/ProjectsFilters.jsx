@@ -3,25 +3,25 @@ import React from "react";
 import icons from '../data/icons.json';
 import { useFilters } from '../app/store';
 
-console.log(icons);
+//console.log(icons);
 
 const ProjectsFilters = () => {
   const { activeFilters, setActiveFilters } = useFilters();
 
   const toggleFilter = (value) => {
-    
-console.log("Clicked:", value);
+
+    console.log("BOTÃO CLICADO:", value);
 
 
 
     setActiveFilters((prev) =>
       prev.includes(value) ? prev.filter((f) => f !== value) : [...prev, value]
     );
-    console.log("activeFilters in Filters component:", activeFilters);
+    console.log("FILTROS ACTIVOS:", activeFilters);
   };
 
-  
-const iconsGroups = icons.reduce((acc, icon) => {
+
+  const iconsGroups = icons.reduce((acc, icon) => {
     if (icon.category === "contact") return acc;
     acc[icon.category] = acc[icon.category] || [];
     acc[icon.category].push(icon);
@@ -38,9 +38,8 @@ const iconsGroups = icons.reduce((acc, icon) => {
               {items.map(({ id, label, value }) => (
                 <li key={id}>
                   <button
-                      className={`iconTextBtn ${
-                      activeFilters.includes(label) ? "active" : ""
-                    }`}
+                    className={`iconTextBtn ${activeFilters.includes(label) ? "active" : ""
+                      }`}
                     onClick={() => toggleFilter(label)}
                   >
                     <span className="icon material-symbols-outlined">{value}</span>
