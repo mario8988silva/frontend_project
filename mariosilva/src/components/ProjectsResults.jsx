@@ -5,36 +5,49 @@ import projects from '../data/projects.json';
 import ProjectCard from "./ProjectCard";
 import { useFilters } from '../app/store';
 
+
+import { groupFiltersByCategory } from "../utils/filters";
+
 //console.log("courses: ", courses);
 //console.log("projects: ", projects);
+
 
 const ProjectsResults = () => {
     const { activeFilters } = useFilters();
 
-    /*
-    console.log("Filter values:", activeFilters);
-    projects.forEach(p => {
-        console.log("→", p.pName, "| TOOLS:", p.pTools, "| FILTERS:", p.pFilters);
-    });
-    */
+
 
     const selectedCourse = courses
         .map(course => {
             const matchingProjects = projects.filter(project => {
                 const isSameCourse = project.pCourse === course.cCourse;
-                const matchesFilter =
+
+                const searchableLabels  = Object.entries(filtersByCategory).every(([label, category]) => {
+                    const target = (() => {
+                        if (label === "tools") return project.pTools || [];
+                        if (label === "context") return project.pFilters || [];
+                        if (label === "school") return project.pClientName || [];
+                        return [];
+                    })();
+
+                    return values.some(v => target.includes(v));
+                }
+            );
+            /*
                     activeFilters.length === 0 ||
                     activeFilters.some(filter =>
                         (project.pFilters || []).includes(filter) ||
                         (project.pTools || []).includes(filter)
                     );
-                return isSameCourse && matchesFilter;
+            */
+                return isSameCourse && (activeFilters.length === 0 || matchesAllActiveCategories) ;
             });
 
             return {
                 ...course,
                 projects: matchingProjects,
             };
+            
         })
 
         // esconde container/header que não contenha projectos:

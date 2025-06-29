@@ -12,14 +12,11 @@ const ProjectsFilters = () => {
 
     console.log("BOTÃO CLICADO:", value);
 
-
-
     setActiveFilters((prev) =>
       prev.includes(value) ? prev.filter((f) => f !== value) : [...prev, value]
     );
     console.log("FILTROS ACTIVOS:", activeFilters);
   };
-
 
   const iconsGroups = icons.reduce((acc, icon) => {
     if (icon.category === "contact") return acc;
