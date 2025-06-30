@@ -503,6 +503,15 @@ div.timeline {
     z-index: 0;
 }
 
+/* esconde a timeline no ultimo curso */
+.projectsSchools:not(:last-child) .timeline {
+  display: block;
+}
+
+.projectsSchools:last-child .timeline {
+  display: none;
+}
+
 span.timelineDot {
     background-color: red;
 

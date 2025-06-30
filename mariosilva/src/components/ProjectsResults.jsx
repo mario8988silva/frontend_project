@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard";
 import { useFilters } from '../app/store';
 
 
-import { groupFiltersByCategory } from "../utils/filters";
+import { groupFiltersByCategory, projectMatchesFilters } from "../utils/filters";
 import CourseArticle from "./CourseArticle";
 
 console.log("courses: ", courses);
@@ -72,11 +72,30 @@ projects: matchingProjects,
 */
 
 
+  const { activeFilters } = useFilters();
+  const filtersByCategory = groupFiltersByCategory(activeFilters);
+
+  const filteredCourses = coursesData.map((course) => {
+    const courseProjects = projectsData
+      .filter((p) => p.pCourse === course.cCourse)
+      .filter((p) => projectMatchesFilters(p, filtersByCategory));
+
+    return {
+      ...course,
+      projects: courseProjects,
+    };
+  })
+    .filter((course) => course.projects.length > 0);
+
   /*renderiza lista de cursos */
   return (
     <section className="results">
-      {courseList.map((course) => (
-        <CourseArticle key={course.id} course={course} projects={projectsList} />
+      {filteredCourses.map((course) => (
+        <CourseArticle
+          key={course.id}
+          course={course}
+          projects={course.projects}
+        />
       ))}
     </section>
   );
