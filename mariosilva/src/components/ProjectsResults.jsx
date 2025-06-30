@@ -7,15 +7,32 @@ import { useFilters } from '../app/store';
 
 
 import { groupFiltersByCategory } from "../utils/filters";
+import CourseArticle from "./CourseArticle";
 
-//console.log("courses: ", courses);
-//console.log("projects: ", projects);
+console.log("courses: ", courses);
+console.log("projects: ", projects);
+
+const coursesData = courses;
+const projectsData = projects;
+
+console.log("courses variable: ", coursesData);
+console.log("projects variable: ", projectsData);
 
 
 const ProjectsResults = () => {
+
+  /* chama lista de cursos */
+  const courseList = coursesData;
+  console.log("courseList: ", courseList);
+
+  /* chama lista de projectos */
+  const projectsList = projectsData;
+  console.log("projectsList: ", projectsList);
+
+
+
+  /*
     const { activeFilters } = useFilters();
-
-
 
     const selectedCourse = courses
         .map(course => {
@@ -39,48 +56,30 @@ const ProjectsResults = () => {
                         (project.pFilters || []).includes(filter) ||
                         (project.pTools || []).includes(filter)
                     );
-            */
-                return isSameCourse && (activeFilters.length === 0 || matchesAllActiveCategories) ;
-            });
+            *//*
+return isSameCourse && (activeFilters.length === 0 || matchesAllActiveCategories) ;
+});
 
-            return {
-                ...course,
-                projects: matchingProjects,
-            };
-            
-        })
-
-        // esconde container/header que não contenha projectos:
-        .filter(course => course.projects.length > 0);
-
-    return (
-        <section className="results">
-            {selectedCourse.map(({ id, cPeriod, cSchool, cCourse, cHours, projects: courseProjects }) => (
-
-                <article key={id} className="projectsSchools">
-
-                    <div className="timeline"></div>
-
-                    <header className="iconTextBtn schoolContainer">
-                        <span className="timelineDot"></span>
-
-                        <h2>
-                            <span id="schoolPeriod">{cPeriod}</span>
-                            <span> · </span>
-                            <span id="schoolName">{cSchool}</span>
-                            <span> · </span>
-                            <span id="schoolCourse">{cCourse}</span>
-                            <span id="courseHours"> ({cHours}h)</span>
-                        </h2>
-                    </header>
-
-                    <nav className="projectCardContainer">
-                        <ProjectCard projects={courseProjects} />
-                    </nav>
-                </article>
-            )
-            )}
-        </section>
-    );
+return {
+...course,
+projects: matchingProjects,
 };
+ 
+})
+
+// esconde container/header que não contenha projectos:
+.filter(course => course.projects.length > 0);
+*/
+
+
+  /*renderiza lista de cursos */
+  return (
+    <section className="results">
+      {courseList.map((course) => (
+        <CourseArticle key={course.id} course={course} projects={projectsList} />
+      ))}
+    </section>
+  );
+};
+
 export default ProjectsResults;

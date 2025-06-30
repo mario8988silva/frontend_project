@@ -13,3 +13,11 @@ export const groupFiltersByCategory = (activeLabels) => {
   });
   return categoryMap;
 };
+
+/* lógica para inserir projectos nos devidos cursos */
+export const filterProjectByCourse = (projects, courseCode) => {
+  return projects.filter(
+    (project) => project.pCourse === courseCode);
+};
+
+
