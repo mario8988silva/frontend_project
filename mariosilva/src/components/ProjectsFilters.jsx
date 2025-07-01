@@ -34,6 +34,7 @@ const filtersGrouped = icons.reduce((acc, icon) => {
 console.log("filtersGrouped: ", filtersGrouped);
 
 
+
   /* faz renderização */
   return (
     <section className="filters">
@@ -55,7 +56,7 @@ console.log("filtersGrouped: ", filtersGrouped);
                     {type === "fonts-google" ? (
                       <span className="icon material-symbols-outlined">{value}</span>
                     ) : (
-                      <img className="icon" src={value} alt={label} />
+                      <img src={value} alt={label} className="icon"/>
                     )}
                     {label}
                   </button>

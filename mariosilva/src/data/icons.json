@@ -4,77 +4,77 @@
         "label": "Flash",
         "category": "tools",
         "type": "local-svg",
-        "value": "/icons/tools/adobe-flash.svg"
+        "value": "/src/assets/icons/tools/adobe-flash.svg"
     },
     {
         "id": 1,
         "label": "Illustrator",
         "category": "tools",
         "type": "local-svg",
-        "value": "/icons/tools/adobe-illustrator.svg"
+        "value": "/src/assets/icons/tools/adobe-illustrator.svg"
     },
     {
         "id": 2,
         "label": "InDesign",
         "category": "tools",
         "type": "local-svg",
-        "value": "/icons/tools/adobe-indesign.svg"
+        "value": "/src/assets/icons/tools/adobe-indesign.svg"
     },
     {
         "id": 3,
         "label": "Photoshop",
         "category": "tools",
         "type": "local-svg",
-        "value": "/icons/tools/adobe-photoshop.svg"
+        "value": "/src/assets/icons/tools/adobe-photoshop.svg"
     },
     {
         "id": 4,
         "label": "Premier",
         "category": "tools",
         "type": "local-svg",
-        "value": "/icons/tools/adobe-premierpro.svg"
+        "value": "/src/assets/icons/tools/adobe-premierpro.svg"
     },
     {
         "id": 5,
         "label": "CSS",
         "category": "tools",
         "type": "local-svg",
-        "value": "/icons/tools/css3.svg"
+        "value": "/src/assets/icons/tools/css3.svg"
     },
     {
         "id": 6,
         "label": "Figma",
         "category": "tools",
         "type": "local-svg",
-        "value": "/icons/tools/figma.svg"
+        "value": "/src/assets/icons/tools/figma.svg"
     },
     {
         "id": 7,
         "label": "HTML",
         "category": "tools",
         "type": "local-svg",
-        "value": "/icons/tools/html5.svg"
+        "value": "/src/assets/icons/tools/html5.svg"
     },
     {
         "id": 8,
         "label": "JavaScript",
         "category": "tools",
         "type": "local-svg",
-        "value": "/icons/tools/javascript.svg"
+        "value": "/src/assets/icons/tools/javascript.svg"
     },
     {
         "id": 9,
         "label": "PHP",
         "category": "tools",
         "type": "local-svg",
-        "value": "/icons/tools/php.svg"
+        "value": "/src/assets/icons/tools/php.svg"
     },
     {
         "id": 10,
         "label": "React",
         "category": "tools",
         "type": "local-svg",
-        "value": "/icons/tools/react.svg"
+        "value": "/src/assets/icons/tools/react.svg"
     },
     {
         "id": 11,
@@ -186,20 +186,20 @@
         "label": "Behance",
         "category": "contact",
         "type": "local-svg",
-        "value": "/icons/contact/behance.svg"
+        "value": "/src/assets/icons/contact/behance.svg"
     },
     {
         "id": 27,
         "label": "Instagram",
         "category": "contact",
         "type": "local-svg",
-        "value": "/icons/contact/instagram.svg"
+        "value": "/src/assets/icons/contact/instagram.svg"
     },
     {
         "id": 28,
         "label": "LinkedIn",
         "category": "contact",
         "type": "local-svg",
-        "value": "/icons/contact/linkedin.svg"
+        "value": "/src/assets/icons/contact/linkedin.svg"
     }
 ]

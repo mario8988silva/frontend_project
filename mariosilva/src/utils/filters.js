@@ -1,6 +1,7 @@
 import icons from "../data/icons.json";
 
-/* botões filtros */
+/* botões de filtragem */
+/* construcção da secção de botões */
 export const groupFiltersByCategory = (activeLabels) => {
   const categoryMap = {};
 
@@ -15,6 +16,7 @@ export const groupFiltersByCategory = (activeLabels) => {
   return categoryMap;
 };
 
+/* lógica da função de filtragem */
 export const projectMatchesFilters = (project, filterByCategory) => {
   return Object.entries(filterByCategory).every(([category, labels]) => {
     if (labels.length === 0) return true;
@@ -26,10 +28,14 @@ export const projectMatchesFilters = (project, filterByCategory) => {
       if (category === "schools") return project.pFilters || [];
       return [];
     })();
+    
 
     return labels.every((label) => field.includes(label));
   });
 }
+
+/* apenas mostra filtros em uso a partir do projects.json */
+
 
 
 /* lógica para inserir projectos nos devidos cursos */

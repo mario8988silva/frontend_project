@@ -29,49 +29,6 @@ const ProjectsResults = () => {
   const projectsList = projectsData;
   console.log("projectsList: ", projectsList);
 
-
-
-  /*
-    const { activeFilters } = useFilters();
-
-    const selectedCourse = courses
-        .map(course => {
-            const matchingProjects = projects.filter(project => {
-                const isSameCourse = project.pCourse === course.cCourse;
-
-                const searchableLabels  = Object.entries(filtersByCategory).every(([label, category]) => {
-                    const target = (() => {
-                        if (label === "tools") return project.pTools || [];
-                        if (label === "context") return project.pFilters || [];
-                        if (label === "school") return project.pClientName || [];
-                        return [];
-                    })();
-
-                    return values.some(v => target.includes(v));
-                }
-            );
-            /*
-                    activeFilters.length === 0 ||
-                    activeFilters.some(filter =>
-                        (project.pFilters || []).includes(filter) ||
-                        (project.pTools || []).includes(filter)
-                    );
-            *//*
-return isSameCourse && (activeFilters.length === 0 || matchesAllActiveCategories) ;
-});
-
-return {
-...course,
-projects: matchingProjects,
-};
- 
-})
-
-// esconde container/header que não contenha projectos:
-.filter(course => course.projects.length > 0);
-*/
-
-
   const { activeFilters } = useFilters();
   const filtersByCategory = groupFiltersByCategory(activeFilters);
 
@@ -85,6 +42,8 @@ projects: matchingProjects,
       projects: courseProjects,
     };
   })
+
+  /* esconde todos os cursos que não constenham projectos resultantes */
     .filter((course) => course.projects.length > 0);
 
   /*renderiza lista de cursos */
