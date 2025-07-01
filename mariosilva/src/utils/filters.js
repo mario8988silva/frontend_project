@@ -20,10 +20,10 @@ export const projectMatchesFilters = (project, filterByCategory) => {
     if (labels.length === 0) return true;
 
     const field = (() => {
-      if (category === "tools") return (project.pTools || []).map(v => v.toLowerCase());
-      if (category === "fields") return (project.pFilters || []).map(v => v.toLowerCase());
-      if (category === "context") return (project.pFilters || []).map(v => v.toLowerCase());
-      if (category === "schools") return (project.pClientName || []).map(v => v.toLowerCase());
+      if (category === "tools") return project.pTools || [];
+      if (category === "fields") return project.pFilters || [];
+      if (category === "context") return project.pFilters || [];
+      if (category === "schools") return project.pFilters || [];
       return [];
     })();
 

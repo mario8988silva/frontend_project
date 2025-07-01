@@ -113,7 +113,7 @@
     },
     {
         "id": 16,
-        "label": "Editorial design",
+        "label": "Editorial Design",
         "category": "fields",
         "type": "fonts-google",
         "value": "import_contacts"
@@ -134,7 +134,7 @@
     },
     {
         "id": 19,
-        "label": "IEFP",
+        "label": "IEFP Setubal",
         "category": "schools",
         "type": "fonts-google",
         "value": "school"
