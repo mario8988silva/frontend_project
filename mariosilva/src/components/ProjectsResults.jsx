@@ -44,7 +44,7 @@ const ProjectsResults = () => {
   })
 
   /* esconde todos os cursos que não constenham projectos resultantes */
-    .filter((course) => course.projects.length > 0);
+    //.filter((course) => course.projects.length > 0);
 
   /*renderiza lista de cursos */
   return (

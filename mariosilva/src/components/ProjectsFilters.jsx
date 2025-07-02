@@ -1,8 +1,10 @@
 
-import React from "react";
+import React, { useState } from "react";
 import icons from '../data/icons.json';
 import { useFilters } from '../app/store';
 import FilterGroup from "./FilterGroup";
+import { revelantIcons } from "../utils/filters";
+import useToggle from "../hooks/useToggle";
 
 console.log("icons.json: ", icons);
 
@@ -21,7 +23,7 @@ const ProjectsFilters = () => {
 
 
   /* lógica para listar conteudos por categoria */
-  const filtersGrouped = icons.reduce((acc, icon) => {
+  const filtersGrouped = /*icons*/revelantIcons.reduce((acc, icon) => {
     /* selecciona aqueles que contenham category:"contact" */
     if (icon.category === "contact") return acc;
 
@@ -34,13 +36,21 @@ const ProjectsFilters = () => {
   }, {});
   console.log("filtersGrouped: ", filtersGrouped);
 
-
+  const { isActive, toggle, close } = useToggle();
 
   /* faz renderização */
   return (
     <section className="filters">
-      <ul>
 
+      <ul className="filtersMenuContainer">
+        <li>
+          <button onClick={toggle} className="filtersToggle">
+            <span className="icon material-symbols-outlined ">{isActive ? "close" : "filter_alt"}</span>
+          </button>
+        </li>
+      </ul>
+
+      <ul className={`filtersGroup ${isActive ? "open" : "closed"}`}>
         {Object.entries(filtersGrouped).map(([category, items]) => (
           <FilterGroup
             key={category}
@@ -50,7 +60,6 @@ const ProjectsFilters = () => {
             onToggle={toggleFilter}
           />
         ))}
-
       </ul>
     </section>
   );

@@ -128,6 +128,7 @@ address {
 
     display: inline-flex;
     justify-content: center;
+    align-content: center;
 
     padding: var(--space-m) var(--space-l);
     border: none;
@@ -390,6 +391,21 @@ header a {
     }
 }
 
+.filtersGroup {
+    display: none;
+}
+
+/* breakpoint: tablet */
+@media (min-width: 768px) {
+    .filtersGroup {
+        display: flex;
+    }
+}
+
+.filtersGroup.open {
+    display: flex;
+}
+
 .icon {
     width: var(--font-size-3xl);
     height: var(--font-size-3xl);
@@ -397,7 +413,8 @@ header a {
     padding: var(--space-s);
 
     display: inline-flex;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
 
     text-align: center;
 
@@ -478,7 +495,7 @@ header a {
 }
 
 .filters {
-    display: none;
+    display: flex;
 
     background-color: blue;
 }
@@ -505,11 +522,11 @@ div.timeline {
 
 /* esconde a timeline no ultimo curso */
 .projectsSchools:not(:last-child) .timeline {
-  display: block;
+    display: block;
 }
 
 .projectsSchools:last-child .timeline {
-  display: none;
+    display: none;
 }
 
 span.timelineDot {

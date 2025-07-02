@@ -1,4 +1,5 @@
 import icons from "../data/icons.json";
+import projects from "../data/projects.json";
 
 /* botões de filtragem */
 /* construcção da secção de botões */
@@ -16,6 +17,7 @@ export const groupFiltersByCategory = (activeLabels) => {
   return categoryMap;
 };
 
+
 /* lógica da função de filtragem */
 export const projectMatchesFilters = (project, filterByCategory) => {
   return Object.entries(filterByCategory).every(([category, labels]) => {
@@ -28,7 +30,7 @@ export const projectMatchesFilters = (project, filterByCategory) => {
       if (category === "schools") return project.pFilters || [];
       return [];
     })();
-    
+
 
     return labels.every((label) => field.includes(label));
   });
@@ -36,6 +38,17 @@ export const projectMatchesFilters = (project, filterByCategory) => {
 
 /* apenas mostra filtros em uso a partir do projects.json */
 
+
+/* Apenas apresenta botões que estejam a ser utilizados */
+const usedLabels = new Set(
+  projects.flatMap((p) => [
+    ...(p.pFilters || []), 
+    ...(p.pTools || [])
+  ])
+);
+export const revelantIcons = icons.filter(icon =>
+  usedLabels.has(icon.label)
+);
 
 
 /* lógica para inserir projectos nos devidos cursos */
