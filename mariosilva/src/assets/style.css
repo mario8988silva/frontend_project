@@ -370,11 +370,9 @@ header a {
 /* main -------------------------------------------- */
 
 /* filters ------------------------------------------*/
-/* DEFINIR ICONES EM PX, JÁ COM RESIZE PARA OS VARIOS BREAKPOINTS */
-
 .filtersMenuContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
 
     position: sticky;
 
@@ -391,20 +389,26 @@ header a {
     }
 }
 
+/* DEFINIR ICONES EM PX, JÁ COM RESIZE PARA OS VARIOS BREAKPOINTS */
+
+
 .filtersGroup {
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 
-/* breakpoint: tablet */
+/* breakpoint: tablet *//*
 @media (min-width: 768px) {
     .filtersGroup {
         display: flex;
     }
 }
-
+*/
+/*
 .filtersGroup.open {
     display: flex;
 }
+*/
 
 .icon {
     width: var(--font-size-3xl);
@@ -464,19 +468,34 @@ header a {
 
 .filtersContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: green;
+}
+
+/* breakpoint: tablet */
+@media (min-width: 768px) {
+    .filtersContainer {
+        
+        flex-direction: row;
+    }
 }
 
 .filtersContainer>h3 {
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
 
     font-size: var(--font-size-s);
 
     padding: var(--space-s);
 
     background-color: red;
+}
+
+/* breakpoint: tablet */
+@media (min-width: 768px) {
+    .filtersContainer>h3 {
+        text-align: right;
+    }
 }
 
 
@@ -495,9 +514,19 @@ header a {
 }
 
 .filters {
-    display: flex;
+    display: none;
 
     background-color: blue;
+}
+
+.filters.open {
+    display: flex;
+    
+    position: sticky;
+
+    top: calc(var(--space-4xl)* 1.6) ;
+
+    z-index: 2;    
 }
 
 /* breakpoint: tablet */

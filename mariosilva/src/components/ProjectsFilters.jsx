@@ -8,7 +8,7 @@ import useToggle from "../hooks/useToggle";
 
 console.log("icons.json: ", icons);
 
-const ProjectsFilters = () => {
+const ProjectsFilters = ({isOpen}) => {
 
   /* toogle para botões */
   const { activeFilters, setActiveFilters } = useFilters();
@@ -36,21 +36,13 @@ const ProjectsFilters = () => {
   }, {});
   console.log("filtersGrouped: ", filtersGrouped);
 
-  const { isActive, toggle, close } = useToggle();
+  
 
   /* faz renderização */
   return (
-    <section className="filters">
+    <section className={`filters ${isOpen ? "open" : "closed"}`}>
 
-      <ul className="filtersMenuContainer">
-        <li>
-          <button onClick={toggle} className="filtersToggle">
-            <span className="icon material-symbols-outlined ">{isActive ? "close" : "filter_alt"}</span>
-          </button>
-        </li>
-      </ul>
-
-      <ul className={`filtersGroup ${isActive ? "open" : "closed"}`}>
+      <ul className={"filtersGroup"}>
         {Object.entries(filtersGrouped).map(([category, items]) => (
           <FilterGroup
             key={category}
