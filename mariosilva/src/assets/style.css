@@ -194,6 +194,7 @@ section {
 }
 
 /* header ------------------------------------------ */
+
 header {
     width: var(--component-width-3xl);
     height: fit-content;
@@ -203,6 +204,13 @@ header {
 
     display: flex;
     flex-direction: row;
+    /* este é o layout a escolher. no entanto perceber como mante-lo em flow-direction quando o header menu esta fechado, e passar para column-reverse quando esta aberto
+    flex-direction: column-reverse; já está declarado no .openHeader
+
+    ----
+
+    extrair apenas a caracteristica que muda a disponibilização do layout para uma classe. depois a outra é aplica mediante o trigger
+    */
     align-items: center;
     justify-content: space-between;
     gap: var(--space-l);
@@ -245,7 +253,7 @@ header {
     background-color: #00A651;
 }
 
-.headerNav {
+.headerNavClass {
     position: fixed;
     z-index: 9;
 }
@@ -268,25 +276,25 @@ ul.headerMenuToogle {
         background-color: blue;
     }
 }
-
-/* breakpoint: mobile */
+/*
+/* breakpoint: mobile *//*
 a.navOpen {
     display: flex;
 }
 
-/* breakpoint: tablet */
+/* breakpoint: tablet *//*
 @media (min-width: 768px) {
     a.navOpen {
         display: none;
     }
 }
 
-/* breakpoint: mobile */
+/* breakpoint: mobile *//*
 .navClose {
     display: flex;
 }
 
-/* breakpoint: tablet */
+/* breakpoint: tablet *//*
 @media (min-width: 768px) {
     .navClose {
         display: none;
@@ -300,7 +308,6 @@ a.navOpen {
     width: var(--component-width-3xl);
     height: 100%;
 
-    display: flex;
     display: none;
     flex-direction: column;
 
@@ -309,6 +316,11 @@ a.navOpen {
     align-items: center;
 
     background-color: yellow;
+}
+
+
+.navMenu.open{
+    display: flex;
 }
 
 /* breakpoint: tablet */
@@ -397,7 +409,8 @@ header a {
     flex-direction: column;
 }
 
-/* breakpoint: tablet *//*
+/* breakpoint: tablet */
+/*
 @media (min-width: 768px) {
     .filtersGroup {
         display: flex;
@@ -475,7 +488,7 @@ header a {
 /* breakpoint: tablet */
 @media (min-width: 768px) {
     .filtersContainer {
-        
+
         flex-direction: row;
     }
 }
@@ -517,22 +530,28 @@ header a {
     display: none;
 
     background-color: blue;
+
+    z-index: 2;
+    transform: translateX(-100%);
+
 }
 
 .filters.open {
     display: flex;
-    
-    position: sticky;
 
-    top: calc(var(--space-4xl)* 1.6) ;
+    top: calc(var(--space-4xl)* 1.6);
 
-    z-index: 2;    
+    transform: translateX(0);
+    position: static;
+    overflow-y: auto;
+    touch-action: cross-slide-y;
 }
 
 /* breakpoint: tablet */
 @media (min-width: 768px) {
     .filters {
         display: flex;
+        transform: translateX(0);
     }
 }
 
@@ -567,6 +586,7 @@ span.timelineDot {
 
     flex-shrink: 0;
     flex-grow: 0;
+
 }
 
 header.iconTextBtn {
@@ -580,6 +600,8 @@ header.iconTextBtn {
     justify-content: left;
 
     display: flex;
+
+
 
     /*
     position: sticky;

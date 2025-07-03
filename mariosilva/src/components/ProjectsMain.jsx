@@ -9,7 +9,7 @@ const ProjectsMain = () => {
 
   return (
     <FilterProvider>
-      <main>
+      <main id="ProjectsMain">
 
         <ul className="filtersMenuContainer">
           <li>
