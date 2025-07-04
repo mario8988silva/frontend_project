@@ -204,13 +204,7 @@ header {
 
     display: flex;
     flex-direction: row;
-    /* este é o layout a escolher. no entanto perceber como mante-lo em flow-direction quando o header menu esta fechado, e passar para column-reverse quando esta aberto
-    flex-direction: column-reverse; já está declarado no .openHeader
 
-    ----
-
-    extrair apenas a caracteristica que muda a disponibilização do layout para uma classe. depois a outra é aplica mediante o trigger
-    */
     align-items: center;
     justify-content: space-between;
     gap: var(--space-l);
@@ -218,7 +212,10 @@ header {
     background-color: #00A651;
 }
 
+
+/*
 /* breakpoint: tablet */
+/*
 @media (min-width: 768px) {
     header {
         width: var(--component-width-3xl);
@@ -236,21 +233,32 @@ header {
         background-color: #00A651;
     }
 }
+*/
+.openedHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-.openHeader {
-    width: var(--component-width-3xl);
+    width: 100vw;
     height: 90vh;
 
     padding-top: var(--space-l);
     padding-bottom: var(--space-2xl);
 
-    display: flex;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
     flex-direction: column-reverse;
-    align-items: center;
-    justify-content: space-between;
+
     gap: var(--space-2xl);
 
-    background-color: #00A651;
+    z-index: 9;
+}
+
+.closedHeader {
+    position: fixed;
+    z-index: 9;
+
 }
 
 .headerNavClass {
@@ -275,26 +283,43 @@ ul.headerMenuToogle {
 
         background-color: blue;
     }
+
+    .openedHeader ul.headerMenuToogle {
+        display: flex;
+    }
+
+    .openedHeader ul.navMenu {
+
+        flex-direction: column;
+
+        justify-content: end;
+
+    }
 }
+
 /*
-/* breakpoint: mobile *//*
+/* breakpoint: mobile */
+/*
 a.navOpen {
     display: flex;
 }
 
-/* breakpoint: tablet *//*
+/* breakpoint: tablet */
+/*
 @media (min-width: 768px) {
     a.navOpen {
         display: none;
     }
 }
 
-/* breakpoint: mobile *//*
+/* breakpoint: mobile */
+/*
 .navClose {
     display: flex;
 }
 
-/* breakpoint: tablet *//*
+/* breakpoint: tablet */
+/*
 @media (min-width: 768px) {
     .navClose {
         display: none;
@@ -319,7 +344,7 @@ a.navOpen {
 }
 
 
-.navMenu.open{
+.navMenu.open {
     display: flex;
 }
 
@@ -556,6 +581,14 @@ header a {
 }
 
 /* results -------------------------------------------- */
+
+/* breakpoint: tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .results {
+        padding-right: 0;
+    }
+}
+
 div.timeline {
     position: absolute;
     top: var(--font-size-3xl);
@@ -626,6 +659,7 @@ header.iconTextBtn {
 
 article.projectsSchools {
     position: relative;
+
 }
 
 nav.projectCardContainer {
@@ -657,7 +691,7 @@ nav.projectCardContainer {
     }
 }
 
-/* laptop */
+/*  breakpoint: laptop */
 @media (min-width: 1024px) {
     nav.projectCardContainer {
         flex-wrap: wrap;
@@ -785,7 +819,7 @@ nav.projectCardContainer {
     }
 }
 
-/* laptop */
+/*  breakpoint: laptop */
 @media (min-width: 1024px) {
     .servicesAndPath {
         background-position: 70% -150%;

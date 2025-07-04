@@ -5,23 +5,19 @@ const Header = () => {
 
     const { isActive, toggle, close } = useToggle();
 
-
     return (
         <header
             id="headerNav"
-            className={`headerNavClass header ${isActive ? "openHeader" : ""}`}
+            className={`${isActive ? "openedHeader" : "closedHeader"}`}
         >
-
-            <a href="#" className="logo">Ø</a>
-
-
+            <a href="#" className="logo" onClick={close}>Ø</a>
 
             <ul className={`navMenu ${isActive ? "open" : "closed"}`}>
 
-                <li><a href="#ProjectsMain" className="btn">projects</a></li>
-                <li><a href="#servicesAndPath" className="btn">about</a></li>
-                <li><a href="#valuesAndMethods" className="btn">values & methods</a></li>
-                <li><a href="#footer" className="btn">contact</a></li>
+                <li><a href="#ProjectsMain" className="btn" onClick={close}>projects</a></li>
+                <li><a href="#servicesAndPath" className="btn" onClick={close}>about</a></li>
+                <li><a href="#valuesAndMethods" className="btn" onClick={close}>values & methods</a></li>
+                <li><a href="#footer" className="btn" onClick={close}>contact</a></li>
             </ul>
 
             <ul className="headerMenuToogle">
@@ -30,24 +26,8 @@ const Header = () => {
                         <span className="icon material-symbols-outlined ">{isActive ? "close" : "menu"}</span>
                     </button>
                 </li>
-
-                {/*}
-                <li>
-                    <a href="" className="navOpen">
-                        <span className="icon material-symbols-outlined">menu</span>
-                    </a>
-                </li>
-                
-
-                <li>
-                    <a href="" className="navClose close">
-                        <span className="icon material-symbols-outlined ">close</span>
-                    </a>
-                </li>
-                {*/}
             </ul>
         </header>
-
     )
 }
 
