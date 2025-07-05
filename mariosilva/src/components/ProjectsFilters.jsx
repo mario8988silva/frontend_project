@@ -8,53 +8,61 @@ import useToggle from "../hooks/useToggle";
 
 console.log("icons.json: ", icons);
 
-const ProjectsFilters = ({isOpen}) => {
+const ProjectsFilters = ({ isOpen }) => {
 
   /* toogle para botões */
   const { activeFilters, setActiveFilters } = useFilters();
 
   const toggleFilter = (label) => {
-    setActiveFilters((prev) =>
-      prev.includes(label)
-        ? prev.filter((f) => f !== label)
-        : [...prev, label]
-    );
-  }
-
-
-  /* lógica para listar conteudos por categoria */
-  const filtersGrouped = /*icons*/revelantIcons.reduce((acc, icon) => {
-    /* selecciona aqueles que contenham category:"contact" */
-    if (icon.category === "contact") return acc;
-
-    /* todos aqueles que não sejam "contact" */
-    if (!acc[icon.category]) {
-      acc[icon.category] = [];
-    }
-    acc[icon.category].push(icon);
-    return acc;
-  }, {});
-  console.log("filtersGrouped: ", filtersGrouped);
-
+    const icon = revelantIcons.find((icon) => icon.label === label);
+    const category = icon?.category;
   
 
-  /* faz renderização */
-  return (
-    <section className={`filters ${isOpen ? "open" : "closed"}`}>
+  setActiveFilters((prev) => {
+    const isActive = prev.includes(label);
 
-      <ul className={"filtersGroup"}>
-        {Object.entries(filtersGrouped).map(([category, items]) => (
-          <FilterGroup
-            key={category}
-            category={category}
-            items={items}
-            activeFilters={activeFilters}
-            onToggle={toggleFilter}
-          />
-        ))}
-      </ul>
-    </section>
-  );
+    if (category === "schools") {
+      return isActive ? [] : [label];
+    }
+
+    return isActive
+      ? prev.filter((f) => f !== label)
+      : [...prev, label]
+  });
+};
+
+/* lógica para listar conteudos por categoria */
+const filtersGrouped = /*icons*/revelantIcons.reduce((acc, icon) => {
+  /* selecciona aqueles que contenham category:"contact" */
+  if (icon.category === "contact") return acc;
+
+  /* todos aqueles que não sejam "contact" */
+  if (!acc[icon.category]) {
+    acc[icon.category] = [];
+  }
+  acc[icon.category].push(icon);
+  return acc;
+}, {});
+console.log("filtersGrouped: ", filtersGrouped);
+
+
+/* faz renderização */
+return (
+  <section className={`filters ${isOpen ? "open" : "closed"}`}>
+
+    <ul className={"filtersGroup"}>
+      {Object.entries(filtersGrouped).map(([category, items]) => (
+        <FilterGroup
+          key={category}
+          category={category}
+          items={items}
+          activeFilters={activeFilters}
+          onToggle={toggleFilter}
+        />
+      ))}
+    </ul>
+  </section>
+);
 };
 
 export default ProjectsFilters;

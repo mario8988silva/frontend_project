@@ -21,19 +21,24 @@ export const groupFiltersByCategory = (activeLabels) => {
 /* lógica da função de filtragem */
 export const projectMatchesFilters = (project, filterByCategory) => {
   return Object.entries(filterByCategory).every(([category, labels]) => {
+    console.log("FILTROS ACTIVOS: ", labels);
     if (labels.length === 0) return true;
 
     const field = (() => {
       if (category === "tools") return project.pTools || [];
-      if (category === "fields") return project.pFilters || [];
-      if (category === "context") return project.pFilters || [];
-      if (category === "schools") return project.pFilters || [];
+      if (["fields", "context", "schools"].includes(category)) return project.pFilters || [];
       return [];
     })();
 
+    if (category === "schools") {
+      return labels.some((label) => field.includes(label));
+    }
 
     return labels.every((label) => field.includes(label));
+
+
   });
+  
 }
 
 /* apenas mostra filtros em uso a partir do projects.json */
@@ -42,7 +47,7 @@ export const projectMatchesFilters = (project, filterByCategory) => {
 /* Apenas apresenta botões que estejam a ser utilizados */
 const usedLabels = new Set(
   projects.flatMap((p) => [
-    ...(p.pFilters || []), 
+    ...(p.pFilters || []),
     ...(p.pTools || [])
   ])
 );
