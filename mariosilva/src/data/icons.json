@@ -201,5 +201,12 @@
         "category": "contact",
         "type": "local-svg",
         "value": "/src/assets/icons/contact/linkedin.svg"
+    },
+    {
+        "id": 29,
+        "label": "Reset",
+        "category": "system",
+        "type": "fonts-google",
+        "value": "replay"
     }
 ]

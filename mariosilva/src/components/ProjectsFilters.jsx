@@ -16,53 +16,68 @@ const ProjectsFilters = ({ isOpen }) => {
   const toggleFilter = (label) => {
     const icon = revelantIcons.find((icon) => icon.label === label);
     const category = icon?.category;
-  
 
-  setActiveFilters((prev) => {
-    const isActive = prev.includes(label);
 
-    if (category === "schools") {
-      return isActive ? [] : [label];
+    setActiveFilters((prev) => {
+      const isActive = prev.includes(label);
+
+      if (category === "schools") {
+        return isActive ? [] : [label];
+      }
+
+      return isActive
+        ? prev.filter((f) => f !== label)
+        : [...prev, label]
+    });
+  };
+
+
+
+  /* lógica para listar conteudos por categoria */
+  const filtersGrouped = /*icons*/revelantIcons.reduce((acc, icon) => {
+    /* selecciona aqueles que contenham category:"contact" */
+    if (icon.category === "contact") return acc;
+
+    /* todos aqueles que não sejam "contact" */
+    if (!acc[icon.category]) {
+      acc[icon.category] = [];
     }
+    acc[icon.category].push(icon);
+    return acc;
+  }, {});
+  console.log("filtersGrouped: ", filtersGrouped);
 
-    return isActive
-      ? prev.filter((f) => f !== label)
-      : [...prev, label]
-  });
-};
+  const resetItem = icons.find(f => f.label === "Reset" && f.type === "fonts-google");
+  const resetFilters = () => {
+    setActiveFilters([]);
+  };
+  console.log("Reset Button: ", resetItem);
 
-/* lógica para listar conteudos por categoria */
-const filtersGrouped = /*icons*/revelantIcons.reduce((acc, icon) => {
-  /* selecciona aqueles que contenham category:"contact" */
-  if (icon.category === "contact") return acc;
+  /* faz renderização */
+  return (
+    <section className={`filters ${isOpen ? "open" : "closed"}`}>
 
-  /* todos aqueles que não sejam "contact" */
-  if (!acc[icon.category]) {
-    acc[icon.category] = [];
-  }
-  acc[icon.category].push(icon);
-  return acc;
-}, {});
-console.log("filtersGrouped: ", filtersGrouped);
+      <ul className={"filtersGroup"}>
 
+        <li key="resetButton" className="filtersItem resetButton">
+          <button className="iconTextBtn" onClick={resetFilters}>
+            <span className="icon material-symbols-outlined">{resetItem.value}</span>
+            {resetItem.label}
+          </button>
+        </li>
 
-/* faz renderização */
-return (
-  <section className={`filters ${isOpen ? "open" : "closed"}`}>
-
-    <ul className={"filtersGroup"}>
-      {Object.entries(filtersGrouped).map(([category, items]) => (
-        <FilterGroup
-          key={category}
-          category={category}
-          items={items}
-          activeFilters={activeFilters}
-          onToggle={toggleFilter}
-        />
-      ))}
-    </ul>
-  </section>
-);
+        {Object.entries(filtersGrouped).map(([category, items]) => (
+          <FilterGroup
+            key={category}
+            category={category}
+            items={items}
+            activeFilters={activeFilters}
+            onToggle={toggleFilter}
+          />
+        ))}
+      </ul>
+    </section>
+  );
 };
 
 export default ProjectsFilters;

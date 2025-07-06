@@ -1,6 +1,56 @@
 [
     {
-        "id": 9,
+        "id": 0,
+        "component": "Footer",
+        "section": "footer",
+        "container": "article",
+        "containerClass": null,
+        "element": "h2",
+        "className": null,
+        "content": [
+            {
+                "id": 0,
+                "value": "",
+                "ariaLabel": null,
+                "target": "https://api-ninjas.com/api/quotes",
+                "type": "link"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "component": "Footer",
+        "section": "footer",
+        "container": "address",
+        "containerClass": null,
+        "element": "a",
+        "className": "iconTextBtn",
+        "content": [
+            {
+                "id": 0,
+                "value": "Behance",
+                "ariaLabel": null,
+                "target": "https://www.behance.net/mariosilva36",
+                "type": "link"
+            },
+            {
+                "id": 1,
+                "value": "Instagram",
+                "ariaLabel": null,
+                "target": "https://www.instagram.com/mario8988silva/",
+                "type": "link"
+            },
+            {
+                "id": 2,
+                "value": "LinkedIn",
+                "ariaLabel": null,
+                "target": "https://www.linkedin.com/in/mario-silva-297b17203/",
+                "type": "link"
+            }
+        ]
+    },
+    {
+        "id": 2,
         "component": "Footer",
         "section": "footer",
         "container": "address",
@@ -18,7 +68,7 @@
         ]
     },
     {
-        "id": 10,
+        "id": 3,
         "component": "Footer",
         "section": "footer",
         "container": "div",
@@ -35,7 +85,7 @@
         ]
     },
     {
-        "id": 11,
+        "id": 4,
         "component": "Footer",
         "section": "footer",
         "container": "div",

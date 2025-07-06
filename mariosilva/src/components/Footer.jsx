@@ -1,5 +1,20 @@
 import { useEffect, useState } from "react";
 import { getQuote } from "../api/quote";
+import footer from '../data/footer.json';
+import icons from '../data/icons.json';
+
+const contactLinks = footer.flatMap(block =>
+    block.content?.map(item => item.target).filter(Boolean) || []
+);
+
+const footerLinks = footer
+    .find(block => block.container === "address" && block.element === "a")
+    ?.content.reduce((acc, { value, target }) => {
+        acc[value] = target;
+        return acc;
+    }, {}) || {};
+
+
 
 const Footer = () => {
 
@@ -18,27 +33,32 @@ const Footer = () => {
             </article>
 
             <address className={null} >
-                <a href={null} target="_blank" className="iconTextBtn">
-                    <span className="icon material-symbols-outlined">mail</span>
+                <a 
+                href={`mailto:${footerLinks["Contact Me"]}`}
+                target="_blank" 
+                className="iconTextBtn"
+                >
+                    <span 
+                    className="icon material-symbols-outlined">mail</span>
                     Contact Me
                 </a>
 
                 <ul className="socialMediaContainer">
-                    <li>
-                        <a href={null} target="_blank" className="iconTextBtn">
-                            <img src={null} alt="linkedIn" className="icon" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href={null} target="_blank" className="iconTextBtn">
-                            <img src={null} alt="behance" className="icon" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href={null} target="_blank" className="iconTextBtn">
-                            <img src={null} alt="instagram" className="icon" />
-                        </a>
-                    </li>
+                    {icons
+                    .filter(icon => icon.category === "contact")
+                    .map(({ id, label, value }) => (
+                        <li key={id}>
+                            <a 
+                            href={footerLinks[label] || "#"} 
+                            target="_blank" className="iconTextBtn">
+                                <img 
+                                src={value} 
+                                alt={label} className="icon" 
+                                />
+                            </a>
+                        </li>
+                    ))}
+                    
                 </ul>
             </address>
 
