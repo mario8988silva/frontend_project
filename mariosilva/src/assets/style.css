@@ -92,10 +92,10 @@
     --space-fixed-s: 36px;
 
     /* height */
-    --total-heigh: 100vh;
-    --section-heigh: 80vh;
-    --banner-heigh: 60vh;
-    --footer-heigh: 70vh;
+    --total-height: 100vh;
+    --section-height: 80vh;
+    --banner-height: 60vh;
+    --footer-height: 70vh;
 
     /* width */
     --component-width-3xl: 100%;
@@ -186,11 +186,18 @@ span.material-symbols-outlined {
 section {
     display: flex;
     flex-direction: column;
+    
     justify-content: end;
+
 
     padding: clamp(var(--space-xl), 1.5vw, var(--space-3xl));
     padding-bottom: var(--space-xl);
-    min-height: var(--section-heigh);
+    /*
+    min-height: var(--section-height);
+    */
+
+    height: fit-content;
+
 }
 
 /* header ------------------------------------------ */
@@ -258,7 +265,6 @@ header {
 .closedHeader {
     position: fixed;
     z-index: 9;
-
 }
 
 .headerNavClass {
@@ -382,7 +388,14 @@ header a {
     gap: var(--space-3xl);
 
     /* a lembrar! deve respeitar grid de 12 colunas */
-    min-height: var(--section-heigh);
+
+
+    /* PERCEBER COMPORTAMENTO E AJUSTAR MEDIANTE */
+    padding-top: calc(var(--space-4xl) * 3);
+    min-height: 40vh;
+    max-height: 100vh;
+    
+
 }
 
 .banner aside.currentPath {
@@ -857,7 +870,7 @@ footer {
     justify-content: end;
     gap: var(--space-l);
 
-    min-height: var(--footer-heigh);
+    min-height: var(--footer-height);
     padding: var(--space-2xl) var(--space-xl);
 }
 
@@ -881,7 +894,6 @@ footer address {
 footer address a {
     font-style: normal;
 }
-
 
 ul.socialMediaContainer {
     display: flex;
