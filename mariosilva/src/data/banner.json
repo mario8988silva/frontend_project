@@ -1,0 +1,81 @@
+[
+    {
+        "id": 2,
+        "component": "Banner",
+        "section": "banner",
+        "container": "article",
+        "containerClass": "",
+        "element": "h1",
+        "className": null,
+        "content": [
+            {
+                "id": 0,
+                "value": "Well Hello, Night Owl...",
+                "ariaLabel": null,
+                "type": "dynamicGreeting"
+            },
+            {
+                "id": 1,
+                "value": "Good Morning!",
+                "ariaLabel": null,
+                "type": "dynamicGreeting"
+            },
+            {
+                "id": 2,
+                "value": "Lunch Break? Bon Appétit!",
+                "ariaLabel": null,
+                "type": "dynamicGreeting"
+            },
+            {
+                "id": 3,
+                "value": "Good Afternoon!",
+                "ariaLabel": null,
+                "type": "dynamicGreeting"
+            },
+            {
+                "id": 4,
+                "value": "Hope You Had a Nice Day",
+                "ariaLabel": null,
+                "type": "dynamicGreeting"
+            },
+            {
+                "id": 5,
+                "value": "Have a Good Night...",
+                "ariaLabel": null,
+                "type": "dynamicGreeting"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "component": "Banner",
+        "section": "banner",
+        "container": "article",
+        "containerClass": "",
+        "element": "p",
+        "className": null,
+        "content": [
+            {
+                "id": 0,
+                "value": "Welcome to my little corner of the web — a collection of projects I’ve crafted over the past few years.",
+                "ariaLabel": null
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "component": "Banner",
+        "section": "banner",
+        "container": "article",
+        "containerClass": "",
+        "element": "aside",
+        "className": "currentPath",
+        "content": [
+            {
+                "id": 0,
+                "value": "main page",
+                "ariaLabel": null
+            }
+        ]
+    }
+]

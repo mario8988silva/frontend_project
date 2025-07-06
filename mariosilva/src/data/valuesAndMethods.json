@@ -1,0 +1,50 @@
+[
+    {
+        "id": 7,
+        "component": "Values",
+        "section": "valuesAndMethods",
+        "container": "article",
+        "containerClass": null,
+        "element": "p",
+        "className": null,
+        "content": [
+            {
+                "id": 0,
+                "value": "My process usually begins by understanding the core idea or challenge of a project.",
+                "type": "processStep"
+            },
+            {
+                "id": 1,
+                "value": "From there, I break it down into key stages: research, structure, design, content, development, and testing.",
+                "type": "processStep"
+            },
+            {
+                "id": 2,
+                "value": "To stay focused and flexible, I organize and prioritize tasks using a hybrid approach — combining Scrum principles with the Eisenhower Matrix.",
+                "type": "processStep"
+            },
+            {
+                "id": 3,
+                "value": "I work in tight feedback loops, regularly presenting progress to clients or stakeholders to ensure alignment throughout. Each round informs the next — whether that means refining wireframes, adjusting layouts, or rethinking functionality. This loop continues until we reach a polished, functional result — or until the deadline calls for delivery.",
+                "type": "processStep"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "component": "Values",
+        "section": "valuesAndMethods",
+        "container": "article",
+        "containerClass": null,
+        "element": "a",
+        "className": "iconTextBtn",
+        "content": [
+            {
+                "id": 0,
+                "value": "Download Resume",
+                "ariaLabel": null,
+                "target": "/curriculum_a4_v6 - eng_dig.pdf"
+            }
+        ]
+    }
+]

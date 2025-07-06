@@ -1,0 +1,53 @@
+[
+    {
+        "id": 9,
+        "component": "Footer",
+        "section": "footer",
+        "container": "address",
+        "containerClass": null,
+        "element": "a",
+        "className": "iconTextBtn",
+        "content": [
+            {
+                "id": 0,
+                "value": "Contact Me",
+                "ariaLabel": null,
+                "target": "mario8988silva@gmail.com",
+                "type": "email"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "component": "Footer",
+        "section": "footer",
+        "container": "div",
+        "containerClass": "logoContainer",
+        "element": "a",
+        "className": "logo",
+        "content": [
+            {
+                "id": 0,
+                "value": "Ø",
+                "ariaLabel": null,
+                "target": "#"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "component": "Footer",
+        "section": "footer",
+        "container": "div",
+        "containerClass": "logoContainer",
+        "element": "aside",
+        "className": null,
+        "content": [
+            {
+                "id": 0,
+                "value": "2025",
+                "ariaLabel": null
+            }
+        ]
+    }
+]

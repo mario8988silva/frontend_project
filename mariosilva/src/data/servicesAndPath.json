@@ -1,0 +1,49 @@
+[
+    {
+        "id": 5,
+        "component": "About",
+        "section": "servicesAndPath",
+        "container": "article",
+        "containerClass": null,
+        "element": "h2",
+        "className": null,
+        "content": [
+            {
+                "id": 0,
+                "value": "Hello, my name is Mario",
+                "ariaLabel": null
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "component": "About",
+        "section": "servicesAndPath",
+        "container": "article",
+        "containerClass": null,
+        "element": "p",
+        "className": null,
+        "content": [
+            {
+                "id": 0,
+                "value": "and I move quite comfortably across the fields of Graphic Design, UX/UI Design and Front-End Development, crafting solutions that blend aesthetics with function; I believe in delivering visual clarity and usability.",
+                "type": "intro"
+            },
+            {
+                "id": 1,
+                "value": "I began working as a counter employee at a café after leaving school at 18 without completing my studies.",
+                "type": "backstory"
+            },
+            {
+                "id": 2,
+                "value": "In 2019, I made the decision to return to education and pursue my passions. Since then, I’ve completed multiple technical and creative courses — including Multimedia, Graphic Design, UX/UI Design, and currently, a Fullstack Developer program set to finish by the end of this year.",
+                "type": "education"
+            },
+            {
+                "id": 3,
+                "value": "This path has taught me resilience, adaptability, and a deep motivation to keep evolving.",
+                "type": "reflection"
+            }
+        ]
+    }
+]

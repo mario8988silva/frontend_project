@@ -1,0 +1,54 @@
+[
+    {
+        "id": 0,
+        "component": "Header",
+        "section": "header",
+        "container": "header",
+        "containerClass": "headerNav",
+        "element": "a",
+        "className": "logo",
+        "content": [
+            {
+                "id": 0,
+                "value": "Ø",
+                "ariaLabel": null,
+                "target": "#"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "component": "Header",
+        "section": "header",
+        "container": "li",
+        "containerClass": "",
+        "element": "a",
+        "className": "btn",
+        "content": [
+            {
+                "id": 0,
+                "value": "projects",
+                "ariaLabel": null,
+                "target": "#ProjectsMain"
+            },
+            {
+                "id": 1,
+                "value": "about",
+                "ariaLabel": null,
+                "target": "#servicesAndPath"
+            },
+            {
+                "id": 2,
+                "value": "values & methods",
+                "ariaLabel": null,
+                "target": "#valuesAndMethods"
+            },
+            {
+                "id": 3,
+                "value": "contact",
+                "ariaLabel": null,
+                "target": "#footer"
+            }
+        ]
+    }
+]
