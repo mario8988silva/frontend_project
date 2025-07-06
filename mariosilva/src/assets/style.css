@@ -141,6 +141,11 @@ ul {
     padding-left: 0;
 }
 
+a.disabled,
+button.disabled,
+address.disabled{
+    background-color: var(--shade04);
+}
 
 /* html */
 html {
@@ -380,8 +385,11 @@ header a {
 }
 
 .btn {
+    text-transform: uppercase;
+    font-weight: var(--font-weight-l);
     background-color: red;
 }
+
 
 /* banner ------------------------------------- */
 .banner {
@@ -400,7 +408,7 @@ header a {
     min-height: calc(var(--banner-height));  
     */
     
-    min-height: clamp(60svh, 75vh, 100svh);
+    min-height: clamp(60vh, 7.5vh, 100vh);
     max-height: var(--total-height);
 
     background-color: transparent;
@@ -692,9 +700,9 @@ nav.projectCardContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: var(--space-m);
+    gap: var(--space-xl);
 
-    padding: 0 var(--space-2xl);
+    padding: 0 var(--space-2xl) var(--space-2xl) ;
     /* padding com 0 de altura, dado que o header.iconTextBtn já tem uma "margem/line-height" considerável */
 
     background-color: red;
@@ -730,11 +738,10 @@ nav.projectCardContainer {
 /* Project Card */
 .projectCard {
     /*
-    background-image: url(Free_A4_Brochure_Mockup_02.jpg);
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
-
+    
     opacity: 0.5;
     */
     position: relative;
@@ -742,12 +749,12 @@ nav.projectCardContainer {
 
     display: flex;
     flex-direction: column;
-    justify-items: center;
     gap: var(--space-s);
-    align-content: end;
+    justify-content: end;
 
     flex-shrink: 0;
     width: calc(var(--space-2xl) * 4);
+    height: 500px;
 
     padding: var(--space-l);
 
@@ -756,18 +763,25 @@ nav.projectCardContainer {
 
 .projectCard figure {
     position: absolute;
-
+/*
     background-image: url(Free_A4_Brochure_Mockup_02.jpg);
-    background-size: cover;
+    
+    background-size:contain;
     background-position-x: center;
     background-repeat: no-repeat;
-
+*/
     inset: 0;
     /* shorthand para top, right, bottom, left */
     margin: 0;
     /* ignora o padding definido para a card */
     z-index: 0;
-    opacity: .5;
+    opacity: .4;
+}
+
+.pMainImage img{
+    width: auto;
+    height: 120%;
+    /* perceber que funcionalidades existem para que se possa editar a imagem */
 }
 
 /* todo e qualquer elemento que não seja o .pMainImage, terá um z-index de 1, para se sobrepor a este */

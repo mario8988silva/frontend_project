@@ -27,26 +27,41 @@ const ProjectCard = ({ projects }) => {
             {projects.map(({ id, pName, pDescription, pInnerLink, pTools, pFilters, pImages }) => {
 
                 const mainImage = pImages?.[0] || null;
+
                 const toolsIcons = icons.filter(icon => pTools?.includes(icon.label));
-                const filterIcons = icons.filter(icon => pFilters?.includes(icon.label));
+                const filterIcons = icons.filter(icon =>
+                    pFilters?.includes(icon.label) &&
+                    icon.category !== "schools"
+                );
 
                 return (
                     <article
                         key={id}
                         className="projectCard">
+
                         {/* aplicar img dentro do figure? ou aplicar background image ao article? */}
                         <figure className="pMainImage">
                             {mainImage && <img src={mainImage} alt={`${pName} main`} />}
                         </figure>
 
+                        {/*}
                         <h4 className="pName">{pName}</h4>
-                        <p className="pDescription close">{pDescription}</p>
+                        {*/}
+                        <p className="pDescription">{pDescription}</p>
 
-
-
-                        {pInnerLink && (
-                            <a href={pInnerLink} className="pInnerLink" target="_blank">
-                                View Project
+                        {pInnerLink ? (
+                            <a
+                                href={pInnerLink}
+                                className="btn"
+                                target="_blank"
+                            >
+                                {pName}
+                            </a>
+                        ) : (
+                            <a
+                                className="btn disabled"
+                            >
+                                {pName}
                             </a>
                         )}
 
@@ -56,10 +71,10 @@ const ProjectCard = ({ projects }) => {
                                 type === "fonts-google" ? (
                                     <span key={id}
                                         className="material-symbols-outlined">{value}</span>
-                                    ) : (
-                                        <img key={id} src={value} alt={label} className="icon" />
-                                    )
-                                )}
+                                ) : (
+                                    <img key={id} src={value} alt={label} className="icon" />
+                                )
+                            )}
                         </div>
 
                         <div className="pFilters">
@@ -67,10 +82,10 @@ const ProjectCard = ({ projects }) => {
                                 type === "fonts-google" ? (
                                     <span key={id}
                                         className="material-symbols-outlined">{value}</span>
-                                    ) : (
-                                        <img key={id} src={value} alt={label} className="icon" />
-                                    )
-                                )}
+                                ) : (
+                                    <img key={id} src={value} alt={label} className="icon" />
+                                )
+                            )}
                         </div>
                     </article>
                 )
