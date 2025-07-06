@@ -94,7 +94,7 @@
     /* height */
     --total-height: 100vh;
     --section-height: 80vh;
-    --banner-height: 60vh;
+    --banner-height: 75vh;
     --footer-height: 70vh;
 
     /* width */
@@ -197,6 +197,8 @@ section {
     */
 
     height: fit-content;
+
+    
 
 }
 
@@ -391,11 +393,22 @@ header a {
 
 
     /* PERCEBER COMPORTAMENTO E AJUSTAR MEDIANTE */
-    padding-top: calc(var(--space-4xl) * 3);
-    min-height: 40vh;
-    max-height: 100vh;
-    
 
+    padding-top: calc(var(--space-l) + 100vh);
+
+    /*
+    min-height: calc(var(--banner-height));  
+    */
+    
+    min-height: clamp(60svh, 75vh, 100svh);
+    max-height: var(--total-height);
+
+    background-color: transparent;
+    border: 4px solid red;
+}
+
+.banner *{
+    background-color: #00ADEE;
 }
 
 .banner aside.currentPath {

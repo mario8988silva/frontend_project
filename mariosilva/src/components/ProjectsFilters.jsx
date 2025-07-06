@@ -47,11 +47,13 @@ const ProjectsFilters = ({ isOpen }) => {
   }, {});
   console.log("filtersGrouped: ", filtersGrouped);
 
+  
   const resetItem = icons.find(f => f.label === "Reset" && f.type === "fonts-google");
   const resetFilters = () => {
     setActiveFilters([]);
   };
   console.log("Reset Button: ", resetItem);
+  
 
   /* faz renderização */
   return (
