@@ -1,32 +1,25 @@
 import React from "react";
 import projects from '../data/projects.json';
 import icons from '../data/icons.json';
+import { useState } from "react";
 
 console.log(projects);
 console.log(icons);
 
-/*
-<article href="" class="projectCard">
-    <figure class="pMainImage"></figure>
-    <h4 class="pName">pName</h4>
-    <p class="pDescription">Lorem ipsum dolor sit amet consectetur. Nibh amet tristique purus enim eleifend risus etiam fermentum dictum. Aliquam felis feugiat lacus commodo eget aliquet.</p>
-    <a href="" class="pInnerLink">pInnerLink</a>
-    <div class="pTools">
-        <span class="material-symbols-outlined">person</span>
-        <span class="material-symbols-outlined">person</span>
-    </div> <div class="pFilters">
-        <span class="material-symbols-outlined">person</span>
-        <span class="material-symbols-outlined">person</span>
-    </div>
-</article>
-*/
-
 const ProjectCard = ({ projects }) => {
+
+    const [openCardId, setOpenCardId] = useState(null);
+
+    const handleToogle = (id) => {
+        setOpenCardId(prev => (prev === id ? null : id));
+    };
+
     return (
         <>
             {projects.map(({ id, pName, pDescription, pInnerLink, pTools, pFilters, pImages }) => {
 
                 const mainImage = pImages?.[0] || null;
+                const isOpen = openCardId === id;
 
                 const toolsIcons = icons.filter(icon => pTools?.includes(icon.label));
                 const filterIcons = icons.filter(icon =>
@@ -37,16 +30,15 @@ const ProjectCard = ({ projects }) => {
                 return (
                     <article
                         key={id}
-                        className="projectCard">
+                        className={`projectCard clickable ${isOpen ? "open" : ""}`}
+                        onClick={() => handleToogle(id)}
+                    >
 
                         {/* aplicar img dentro do figure? ou aplicar background image ao article? */}
                         <figure className="pMainImage">
                             {mainImage && <img src={mainImage} alt={`${pName} main`} />}
                         </figure>
 
-                        {/*}
-                        <h4 className="pName">{pName}</h4>
-                        {*/}
                         <p className="pDescription">{pDescription}</p>
 
                         {pInnerLink ? (
@@ -54,6 +46,7 @@ const ProjectCard = ({ projects }) => {
                                 href={pInnerLink}
                                 className="btn"
                                 target="_blank"
+                                onClick={(e) => e.stopPropagation()}
                             >
                                 {pName}
                             </a>
