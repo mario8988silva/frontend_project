@@ -114,6 +114,29 @@
     /* z-index */
     /* caso faça sentido, para trabalhar na parte dos resultados dos filtros
     /* ---------------------------------------- */
+    /* efeitos */
+    --effect-blur-2xl: blur(48px);
+    --effect-blur-xl: blur(24px);
+    --effect-blur-l: blur(12px);
+    --effect-blur-m: blur(8px);
+    --effect-blur-s: blur(4px);
+    --effect-blur-xs: blur(2px);
+
+    --effect-scale-2xl: scale(2);
+    --effect-scale-xl: scale(1.8);
+    --effect-scale-l: scale(1.6);
+    --effect-scale-m: scale(1.4);
+    --effect-scale-s: scale(1.2);
+    --effect-scale-xs: scale(1.1);
+
+    --time-2xl: 1s;
+    --time-xl: .75s;
+    --time-l: .5s;
+    --time-m: .2s;
+    --time-s: .1s;
+    --time-xs: .05s;
+    
+    /* ---------------------------------------- */
     /* transitions & animations */
     /* a modos de manter coerência em todo o projecto */
 }
@@ -722,8 +745,6 @@ nav.projectCardContainer {
 
         overflow-x: auto;
         overflow-y: hidden;
-
-        cursor: grab;
     }
 
     .projectCardContainer::-webkit-scrollbar {
@@ -784,14 +805,20 @@ nav.projectCardContainer {
     /* ignora o padding definido para a card */
     z-index: 0;
     opacity: .4;
+    filter: var(--effect-blur-m);
+    
 }
 
 .pMainImage img{
     width: 120%;
-    height: auto;
+    height: 120%;
     margin-top: -45%;
     margin-left: -10%;
+
+    transition: transform var(--time-l) ease ;
 }
+
+
 
 /* todo e qualquer elemento que não seja o .pMainImage, terá um z-index de 1, para se sobrepor a este */
 .projectCard>*:not(.pMainImage) {
@@ -800,9 +827,11 @@ nav.projectCardContainer {
 }
 
 .pDescription {
-    padding-top: var(--space-4xl);
+    padding: var(--space-s);;
     
     display: none;
+
+    background-color: #00A651;
 }
 
 .projectCard a.btn{
@@ -894,18 +923,57 @@ nav.projectCardContainer {
     display: none;
 }
 
-    .projectCard.open>*:not(.pMainImage) {
+.projectCard.open>*:not(.pMainImage) {
     display: flex;
 }
+
+.projectCard figure {
+    position: absolute;
+/*
+    background-image: url(Free_A4_Brochure_Mockup_02.jpg);
+    
+    background-size:contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+*/
+    inset: 0;
+    /* shorthand para top, right, bottom, left */
+    margin: 0;
+    /* ignora o padding definido para a card */
+    z-index: 0;
+    opacity: .4;
+    filter: var(--effect-blur-s);    
+}
+
+.projectCard:hover figure{
+    opacity: .6;
+    filter: none;    
+}
+
+
+.projectCard.open figure {    
+    opacity: .6;
+    filter: none;    
+}
+
+.pMainImage img{
+    width: 120%;
+    height: auto;
+    margin-top: -45%;
+    margin-left: -10%;
+}
+
 
 
   .projectCard.open .pMainImage img{
     width: 120%;
     height: auto;
-    margin-top: -20%;
+    margin-top: -10%;
     margin-left: -10%;
 }
 }
+
+
 
 
 @media (min-width: 768px){
@@ -950,7 +1018,8 @@ nav.projectCardContainer {
     margin: 0;
     /* ignora o padding definido para a card */
     z-index: 0;
-    opacity: .4;
+        opacity: .6;
+    filter: none;
 }
 
 .pMainImage img{
@@ -961,6 +1030,10 @@ nav.projectCardContainer {
     /* perceber que funcionalidades existem para que se possa editar a imagem */
 }
 
+.projectCard:hover .pMainImage img{
+    transform: var(--effect-scale-m);
+}
+
 /* todo e qualquer elemento que não seja o .pMainImage, terá um z-index de 1, para se sobrepor a este */
 .projectCard>*:not(.pMainImage) {
     position: relative;
@@ -968,9 +1041,9 @@ nav.projectCardContainer {
 }
 
 .pDescription {
-    padding-top: var(--space-4xl);
+    padding: var(--space-s);;
     
-    display: flex;
+    display: none;
 }
 
 .projectCard a.btn{
@@ -1045,7 +1118,14 @@ nav.projectCardContainer {
     /* ignora o padding definido para a card */
     z-index: 0;
     opacity: .4;
+    filter: var(--effect-blur-s);    
 }
+
+.projectCard:hover figure{
+    opacity: .6;
+    filter: none;    
+}
+
 
 .pMainImage img{
     width: auto;
@@ -1055,6 +1135,10 @@ nav.projectCardContainer {
     /* perceber que funcionalidades existem para que se possa editar a imagem */
 }
 
+.projectCard:hover .pMainImage img{
+    transform: var(--effect-scale-m);
+}
+
 /* todo e qualquer elemento que não seja o .pMainImage, terá um z-index de 1, para se sobrepor a este */
 .projectCard>*:not(.pMainImage) {
     position: relative;
@@ -1062,13 +1146,14 @@ nav.projectCardContainer {
 }
 
 .pDescription {
-    padding-top: var(--space-4xl);
+    padding: var(--space-s);
     
     display: none;
 }
 
 .projectCard:hover .pDescription{
     display: flex;
+    
 }
 
 .projectCard a.btn{
@@ -1112,26 +1197,38 @@ nav.projectCardContainer {
 }
 /* servicesAndPath ---------------------------- */
 /* propósito é que as "letras" adoptem uma cor negativa mediante a cor do fundo */
-/*
-.servicesAndPath article{ 
-/*
-  backdrop-filter: invert(100%);
 
+.servicesAndPath article{ 
+/* construir variaveis e estudar valores */
+position: sticky;
+top: 200px;   
+  backdrop-filter: var(--effect-blur-2xl);
+
+  background-color: rgba(255, 255, 255, .2);
+  
+
+/*
   mix-blend-mode: difference;
   */
-/*
+
 }
-*/
+
 
 .servicesAndPath p {
+    color: var(--shade10);
+    
     max-width: var(--character-counter-s);
     bottom: 10px;
+    /*
+    mix-blend-mode: difference;
+    */
+
 }
 
 .servicesAndPath {
     background-color: var(--shade01);
 
-    background-image: url(portraid.png);
+    background-image: url(/public/images/portraid.png);
     background-size: 100vh;
     background-repeat: no-repeat;
     background-position: 70% -100%;
