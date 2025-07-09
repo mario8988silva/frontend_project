@@ -47,26 +47,11 @@ const ProjectsFilters = ({ isOpen }) => {
   }, {});
   console.log("filtersGrouped: ", filtersGrouped);
 
-  
-  const resetItem = icons.find(f => f.label === "Reset Filters" && f.type === "fonts-google");
-  const resetFilters = () => {
-    setActiveFilters([]);
-  };
-  console.log("Reset Button: ", resetItem);
-  
-
   /* faz renderização */
   return (
     <section className={`filters ${isOpen ? "open" : "closed"}`}>
 
       <ul className={"filtersGroup"}>
-
-        <li key="resetButton" className="filtersItem resetButton">
-          <button className="iconTextBtn" onClick={resetFilters}>
-            <span className="icon material-symbols-outlined">{resetItem.value}</span>
-            {resetItem.label}
-          </button>
-        </li>
 
         {Object.entries(filtersGrouped).map(([category, items]) => (
           <FilterGroup

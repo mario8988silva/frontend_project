@@ -2,6 +2,8 @@ import { FilterProvider } from '../app/store';
 import ProjectsFilters from './ProjectsFilters';
 import ProjectsResults from './ProjectsResults';
 import useToggle from "../hooks/useToggle";
+import FilterResetButton from './FilterResetButton';
+
 
 const ProjectsMain = () => {
 
@@ -12,9 +14,26 @@ const ProjectsMain = () => {
       <main id="ProjectsMain">
 
         <ul className="filtersMenuContainer">
+
+          <li key="resetButton" className="filtersItem resetButton">
+            <FilterResetButton />
+          </li>
+
           <li>
-            <button onClick={toggle} className="filtersToggle">
-              <span className="icon material-symbols-outlined ">{isActive ? "close" : "filter_alt"}</span>
+            <button onClick={toggle} className="iconTextBtn filtersToggle">
+
+              <span
+                className="icon material-symbols-outlined"
+              >
+                {isActive ? "close" : "filter_alt"}
+              </span>
+
+              <span
+                className="buttonToogleLegend"
+              >
+                {isActive ? "Close Filters" : "Open Filters"}
+              </span>
+
             </button>
           </li>
         </ul>

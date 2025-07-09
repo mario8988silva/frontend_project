@@ -159,11 +159,12 @@ address {
 
     cursor: pointer;
 }
+
 a{
     text-align: center;
 }
 
-ul {
+ul{
     list-style: none;
     padding-left: 0;
 }
@@ -470,7 +471,7 @@ header a {
 /* filters ------------------------------------------*/
 .filtersMenuContainer {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
 
     position: sticky;
 
@@ -480,10 +481,13 @@ header a {
     z-index: 3;
 }
 
+
 /* breakpoint: tablet */
 @media (min-width: 768px) {
     .filtersMenuContainer {
-        display: none;
+        flex-direction: row-reverse;
+        justify-content: left;
+        
     }
 }
 
@@ -509,7 +513,24 @@ header a {
 }
 */
 
+.buttonToogleLegend{
+    display: inline-flex;
+    outline: 5px dashed blue;
+}
+
+/* breakpoint: tablet *//*
+@media (min-width: 768px){
+.buttonToogleLegend{
+    display: inline-flex;
+    outline: 5px dashed blue;
+}
+};
+
+
+
+/* ------------ */
 .icon {
+    outline: 5px dashed red;
     width: var(--font-size-3xl);
     height: var(--font-size-3xl);
 
@@ -565,6 +586,12 @@ header a {
     flex-direction: row-reverse;
 }
 
+/*
+.filterResetButton{
+    transition: all var(--time-2xl) ease-out;
+}
+    */
+
 .filtersContainer {
     display: flex;
     flex-direction: column;
@@ -596,7 +623,6 @@ header a {
         text-align: right;
     }
 }
-
 
 .filtersContainer>ul {
     flex-direction: column;
@@ -632,14 +658,15 @@ header a {
     overflow-y: auto;
     touch-action: cross-slide-y;
 }
-
-/* breakpoint: tablet */
+/*
+/* breakpoint: tablet *//*
 @media (min-width: 768px) {
     .filters {
         display: flex;
         transform: translateX(0);
     }
 }
+*/
 
 /* results -------------------------------------------- */
 
@@ -805,7 +832,7 @@ nav.projectCardContainer {
     /* ignora o padding definido para a card */
     z-index: 0;
     opacity: .4;
-    filter: var(--effect-blur-m);
+    filter: var(--effect-blur-s);
     
 }
 
@@ -1226,7 +1253,7 @@ top: 200px;
 .servicesAndPath {
     background-color: var(--shade01);
 
-    background-image: url(/public/images/portraid.png);
+    background-image: url(/images/portraid.png);
     background-size: 100vh;
     background-repeat: no-repeat;
     background-position: 70% -100%;

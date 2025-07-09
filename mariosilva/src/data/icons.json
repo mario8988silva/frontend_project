@@ -204,7 +204,7 @@
     },
     {
         "id": 29,
-        "label": "Reset Filters",
+        "label": "Reset Selecion",
         "category": "system",
         "type": "fonts-google",
         "value": "replay"
