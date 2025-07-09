@@ -57,8 +57,7 @@ const ProjectCard = ({ projects }) => {
                                 {pName}
                             </a>
                         )}
-
-                        {/* fazer lógica para aplicar icones */}
+                        {/*}
                         <div className="pTools">
                             {toolsIcons.map(({ id, value, label, type }) =>
                                 type === "fonts-google" ? (
@@ -80,6 +79,7 @@ const ProjectCard = ({ projects }) => {
                                 )
                             )}
                         </div>
+                        {*/}
                     </article>
                 )
             })}

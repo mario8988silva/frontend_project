@@ -860,11 +860,9 @@ nav.projectCardContainer {
     display: none;
 }
 
-.pFilters *{
-    
+.pFilters *{    
     padding: var(--space-xs); 
 }
-
 
 @media (max-width: 767px) {
   .projectCard {
@@ -884,13 +882,13 @@ nav.projectCardContainer {
     justify-content: end;
 
     flex-shrink: 0;
-    width: calc(var(--space-2xl) * 4);
+    width: 100%;
 
     height: var(--space-2xl);
 
     padding: var(--space-l);
 
-    background-color: var(--shade00);
+    background-color: var(--shade01);
   }
 
   .projectCard.open {
@@ -910,7 +908,7 @@ nav.projectCardContainer {
     justify-content: end;
 
     flex-shrink: 0;
-    width: calc(var(--space-2xl) * 4);
+    width: 100%;
 
     height: calc(var(--space-2xl) * 6);
 
@@ -941,8 +939,8 @@ nav.projectCardContainer {
     margin: 0;
     /* ignora o padding definido para a card */
     z-index: 0;
-    opacity: .4;
-    filter: var(--effect-blur-s);    
+    opacity: .6;
+    filter: none;    
 }
 
 .projectCard:hover figure{

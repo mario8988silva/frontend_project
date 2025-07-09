@@ -48,7 +48,7 @@ const ProjectsFilters = ({ isOpen }) => {
   console.log("filtersGrouped: ", filtersGrouped);
 
   
-  const resetItem = icons.find(f => f.label === "Reset" && f.type === "fonts-google");
+  const resetItem = icons.find(f => f.label === "Reset Filters" && f.type === "fonts-google");
   const resetFilters = () => {
     setActiveFilters([]);
   };
