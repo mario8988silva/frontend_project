@@ -175,6 +175,10 @@ address.disabled{
     background-color: var(--shade04);
 }
 
+.iconBackup{
+    background-color: var(--shade04);
+    border-radius: 100px;
+}
 /* html */
 html {
     background-color: var(--shade01);
@@ -483,7 +487,7 @@ header a {
 
 
 /* breakpoint: tablet */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filtersMenuContainer {
         flex-direction: row-reverse;
         justify-content: left;
@@ -514,23 +518,21 @@ header a {
 */
 
 .buttonToogleLegend{
-    display: inline-flex;
-    outline: 5px dashed blue;
+    display: none;
 }
 
-/* breakpoint: tablet *//*
-@media (min-width: 768px){
-.buttonToogleLegend{
-    display: inline-flex;
-    outline: 5px dashed blue;
+/* breakpoint: tablet */
+@media (min-width: 1024px){
+.buttonToogleLegend
+{
+    display: inline-flex;    
 }
-};
+}
 
 
 
 /* ------------ */
 .icon {
-    outline: 5px dashed red;
     width: var(--font-size-3xl);
     height: var(--font-size-3xl);
 
@@ -658,6 +660,41 @@ header a {
     overflow-y: auto;
     touch-action: cross-slide-y;
 }
+
+/* EXPERIMENTOS */
+@media (max-width: 768px){
+
+.filters.open{
+    display: block;
+    position: sticky;
+
+    width: 60vw;
+    height: 100vh;
+/*
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-2xl);
+    */
+/*
+    
+    overscroll-behavior: contain;*/
+    
+
+
+    overflow-y: auto;
+/*
+    z-index: 10;
+    transform: translateX(0);
+    /*
+    overflow-x: hidden;
+    */
+    }
+/*
+    .filters.open::-webkit-scrollbar {
+        display: none;
+    }
+        */
+}
+
 /*
 /* breakpoint: tablet *//*
 @media (min-width: 768px) {

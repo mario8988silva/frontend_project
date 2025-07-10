@@ -421,6 +421,9 @@ header a{
     flex-direction: row-reverse;
 }
 
+
+
+
 .filtersContainer{
     display: flex;
     flex-direction: row;
