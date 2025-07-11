@@ -663,13 +663,30 @@ header a {
 
 /* EXPERIMENTOS */
 @media (max-width: 768px){
+/*
+    .filtersBackground{
+
+        display:inline;
+        position:absolute;
+        width: 100vw;
+    height: 100vh;
+
+    background-color: var(--shade07);
+    opacity: .5;
+
+    filter: blur(10px);
+    
+    }
+    */
 
 .filters.open{
+    
     display: block;
     position: sticky;
 
     width: 60vw;
     height: 100vh;
+    
 /*
     padding-top: var(--space-l);
     padding-bottom: var(--space-2xl);
@@ -690,9 +707,10 @@ header a {
     }
 /*
     .filters.open::-webkit-scrollbar {
-        display: none;
+        
     }
-        */
+*/
+
 }
 
 /*
