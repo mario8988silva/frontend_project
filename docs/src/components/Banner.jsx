@@ -7,7 +7,7 @@ const Banner = () => {
 
         <section className="banner">
 
-            <article>
+            <article className="bannerGreetings">
                 <h1>{message}</h1>
                 <p>Welcome to my little corner of the web — a collection of projects I’ve crafted over the past few years.</p>
             </article>
