@@ -165,3 +165,10 @@ section {
     display: none;
 }
 
+/* esconde header apenas em laptop */
+@media (min-width: 1024px) {
+    .closeInLaptop {
+    display: none;
+}
+
+}

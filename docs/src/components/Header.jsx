@@ -1,9 +1,24 @@
 import useToggle from "../hooks/useToggle";
 
 
+
 const Header = () => {
 
     const { isActive, toggle, close } = useToggle();
+
+    let headerBehaviour = window.scrollY;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+        if (window.innerWidth >= 1024) {
+            if (window.scrollY > headerBehaviour) {
+                header.classList.add("closeInLaptop");
+            } else {
+                header.classList.remove("closeInLaptop");
+            }
+            headerBehaviour = window.scrollY;
+        }
+    });
 
     return (
         <header

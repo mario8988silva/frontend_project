@@ -1,6 +1,8 @@
 /* header ------------------------------------------ */
 
-header {
+header{
+    background-color: var(--shade00);
+
     width: var(--component-width-3xl);
     height: fit-content;
 
@@ -13,8 +15,13 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: var(--space-l);
+}
 
-    background-color: #00A651;
+@media (min-width: 1024px) {
+    header {
+    background-color: none;
+}
+
 }
 
 
@@ -58,6 +65,8 @@ header {
     gap: var(--space-2xl);
 
     z-index: 9;
+
+    background-color: var(--shade00);
 }
 
 .closedHeader {
@@ -77,15 +86,12 @@ ul.headerMenuToogle {
     justify-content: right;
     width: var(--component-width-3xl);
 
-    background-color: blue;
 }
 
 /* breakpoint: tablet */
 @media (min-width: 768px) {
     ul.headerMenuToogle {
         display: none;
-
-        background-color: blue;
     }
 
     .openedHeader ul.headerMenuToogle {
@@ -143,10 +149,7 @@ a.navOpen {
     gap: var(--space-l);
     justify-content: end;
     align-items: center;
-
-    background-color: yellow;
 }
-
 
 .navMenu.open {
     display: flex;
@@ -165,7 +168,6 @@ a.navOpen {
         justify-content: right;
         align-items: center;
 
-        background-color: yellow;
     }
 }
 
@@ -174,5 +176,6 @@ header a {
 
     font-size: var(--font-size-m);
 }
+
 
 

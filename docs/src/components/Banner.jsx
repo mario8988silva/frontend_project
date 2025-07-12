@@ -16,11 +16,7 @@ const Banner = () => {
                 <aside className="currentPath">main page</aside>
             </article>
         </section>
-    )
-
-    
+    )    
 }
-
-
 
 export default Banner;

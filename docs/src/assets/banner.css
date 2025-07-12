@@ -1,6 +1,7 @@
 /* banner ------------------------------------- */
 .banner {
-    background-color: #35BDEF;
+
+    color: var(--shade07);
 
     gap: var(--space-3xl);
 
@@ -19,19 +20,27 @@
     /*
     max-height: var(--total-height);
 */
-    background-color: blue;
+
+  background: linear-gradient(-45deg, var(--shade00), var(--shade02), var(--shade04));
+  background-size: 400% 400%;
+  animation: gradientShift 30s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .banner *{
-    background-color: #00ADEE;
+    cursor: default;
 }
 
 .banner h1{
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-2xl);
-    /*
-    line-height: var(--line-height-3xl);
-    */
+    
+    line-height: var(--line-height-s);   
     
 }
 
@@ -44,13 +53,13 @@
 
 .banner article p {
     max-width: var(--character-counter-xs);
-    background-color: red;
+
 }
 
 .banner aside.currentPath {
     width: var(--component-width-3xl);
     text-align: right;
-    background-color: red;
+
 }
 
 
@@ -58,6 +67,6 @@
 @media (min-width: 768px) {
     .banner article p {
         max-width: var(--character-counter-s);
-        background-color: red;
+
     }
 }

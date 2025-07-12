@@ -20,8 +20,11 @@ export const getGreetings = () => {
     } else if (totalMins >= 1080 && totalMins < 1199) {
         return "Hope You Had a Nice Day";
 
-    } else {
+    } else if ((totalMins >= 1200 && totalMins < 1440) || (totalMins >= 0 && totalMins < 59)) {
         return "Have a Good Night...";
+
+    } else {
+        return "Hello!";
     }
 };
 
