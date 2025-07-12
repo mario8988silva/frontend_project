@@ -1,0 +1,135 @@
+:root {
+    /* variables */
+
+    /* ---------------------------------------- */
+    /* COLOURS */
+    /* shades */
+    --shade00: #fff;
+    --shade01: #ccc;
+    --shade02: #aaa;
+    --shade03: #888;
+    --shade04: #666;
+    --shade05: #444;
+    --shade06: #333;
+    --shade07: #222;
+    --shade08: #111;
+    --shade09: #8080;
+    --shade10: #000;
+
+    /* filter colours */
+    --c-branding: #00ADEE;
+    --c-illustration: #EC008D;
+    --c-packaging: #FDB018;
+    --c-editorial: #EE1C25;
+    --c-communication: #00A651;
+    --c-uxui-design: #303192;
+    --c-photography: #B3B3B3;
+    --c-web-dev: #B7B7B7;
+    --c-edit: #FFDD06;
+    --c-flag: #E74B11;
+    --c-iefp: #32A055;
+    --c-work: #35BDEF;
+    --c-academic: #73DF40;
+    --c-sideproject: #E03A3A;
+    --c-internship: #DFDF40;
+
+
+    /* ---------------------------------------- */
+    /* FONTS */
+    --font-main: Helvetica, Arial, sans-serif;
+
+    /* font-sizes */
+    --font-size-4xl: 4rem; /* logo */
+    --font-size-3xl: 1.8rem; /* h1 */
+    --font-size-2xl: 1.6rem; /* h2 */
+    --font-size-xl: 1.5rem; /* h3 */
+    --font-size-l: 1.16rem; /* botões, links, */
+    --font-size-m: 1rem; /* corpo de texto, */
+    --font-size-s: .8rem; /* notas de rodapé */
+
+    /* line-height */ /* definir valores */
+    --line-height-3xl: calc(var(--f-size-3xl) * 1.5);
+    --line-height-2xl: calc(var(--f-size-2xl) * 1.5);
+    --line-height-xl: calc(var(--f-size-xl) * 1.5);
+    --line-height-l: calc(var(--f-size-l) * 1.5);
+    --line-height-m: calc(var(--f-size-m) * 1.5);
+    --line-height-s: calc(var(--f-size-s) * 1.5);
+
+    /* font-weight */
+    --font-weight-2xl: 900;
+    --font-weight-xl: 750;
+    --font-weight-l: 600;
+    --font-weight-m: 400;
+
+    /* character counter */
+    --character-counter-l: 200ch;
+    --character-counter-m: 65ch;
+    --character-counter-s: 50ch;
+    --character-counter-xs: 20ch;
+
+
+    /* ---------------------------------------- */
+    /* SPACING */
+    --space-4xl: calc(var(--space-2xl) * 2);
+    /* serve para alinhar elementos à linha inferior do header */
+    --space-3xl: 6rem;
+    --space-2xl: 4rem;
+    --space-xl: 2rem;
+    --space-l: 1.33rem;
+    /* padding vertical dos botões, margem entre botões do header */
+    --space-m: 1rem;
+    --space-s: .5rem;
+    --space-xs: .25rem;
+
+    --space-fixed-l: 56px;
+    --space-fixed-m: 36px;
+    --space-fixed-s: 36px;
+
+    /* height */
+    --total-height: 100vh;
+    --section-height: 80vh;
+    --banner-height: 75vh;
+    --footer-height: 70vh;
+
+    /* width */
+    --component-width-3xl: 100%;
+
+
+    /* ---------------------------------------- */
+    /* LINE-WEIGHT */
+    --border-bottom: var(--space-xs) solid var(--shade06);
+
+
+    /* ---------------------------------------- */
+    /* grid & layout */
+    /* aplicar valores das grids e possivelmente dos breakpoints
+    /* ---------------------------------------- */
+    /* z-index */
+    /* caso faça sentido, para trabalhar na parte dos resultados dos filtros
+    /* ---------------------------------------- */
+    /* efeitos */
+    --effect-blur-2xl: blur(48px);
+    --effect-blur-xl: blur(24px);
+    --effect-blur-l: blur(12px);
+    --effect-blur-m: blur(8px);
+    --effect-blur-s: blur(4px);
+    --effect-blur-xs: blur(2px);
+
+    --effect-scale-2xl: scale(2);
+    --effect-scale-xl: scale(1.8);
+    --effect-scale-l: scale(1.6);
+    --effect-scale-m: scale(1.4);
+    --effect-scale-s: scale(1.2);
+    --effect-scale-xs: scale(1.1);
+
+    --time-2xl: 1s;
+    --time-xl: .75s;
+    --time-l: .5s;
+    --time-m: .2s;
+    --time-s: .1s;
+    --time-xs: .05s;
+    
+    /* ---------------------------------------- */
+    /* transitions & animations */
+    /* a modos de manter coerência em todo o projecto */
+}

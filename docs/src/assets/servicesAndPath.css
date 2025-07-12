@@ -1,0 +1,64 @@
+/* servicesAndPath ---------------------------- */
+/* propósito é que as "letras" adoptem uma cor negativa mediante a cor do fundo */
+
+.servicesAndPath article{ 
+/* construir variaveis e estudar valores */
+position: sticky;
+top: 200px;   
+  backdrop-filter: var(--effect-blur-2xl);
+
+  background-color: rgba(255, 255, 255, .2);
+  
+
+/*
+  mix-blend-mode: difference;
+  */
+
+}
+
+
+.servicesAndPath p {
+    color: var(--shade10);
+    
+    max-width: var(--character-counter-s);
+    bottom: 10px;
+    /*
+    mix-blend-mode: difference;
+    */
+
+}
+
+.servicesAndPath {
+    background-color: var(--shade01);
+
+    background-image: url(/images/portraid.png);
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position: 70% -100%;
+    background-attachment: fixed;
+
+    justify-content: center;
+
+    height: 250vh;
+
+    display: flex;
+
+    /*
+    background-color: blue;
+    */
+}
+
+/* breakpoint: tablet */
+@media (min-width: 768px) {
+    .servicesAndPath {
+        background-position: 70% -120%;
+    }
+}
+
+/*  breakpoint: laptop */
+@media (min-width: 1024px) {
+    .servicesAndPath {
+        background-position: 70% -150%;
+    }
+}
+

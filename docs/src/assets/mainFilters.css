@@ -1,0 +1,200 @@
+
+/* main -------------------------------------------- */
+
+/* filters ------------------------------------------*/
+.filtersMenuContainer {
+    display: flex;
+    justify-content: space-between;
+
+    position: sticky;
+
+    top: var(--space-4xl);
+    background-color: orange;
+
+    z-index: 3;
+}
+
+
+/* breakpoint: tablet */
+@media (min-width: 1024px) {
+    .filtersMenuContainer {
+        flex-direction: row-reverse;
+        justify-content: left;
+        
+    }
+}
+
+/* DEFINIR ICONES EM PX, JÁ COM RESIZE PARA OS VARIOS BREAKPOINTS */
+
+
+.filtersGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+/* breakpoint: tablet */
+/*
+@media (min-width: 768px) {
+    .filtersGroup {
+        display: flex;
+    }
+}
+*/
+/*
+.filtersGroup.open {
+    display: flex;
+}
+*/
+
+.buttonToogleLegend{
+    display: none;
+}
+
+/* breakpoint: tablet */
+@media (min-width: 1024px){
+.buttonToogleLegend
+{
+    display: inline-flex;    
+}
+}
+
+
+
+
+
+/*
+.filterResetButton{
+    transition: all var(--time-2xl) ease-out;
+}
+    */
+
+.filtersContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+}
+
+/* breakpoint: tablet */
+@media (min-width: 768px) {
+    .filtersContainer {
+
+        flex-direction: row;
+    }
+}
+
+.filtersContainer>h3 {
+    text-transform: uppercase;
+    text-align: left;
+
+    font-size: var(--font-size-s);
+
+    padding: var(--space-s);
+
+    background-color: red;
+}
+
+/* breakpoint: tablet */
+@media (min-width: 768px) {
+    .filtersContainer>h3 {
+        text-align: right;
+    }
+}
+
+.filtersContainer>ul {
+    flex-direction: column;
+}
+
+/* breakpoint: tablet */
+@media (min-width: 768px) {
+    .filtersContainer>ul {
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-s);
+        flex-wrap: wrap;
+    }
+}
+
+.filters {
+    display: none;
+
+    background-color: blue;
+
+    z-index: 2;
+    transform: translateX(-100%);
+
+}
+
+.filters.open {
+    display: flex;
+
+    top: calc(var(--space-4xl)* 1.6);
+
+    transform: translateX(0);
+    position: static;
+    overflow-y: auto;
+    touch-action: cross-slide-y;
+}
+
+/* EXPERIMENTOS */
+@media (max-width: 768px){
+/*
+    .filtersBackground{
+
+        display:inline;
+        position:absolute;
+        width: 100vw;
+    height: 100vh;
+
+    background-color: var(--shade07);
+    opacity: .5;
+
+    filter: blur(10px);
+    
+    }
+    */
+
+
+    
+.filters.open{
+    
+    display: block;
+    position: sticky;
+
+    width: 60vw;
+    height: 100vh;
+    
+/*
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-2xl);
+    */
+/*
+    
+    overscroll-behavior: contain;*/
+    
+
+
+    overflow-y: auto;
+/*
+    z-index: 10;
+    transform: translateX(0);
+    /*
+    overflow-x: hidden;
+    */
+    }
+/*
+    .filters.open::-webkit-scrollbar {
+        
+    }
+*/
+
+}
+
+/*
+/* breakpoint: tablet *//*
+@media (min-width: 768px) {
+    .filters {
+        display: flex;
+        transform: translateX(0);
+    }
+}
+*/

@@ -1,0 +1,121 @@
+/* main -------------------------------------------- */
+/* results -------------------------------------------- */
+
+/* breakpoint: tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .results {
+        padding-right: 0;
+    }
+}
+
+div.timeline {
+    position: absolute;
+    top: var(--font-size-3xl);
+    left: calc(var(--space-fixed-l)/2 - var(--space-xs)/2);
+    /* distancia da esquerda = metade da largura do circulo (.timelineDot) -(menos) metade da largura da espessura da linha (para fazer o acerto ao centro desta); */
+
+    width: var(--space-xs);
+    height: 120%;
+    background-color: var(--shade06);
+    z-index: 0;
+}
+
+/* esconde a timeline no ultimo curso */
+.projectsSchools:not(:last-child) .timeline {
+    display: block;
+}
+
+.projectsSchools:last-child .timeline {
+    display: none;
+}
+
+span.timelineDot {
+    background-color: red;
+
+    width: var(--space-fixed-l);
+    height: var(--space-fixed-l);
+    border-radius: 99px;
+
+    flex-shrink: 0;
+    flex-grow: 0;
+
+}
+
+header.iconTextBtn {
+    padding-top: 0;
+
+    background-color: yellow;
+}
+
+.projectsSchools header.schoolContainer {
+    gap: var(--space-m);
+    justify-content: left;
+
+    display: flex;
+
+
+
+    /*
+    position: sticky;
+
+    top: calc(var(--space-2xl) * 4);
+
+    */
+    background-color: blue;
+}
+
+
+
+/*
+.projectCardMinimal{
+    height: 158px;
+    width:  158px;
+
+    background-color: red;
+    
+}
+*/
+
+article.projectsSchools {
+    position: relative;
+
+}
+
+nav.projectCardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+
+    padding: 0 var(--space-2xl) var(--space-2xl) ;
+    /* padding com 0 de altura, dado que o header.iconTextBtn já tem uma "margem/line-height" considerável */
+
+    background-color: red;
+}
+
+/* breakpoint: tablet */
+@media (min-width: 768px) {
+    nav.projectCardContainer {
+
+        flex-wrap: nowrap;
+
+        background-color: red;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .projectCardContainer::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/*  breakpoint: laptop */
+@media (min-width: 1024px) {
+    nav.projectCardContainer {
+        flex-wrap: wrap;
+
+        background-color: red;
+    }
+}
+

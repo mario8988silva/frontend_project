@@ -1,0 +1,167 @@
+a,
+button,
+address {
+    text-decoration: none;
+    color: var(--shade10);
+
+    font-size: var(--font-size-l);
+
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+
+    padding: var(--space-m) var(--space-l);
+    border: none;
+
+    cursor: pointer;
+}
+
+a{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+a.disabled,
+button.disabled,
+address.disabled{
+    background-color: var(--shade04);
+}
+
+.iconBackup{
+    background-color: var(--shade04);
+    border-radius: 100px;
+}
+/* html */
+html {
+    background-color: var(--shade01);
+
+    font-size: clamp(16px, 1.5vw, 20px);
+    /* ao invés de usar @media(min-width){...} para ajustar o tamanho da fonte, este serve para um reajuste mais fluído do resize */
+
+    font-family: var(--font-main);
+    color: var(--shade06);
+
+    /*
+    width: 80%;
+    display: flex;
+    justify-self: center;
+    */
+}                                               
+
+
+/* elements */
+span.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        /* 0=outlined; 1=filled; */
+        'wght' 400,
+        /* weight */
+        'GRAD' 0,
+        /* grade */
+        'opsz' 24,
+        /* size */
+    ;
+
+
+    background-color: yellow;
+}
+
+.logo {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-2xl);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: end;
+
+
+    padding: clamp(var(--space-xl), 1.5vw, var(--space-3xl));
+    padding-bottom: var(--space-xl);
+    /*
+    min-height: var(--section-height);
+    */
+
+    height: fit-content;    
+
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: var(--font-weight-l);
+    background-color: red;
+}
+
+/* ------------ */
+.icon {
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: red;
+}
+
+/*
+.iconL{    
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    background-color: red;
+}
+
+.iconM{    
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    background-color: yellow;
+}
+
+.iconS{    
+    width: var(--font-size-3xl);
+    height: var(--font-size-3xl);
+
+    padding: var(--space-s);
+
+    background-color: blue;
+}
+*/
+
+.iconTextBtn {
+    display: flex;
+    align-items: center;
+
+    flex-direction: row;
+    gap: var(--space-xs);
+}
+
+.iconTextBtnReversed {
+    flex-direction: row-reverse;
+}
+
+/* specs */
+
+.clickable:hover{
+    cursor: pointer;
+}
+
+.close {
+    display: none;
+}
+

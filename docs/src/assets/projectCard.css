@@ -1,0 +1,432 @@
+
+/* Project Card */
+.projectCard {
+    /*
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+    opacity: 0.5;
+    */
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    justify-content: end;
+
+    flex-shrink: 0;
+    width: calc(var(--space-2xl) * 4);
+
+    height: var(--space-2xl);
+
+    padding: var(--space-l);
+
+    background-color: var(--shade00);
+}
+
+
+.projectCard figure {
+    position: absolute;
+/*
+    background-image: url(Free_A4_Brochure_Mockup_02.jpg);
+    
+    background-size:contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+*/
+    inset: 0;
+    /* shorthand para top, right, bottom, left */
+    margin: 0;
+    /* ignora o padding definido para a card */
+    z-index: 0;
+    opacity: .4;
+    filter: var(--effect-blur-s);
+    
+}
+
+.pMainImage img{
+    width: 120%;
+    height: 120%;
+    margin-top: -45%;
+    margin-left: -10%;
+
+    transition: transform var(--time-l) ease ;
+}
+
+
+
+/* todo e qualquer elemento que não seja o .pMainImage, terá um z-index de 1, para se sobrepor a este */
+.projectCard>*:not(.pMainImage) {
+    position: relative;
+    z-index: 1;
+}
+
+.pDescription {
+    padding: var(--space-s);;
+    
+    display: none;
+
+    background-color: #00A651;
+}
+
+.projectCard a.btn{
+    display: none;
+    background-color: red;
+}
+
+.pTools {
+    
+    display: flex;
+    gap: var(--space-s);
+    background-color: green;
+
+    display: none;
+}
+
+.pTools *{
+   padding: 0;    
+}
+
+.pFilters {
+    display: flex;
+    gap: var(--space-s);
+    background-color: blue;
+
+    display: none;
+}
+
+.pFilters *{    
+    padding: var(--space-xs); 
+}
+
+@media (max-width: 767px) {
+  .projectCard {
+    /*
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+    opacity: 0.5;
+    */
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    justify-content: end;
+
+    flex-shrink: 0;
+    width: 100%;
+
+    height: var(--space-2xl);
+
+    padding: var(--space-l);
+
+    background-color: var(--shade01);
+  }
+
+  .projectCard.open {
+    /*
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+    opacity: 0.5;
+    */
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    justify-content: end;
+
+    flex-shrink: 0;
+    width: 100%;
+
+    height: calc(var(--space-2xl) * 6);
+
+    padding: var(--space-l);
+
+    background-color: var(--shade00);
+  }
+
+  .projectCard>*:not(.pMainImage) {
+    display: none;
+}
+
+.projectCard.open>*:not(.pMainImage) {
+    display: flex;
+}
+
+.projectCard figure {
+    position: absolute;
+/*
+    background-image: url(Free_A4_Brochure_Mockup_02.jpg);
+    
+    background-size:contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+*/
+    inset: 0;
+    /* shorthand para top, right, bottom, left */
+    margin: 0;
+    /* ignora o padding definido para a card */
+    z-index: 0;
+    opacity: .6;
+    filter: none;    
+}
+
+.projectCard:hover figure{
+    opacity: .6;
+    filter: none;    
+}
+
+
+.projectCard.open figure {    
+    opacity: .6;
+    filter: none;    
+}
+
+.pMainImage img{
+    width: 120%;
+    height: auto;
+    margin-top: -45%;
+    margin-left: -10%;
+}
+
+
+
+  .projectCard.open .pMainImage img{
+    width: 120%;
+    height: auto;
+    margin-top: -10%;
+    margin-left: -10%;
+}
+}
+
+
+
+
+@media (min-width: 768px){
+    .projectCard {
+    /*
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+    opacity: 0.5;
+    */
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    justify-content: end;
+
+    flex-shrink: 0;
+    width: calc(var(--space-2xl) * 4);
+
+    height: calc(var(--space-2xl) * 6);
+
+    padding: var(--space-l);
+
+    background-color: var(--shade00);
+}
+
+
+.projectCard figure {
+    position: absolute;
+/*
+    background-image: url(Free_A4_Brochure_Mockup_02.jpg);
+    
+    background-size:contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+*/
+    inset: 0;
+    /* shorthand para top, right, bottom, left */
+    margin: 0;
+    /* ignora o padding definido para a card */
+    z-index: 0;
+        opacity: .6;
+    filter: none;
+}
+
+.pMainImage img{
+    width: auto;
+    height: 120%;
+    margin-top: -10%;
+    margin-left: -10%;
+    /* perceber que funcionalidades existem para que se possa editar a imagem */
+}
+
+.projectCard:hover .pMainImage img{
+    transform: var(--effect-scale-m);
+}
+
+/* todo e qualquer elemento que não seja o .pMainImage, terá um z-index de 1, para se sobrepor a este */
+.projectCard>*:not(.pMainImage) {
+    position: relative;
+    z-index: 1;
+}
+
+.pDescription {
+    padding: var(--space-s);;
+    
+    display: none;
+}
+
+.projectCard a.btn{
+    display: flex;
+    background-color: red;
+}
+
+.pTools {
+    
+    display: flex;
+    gap: var(--space-s);
+    background-color: green;
+    
+}
+
+.pTools *{
+   padding: 0;    
+}
+
+.pFilters {
+    display: flex;
+    gap: var(--space-s);
+    background-color: blue;
+}
+
+.pFilters *{
+    
+    padding: var(--space-xs); 
+}
+}
+
+@media (min-width: 1024px){
+    .projectCard {
+    /*
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+    opacity: 0.5;
+    */
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    justify-content: end;
+
+    flex-shrink: 0;
+    width: calc(var(--space-2xl) * 4);
+
+    height: calc(var(--space-2xl) * 6);
+
+    padding: var(--space-l);
+
+    background-color: var(--shade00);
+}
+
+
+.projectCard figure {
+    position: absolute;
+/*
+    background-image: url(Free_A4_Brochure_Mockup_02.jpg);
+    
+    background-size:contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+*/
+    inset: 0;
+    /* shorthand para top, right, bottom, left */
+    margin: 0;
+    /* ignora o padding definido para a card */
+    z-index: 0;
+    opacity: .4;
+    filter: var(--effect-blur-s);    
+}
+
+.projectCard:hover figure{
+    opacity: .6;
+    filter: none;    
+}
+
+
+.pMainImage img{
+    width: auto;
+    height: 120%;
+    margin-top: -10%;
+    margin-left: -10%;
+    /* perceber que funcionalidades existem para que se possa editar a imagem */
+}
+
+.projectCard:hover .pMainImage img{
+    transform: var(--effect-scale-m);
+}
+
+/* todo e qualquer elemento que não seja o .pMainImage, terá um z-index de 1, para se sobrepor a este */
+.projectCard>*:not(.pMainImage) {
+    position: relative;
+    z-index: 1;
+}
+
+.pDescription {
+    padding: var(--space-s);
+    
+    display: none;
+}
+
+.projectCard:hover .pDescription{
+    display: flex;
+    
+}
+
+.projectCard a.btn{
+    display: flex;
+    background-color: red;
+}
+
+.pTools {
+    
+    display: none;
+    gap: var(--space-s);
+    background-color: green;
+    
+}
+
+.projectCard:hover .pTools{
+    display: flex;
+}
+
+.pTools *{
+   padding: 0;    
+}
+
+.pFilters {
+    display: none;
+    gap: var(--space-s);
+    background-color: blue;
+}
+
+.projectCard:hover .pFilters{
+    display: flex;
+}
+
+
+.pFilters *{
+    
+    padding: var(--space-xs); 
+}
+
+
+}

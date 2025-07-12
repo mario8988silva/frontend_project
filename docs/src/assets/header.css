@@ -1,0 +1,178 @@
+/* header ------------------------------------------ */
+
+header {
+    width: var(--component-width-3xl);
+    height: fit-content;
+
+    padding-top: var(--space-l);
+    padding-bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-l);
+
+    background-color: #00A651;
+}
+
+
+/*
+/* breakpoint: tablet */
+/*
+@media (min-width: 768px) {
+    header {
+        width: var(--component-width-3xl);
+        height: fit-content;
+
+        padding-top: var(--space-l);
+        padding-bottom: 0;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-l);
+
+        background-color: #00A651;
+    }
+}
+*/
+.openedHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 90vh;
+
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-2xl);
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    flex-direction: column-reverse;
+
+    gap: var(--space-2xl);
+
+    z-index: 9;
+}
+
+.closedHeader {
+    position: fixed;
+    z-index: 9;
+}
+
+.headerNavClass {
+    position: fixed;
+    z-index: 9;
+}
+
+
+/* breakpoint: mobile */
+ul.headerMenuToogle {
+    display: flex;
+    justify-content: right;
+    width: var(--component-width-3xl);
+
+    background-color: blue;
+}
+
+/* breakpoint: tablet */
+@media (min-width: 768px) {
+    ul.headerMenuToogle {
+        display: none;
+
+        background-color: blue;
+    }
+
+    .openedHeader ul.headerMenuToogle {
+        display: flex;
+    }
+
+    .openedHeader ul.navMenu {
+
+        flex-direction: column;
+
+        justify-content: end;
+
+    }
+}
+
+/*
+/* breakpoint: mobile */
+/*
+a.navOpen {
+    display: flex;
+}
+
+/* breakpoint: tablet */
+/*
+@media (min-width: 768px) {
+    a.navOpen {
+        display: none;
+    }
+}
+
+/* breakpoint: mobile */
+/*
+.navClose {
+    display: flex;
+}
+
+/* breakpoint: tablet */
+/*
+@media (min-width: 768px) {
+    .navClose {
+        display: none;
+    }
+}
+
+
+/* breakpoint: mobile */
+/* rever o que pode ser universalizado !!!!!! */
+.navMenu {
+    width: var(--component-width-3xl);
+    height: 100%;
+
+    display: none;
+    flex-direction: column;
+
+    gap: var(--space-l);
+    justify-content: end;
+    align-items: center;
+
+    background-color: yellow;
+}
+
+
+.navMenu.open {
+    display: flex;
+}
+
+/* breakpoint: tablet */
+@media (min-width: 768px) {
+    .navMenu {
+        width: var(--component-width-3xl);
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        gap: var(--space-l);
+        justify-content: right;
+        align-items: center;
+
+        background-color: yellow;
+    }
+}
+
+header a {
+    text-transform: uppercase;
+
+    font-size: var(--font-size-m);
+}
+
+

@@ -1,0 +1,63 @@
+/* banner ------------------------------------- */
+.banner {
+    background-color: #35BDEF;
+
+    gap: var(--space-3xl);
+
+    /* a lembrar! deve respeitar grid de 12 colunas */
+
+
+    /* PERCEBER COMPORTAMENTO E AJUSTAR MEDIANTE */
+
+    padding-top: calc(var(--space-4xl)*2);
+
+    /*
+    min-height: calc(var(--banner-height));  
+    */
+    
+    height: clamp(60vh, 7.5vh, 100vh);
+    /*
+    max-height: var(--total-height);
+*/
+    background-color: blue;
+}
+
+.banner *{
+    background-color: #00ADEE;
+}
+
+.banner h1{
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-2xl);
+    /*
+    line-height: var(--line-height-3xl);
+    */
+    
+}
+
+.banner article.bannerGreetings p{
+    font-size: var(--font-size-xl);
+    /*
+    line-height: var(--line-height-s);
+    */
+}
+
+.banner article p {
+    max-width: var(--character-counter-xs);
+    background-color: red;
+}
+
+.banner aside.currentPath {
+    width: var(--component-width-3xl);
+    text-align: right;
+    background-color: red;
+}
+
+
+/* breakpoint: tablet */
+@media (min-width: 768px) {
+    .banner article p {
+        max-width: var(--character-counter-s);
+        background-color: red;
+    }
+}

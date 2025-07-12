@@ -1,0 +1,19 @@
+/* valuesAndMethods ------------------------------ */
+.valuesAndMethods {
+    background-color: yellow;
+
+    display: flex;
+    /* section */
+    flex-direction: column;
+    /* section */
+    align-items: center;
+    /* section */
+    justify-content: end;
+    /* section */
+}
+
+.valuesAndMethods p {
+    max-width: var(--character-counter-s);
+    text-align: center;
+}
+
