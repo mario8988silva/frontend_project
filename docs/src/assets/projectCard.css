@@ -1,13 +1,7 @@
 
 /* Project Card */
 .projectCard {
-    /*
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    
-    opacity: 0.5;
-    */
+
     position: relative;
     overflow: hidden;
 
@@ -26,6 +20,11 @@
     background-color: var(--shade00);
 }
 
+.projectCard>*:not(.pMainImage) {
+    display: none;
+
+    transition: display var(--time-2xl) ease-in-out;
+}
 
 .projectCard figure {
     position: absolute;
@@ -121,13 +120,6 @@
 */
 @media (max-width: 767px) {
   .projectCard {
-    /*
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    
-    opacity: 0.5;
-    */
     position: relative;
     overflow: hidden;
 
@@ -149,13 +141,7 @@
   }
 
   .projectCard.open {
-    /*
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    
-    opacity: 0.5;
-    */
+
     position: relative;
     overflow: hidden;
 
@@ -181,6 +167,7 @@
 
     transition: display var(--time-2xl) ease-in-out;
 }
+
 
 .projectCard.open>*:not(.pMainImage) {
     display: flex;
@@ -309,7 +296,6 @@
 
 .projectCard a.btn{
     display: flex;
-    background-color: red;
 }
 
 .pTools {
@@ -419,14 +405,12 @@
 
 .projectCard a.btn{
     display: flex;
-    background-color: red;
 }
 
 .pTools {
     
     display: none;
     gap: var(--space-s);
-    background-color: green;
     
 }
 
@@ -441,7 +425,6 @@
 .pFilters {
     display: none;
     gap: var(--space-s);
-    background-color: blue;
 }
 
 .projectCard:hover .pFilters{

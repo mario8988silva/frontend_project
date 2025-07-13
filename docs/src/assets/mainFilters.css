@@ -11,6 +11,7 @@
     top: var(--space-4xl);
     background-color: var(--shade00);
 
+    border-top: 2px solid var(--shade01) ;
     z-index: 3;
 }
 
@@ -134,6 +135,22 @@
 
         flex-direction: row;
     }
+    .filtersGroup {
+
+        flex-direction: column;
+        gap: var(--space-l);
+    }   
+
+        .filtersContainer > h3{
+        width: var(--space-3xl);
+    }
+
+    .filtersContainer ul{
+        justify-content: flex-start;
+
+        width: 100%;
+        padding: var(--space-xs) var(--space-s) var(--space-s);
+    }
 }
 
 .filtersContainer>h3 {
@@ -175,6 +192,8 @@
 
     background-color: var(--shade00);
 
+    transition: transform var(--time-m) ease-in-out;
+
 }
 
 .filters.open {
@@ -186,6 +205,8 @@
     position: static;
     overflow-y: auto;
     touch-action: cross-slide-y;
+
+    transition: display var(--time-m) ease-in-out;
 }
 
 /* EXPERIMENTOS */
@@ -240,6 +261,25 @@
     }
 */
 
+}
+
+@media (min-width: 1024px){
+    .filtersGroup {
+
+        flex-direction: column;
+        gap: var(--space-l);
+    }   
+
+        .filtersContainer > h3{
+        width: var(--space-3xl);
+    }
+
+    .filtersContainer ul{
+        justify-content: flex-start;
+
+        width: 100%;
+        padding: var(--space-xs) var(--space-s) var(--space-s);
+    }
 }
 
 /*

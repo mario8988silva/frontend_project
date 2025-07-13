@@ -422,12 +422,9 @@ header a{
 }
 
 
-
-
 .filtersContainer{
     display: flex;
     flex-direction: row;
-    background-color: green;
 }
 
 .filtersContainer > h3{
@@ -437,14 +434,13 @@ header a{
     font-size: var(--font-size-s);
 
     padding: var(--space-s);
-    
-    background-color: red;
 }
 
 
 .filtersContainer > ul{
     flex-direction: column;
 }
+
 /* breakpoint: tablet */
 @media (min-width: 768px){
         .filtersContainer > ul{
@@ -480,7 +476,6 @@ div.timeline {
 }
 
 span.timelineDot{
-    background-color: red;
 
     width: var(--space-fixed-l);
     height: var(--space-fixed-l);
@@ -508,7 +503,6 @@ header.iconTextBtn{
     top: calc(var(--space-2xl) * 4);
 
     */
-    background-color: blue;
 }
 
 

@@ -2,6 +2,7 @@
 /* results -------------------------------------------- */
 .results{
     padding-bottom: calc(var(--space-3xl) * 2);
+    
 }
 .projectsSchools .iconTextBtn{
     background-color: transparent;
@@ -26,8 +27,8 @@ div.timeline {
     /* distancia da esquerda = metade da largura do circulo (.timelineDot) -(menos) metade da largura da espessura da linha (para fazer o acerto ao centro desta); */
 
     width: var(--space-xs);
-    height: 120%;
-    background-color: var(--shade06);
+    height: 105%;
+    background-color: var(--shade05);
     z-index: 0;
 }
 
@@ -41,7 +42,7 @@ div.timeline {
 }
 
 span.timelineDot {
-    background-color: var(--shade06);
+    background-color: var(--shade05);
 
     width: var(--space-fixed-l);
     height: var(--space-fixed-l);
@@ -61,6 +62,8 @@ header.iconTextBtn {
     justify-content: left;
 
     display: flex;
+
+    
 
 
 
@@ -86,6 +89,7 @@ header.iconTextBtn {
 
 article.projectsSchools {
     position: relative;
+    
 
 }
 
@@ -97,6 +101,8 @@ nav.projectCardContainer {
 
     padding: 0 var(--space-2xl) var(--space-2xl) ;
     /* padding com 0 de altura, dado que o header.iconTextBtn já tem uma "margem/line-height" considerável */
+
+    
 
 }
 
@@ -119,8 +125,6 @@ nav.projectCardContainer {
 @media (min-width: 1024px) {
     nav.projectCardContainer {
         flex-wrap: wrap;
-
-        background-color: red;
     }
 }
 

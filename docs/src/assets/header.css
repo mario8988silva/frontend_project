@@ -127,8 +127,6 @@ ul.headerMenuToogle {
     display: flex;
     justify-content: right;
     width: var(--component-width-3xl);
-
-
 }
 
 /* breakpoint: tablet */
