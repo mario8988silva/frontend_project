@@ -14,7 +14,15 @@
     z-index: 3;
 }
 
+@media (min-width: 1024px) {
+    .filtersMenuContainer {        
+        top: calc(var(--space-3xl) + var(--space-s));
 
+            padding-right: 10.5vw;
+    padding-left: 9.5vw;
+    }
+
+}
 
 .filtersContainer .iconTextBtn{
     color: var(--shade04);

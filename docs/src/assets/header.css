@@ -3,7 +3,7 @@
 header{
     background-color: var(--shade00);
 
-    width: var(--component-width-3xl);
+    width: 100%;
     height: fit-content;
 
     padding-top: var(--space-l);
@@ -26,9 +26,14 @@ header{
 @media (min-width: 1024px) {
     header {
     background-color: none;
-    background-color: red;
 
-    
+    height: var(--space-3xl);
+    width: 80vw;
+
+    padding-bottom: var(--space-s);
+    padding-top: 0;
+    padding-right: 10.5vw;
+    padding-left: 9.5vw;
     }
 }
 
@@ -80,7 +85,7 @@ header .logo:active {
     top: 0;
     left: 0;
 
-    width: 100vw;
+    width: 100%;
     height: 90vh;
 
     padding-top: var(--space-l);
@@ -106,8 +111,6 @@ header .logo:active {
 .headerNavClass {
     position: fixed;
     z-index: 9;
-
-    background-color: yellow;
 }
 
 .headerMenuToogle button:hover .material-symbols-outlined{
@@ -125,7 +128,6 @@ ul.headerMenuToogle {
     justify-content: right;
     width: var(--component-width-3xl);
 
-    background-color: blue;
 
 }
 
@@ -178,8 +180,10 @@ a.navOpen {
 }
 
 
+
 /* breakpoint: mobile */
 /* rever o que pode ser universalizado !!!!!! */
+
 .navMenu {
     width: var(--component-width-3xl);
     height: 100%;

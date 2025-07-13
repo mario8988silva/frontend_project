@@ -5,7 +5,7 @@ import useToggle from "../hooks/useToggle";
 const Header = () => {
 
     const { isActive, toggle, close } = useToggle();
-
+/*
     let headerBehaviour = window.scrollY;
     const header = document.querySelector("header");
 
@@ -19,7 +19,7 @@ const Header = () => {
             headerBehaviour = window.scrollY;
         }
     });
-
+*/
     return (
         <header
             id="headerNav"
