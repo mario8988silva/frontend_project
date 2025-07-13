@@ -25,7 +25,10 @@ header{
 
 @media (min-width: 1024px) {
     header {
-    background-color: none;    
+    background-color: none;
+    background-color: red;
+
+    
     }
 }
 
@@ -103,6 +106,8 @@ header .logo:active {
 .headerNavClass {
     position: fixed;
     z-index: 9;
+
+    background-color: yellow;
 }
 
 .headerMenuToogle button:hover .material-symbols-outlined{
@@ -119,6 +124,8 @@ ul.headerMenuToogle {
     display: flex;
     justify-content: right;
     width: var(--component-width-3xl);
+
+    background-color: blue;
 
 }
 

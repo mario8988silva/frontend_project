@@ -35,6 +35,10 @@ ul{
 }
 /* html */
 html {
+    margin: 0;
+    padding: 0;
+
+    
     background-color: var(--shade01);
 
     font-size: clamp(16px, 1.5vw, 20px);
@@ -48,9 +52,15 @@ html {
     display: flex;
     justify-self: center;
     */
-}     
+}  
 
+@media (min-width: 1024px){
+    section:not(.banner, .banner *){
 
+    width: 75vw;
+    margin: 0 auto;
+    }
+}
 
 /* elements */
 
