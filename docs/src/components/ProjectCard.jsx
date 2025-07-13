@@ -38,9 +38,7 @@ const ProjectCard = ({ projects }) => {
                         <figure className="pMainImage">
                             {mainImage && <img src={mainImage} alt={`${pName} main`} />}
                         </figure>
-
-                        <p className="pDescription">{pDescription}</p>
-
+                        
                         {pInnerLink ? (
                             <a
                                 href={pInnerLink}
@@ -57,6 +55,9 @@ const ProjectCard = ({ projects }) => {
                                 {pName}
                             </a>
                         )}
+
+                        <p className="pDescription">{pDescription}</p>
+                        
                         {/*}
                         <div className="pTools">
                             {toolsIcons.map(({ id, value, label, type }) =>

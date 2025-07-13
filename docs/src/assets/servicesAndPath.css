@@ -3,25 +3,22 @@
 
 .servicesAndPath article{ 
 /* construir variaveis e estudar valores */
-position: sticky;
-top: 200px;   
-  backdrop-filter: var(--effect-blur-2xl);
+    position: relative;
+ 
+    background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: var(--effect-blur-2xl); 
 
-  background-color: rgba(255, 255, 255, .2);
-  
-
-/*
-  mix-blend-mode: difference;
-  */
-
+  padding: 
+    var(--space-4xl) 
+    clamp(var(--space-xl), 1.5vw, var(--space-3xl))
+    calc(var(--space-4xl) * 2);
 }
 
 
 .servicesAndPath p {
     color: var(--shade10);
     
-    max-width: var(--character-counter-s);
-    bottom: 10px;
+    max-width: var(--character-counter-m);
     /*
     mix-blend-mode: difference;
     */
@@ -43,16 +40,24 @@ top: 200px;
 
     display: flex;
 
-    /*
-    background-color: blue;
-    */
+    padding: clamp(var(--space-xl), 1.5vw, var(--space-3xl)) 0;
+    padding-bottom: var(--space-xl);
 }
 
 /* breakpoint: tablet */
 @media (min-width: 768px) {
     .servicesAndPath {
         background-position: 70% -120%;
+
+        height: 350vh;
     }
+
+    .servicesAndPath article{ 
+  padding: 
+    calc(var(--space-4xl) * 3) 
+    clamp(var(--space-xl), 1.5vw, var(--space-3xl))
+    calc(var(--space-4xl) * 3);
+}
 }
 
 /*  breakpoint: laptop */

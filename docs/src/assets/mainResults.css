@@ -1,5 +1,16 @@
 /* main -------------------------------------------- */
 /* results -------------------------------------------- */
+.results{
+    padding-bottom: calc(var(--space-3xl) * 2);
+}
+.projectsSchools .iconTextBtn{
+    background-color: transparent;
+    cursor: default;
+
+}
+.projectsSchools .iconTextBtn:hover{
+    text-shadow: none;
+}
 
 /* breakpoint: tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -11,7 +22,7 @@
 div.timeline {
     position: absolute;
     top: var(--font-size-3xl);
-    left: calc(var(--space-fixed-l)/2 - var(--space-xs)/2);
+    left: calc(var(--space-fixed-l)/1.75 - var(--space-xs)/2);
     /* distancia da esquerda = metade da largura do circulo (.timelineDot) -(menos) metade da largura da espessura da linha (para fazer o acerto ao centro desta); */
 
     width: var(--space-xs);
@@ -30,7 +41,7 @@ div.timeline {
 }
 
 span.timelineDot {
-    background-color: red;
+    background-color: var(--shade06);
 
     width: var(--space-fixed-l);
     height: var(--space-fixed-l);
@@ -43,8 +54,6 @@ span.timelineDot {
 
 header.iconTextBtn {
     padding-top: 0;
-
-    background-color: yellow;
 }
 
 .projectsSchools header.schoolContainer {
@@ -61,7 +70,6 @@ header.iconTextBtn {
     top: calc(var(--space-2xl) * 4);
 
     */
-    background-color: blue;
 }
 
 
@@ -90,7 +98,6 @@ nav.projectCardContainer {
     padding: 0 var(--space-2xl) var(--space-2xl) ;
     /* padding com 0 de altura, dado que o header.iconTextBtn já tem uma "margem/line-height" considerável */
 
-    background-color: red;
 }
 
 /* breakpoint: tablet */
@@ -98,8 +105,6 @@ nav.projectCardContainer {
     nav.projectCardContainer {
 
         flex-wrap: nowrap;
-
-        background-color: red;
 
         overflow-x: auto;
         overflow-y: hidden;

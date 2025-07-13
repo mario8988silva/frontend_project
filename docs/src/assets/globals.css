@@ -25,10 +25,8 @@ ul{
     padding-left: 0;
 }
 
-a.disabled,
-button.disabled,
-address.disabled{
-    background-color: var(--shade04);
+.disabled{
+    color: var(--shade02);
 }
 
 .iconBackup{
@@ -76,6 +74,9 @@ section {
 .logo {
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-2xl);
+
+    transition: color var(--time-xl) ease-in-out;
+    transition: text-shadow var(--time-m) ease-in-out;
 }
 
 .material-symbols-outlined {
@@ -88,7 +89,7 @@ section {
         /* grade */
         'opsz' 24,
         /* size */
-    ;
+        ;
 }
 
 .icon {
@@ -157,15 +158,14 @@ section {
 }
 
 .btn:active {
-  color: var(--shade01);
-  background-color: var(--shade06);
+  color: var(--shade10);
 }
 
-.btn:disabled {
-  background-color: var(--shade03);
+.disabled::after {
+  content: none;
 }
 
-.btn:disabled::after {
+.disabled::after, .btn:focus::after {
   width: 0;
 }
 
@@ -185,6 +185,10 @@ section {
 
     padding: var(--space-xs) var(--space-m) var(--space-xs) var(--space-xs);
     transition: text-shadow var(--time-s) ease-in-out;
+}
+
+.iconTextBtn:hover img{
+    transition: background-color var(--time-m) ease-in-out;
 }
 
 .iconTextBtn:hover{  
@@ -237,10 +241,3 @@ section {
     display: none;
 }
 
-/* esconde header apenas em laptop */
-@media (min-width: 1024px) {
-    .closeInLaptop {
-    display: none;
-}
-
-}

@@ -64,20 +64,38 @@
 }
 
 .pDescription {
-    padding: var(--space-s);;
+    padding: var(--space-s);
     
     display: none;
 
-    background-color: #00A651;
-}
+    color: var(--shade10);
+
+    backdrop-filter:  var(--effect-blur-m);
+
+    transition: display var(--time-xs) ease-in-out;
+}    
 
 .projectCard a.btn{
     display: none;
-    background-color: red;
+    background-color: var(--shade01);
+
+    color: var(--shade06);
+
+    transition: background-color var(--time-s) ease-in-out;    
 }
 
-.pTools {
-    
+.projectCard a.btn:hover{
+    background-color: var(--shade00);
+}
+
+.projectCard a.btn:active{
+    background-color: var(--shade00);
+    text-shadow: 1px 0 currentColor;
+}
+
+
+/*
+.pTools {    
     display: flex;
     gap: var(--space-s);
     background-color: green;
@@ -100,7 +118,7 @@
 .pFilters *{    
     padding: var(--space-xs); 
 }
-
+*/
 @media (max-width: 767px) {
   .projectCard {
     /*
@@ -126,6 +144,8 @@
     padding: var(--space-l);
 
     background-color: var(--shade01);
+
+    transition: height var(--time-l) ease-in-out;
   }
 
   .projectCard.open {
@@ -151,15 +171,21 @@
 
     padding: var(--space-l);
 
-    background-color: var(--shade00);
+    background-color: var(--shade01);
+
+    transition: height var(--time-2xl) ease-in-out;
   }
 
   .projectCard>*:not(.pMainImage) {
     display: none;
+
+    transition: display var(--time-2xl) ease-in-out;
 }
 
 .projectCard.open>*:not(.pMainImage) {
     display: flex;
+
+    transition: display var(--time-2xl) ease-in-out;
 }
 
 .projectCard figure {

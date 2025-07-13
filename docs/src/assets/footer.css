@@ -27,6 +27,19 @@ footer article{
 }
 }
 
+footer .iconTextBtn{
+    color: var(--shade01);
+}
+
+footer .iconTextBtn:hover{
+    color: var(--shade01);
+}
+
+footer .iconTextBtn:active{
+    color: var(--shade00);
+    text-shadow: 1px 0  var(--shade00); 
+}
+
 footer h2 {
     font-style: oblique;
     font-weight: var(--font-weight-m);
@@ -41,7 +54,6 @@ footer address {
     flex-direction: column;
     align-items: center;
     gap: var(--space-l);
-    background-color: blue;
 }
 
 footer address a {
@@ -52,8 +64,6 @@ ul.socialMediaContainer {
     display: flex;
     flex-direction: row;
     justify-items: center;
-
-    background-color: green;
 }
 
 /* logo */
@@ -68,7 +78,14 @@ div.logoContainer {
 }
 
 div.logoContainer a.logo {
-    padding-bottom: var(--space-xs);
+    padding-bottom: var(--space-xs);    
 }
 
+div.logoContainer * {
+    cursor: pointer;
+}
 
+div.logoContainer:hover  * {
+    color: var(--shade00);
+    text-shadow: .5px 0  var(--shade00); 
+}

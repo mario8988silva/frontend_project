@@ -15,15 +15,41 @@ header{
     align-items: center;
     justify-content: space-between;
     gap: var(--space-l);
+
+    transition: 
+        transform var(--time-l) ease-in-out,              
+        opacity var(--time-xl) ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 @media (min-width: 1024px) {
     header {
-    background-color: none;
+    background-color: none;    
+    }
 }
 
+/* esconde header apenas em laptop */
+@media (min-width: 1024px) {
+    .closeInLaptop {
+    transform: translateY(-100%);
+    opacity: 0;
+    }
 }
 
+header .logo {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-2xl);
+    color: var(--shade05);
+}
+
+header .logo:hover {
+    color: var(--shade10);
+}
+
+header .logo:active {
+    color: var(--shade02);
+}
 
 /*
 /* breakpoint: tablet */
@@ -77,6 +103,14 @@ header{
 .headerNavClass {
     position: fixed;
     z-index: 9;
+}
+
+.headerMenuToogle button:hover .material-symbols-outlined{
+  font-variation-settings: 
+    'FILL' 1, 
+    'wght' 800, 
+    'GRAD' 0, 
+    'opsz' 24;    
 }
 
 

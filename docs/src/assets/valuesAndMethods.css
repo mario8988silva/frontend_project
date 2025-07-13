@@ -1,18 +1,27 @@
 /* valuesAndMethods ------------------------------ */
 .valuesAndMethods {
-    background-color: yellow;
+    min-height: 500px;
+    height: 100vh;
+    
+    padding: 
+    var(--space-4xl) 
+    clamp(var(--space-xl), 1.5vw, var(--space-3xl))
+    calc(var(--space-4xl) * 2);
 
-    display: flex;
-    /* section */
-    flex-direction: column;
-    /* section */
-    align-items: center;
-    /* section */
-    justify-content: end;
-    /* section */
+    background-color: var(--shade00); 
 }
 
-.valuesAndMethods p {
+.valuesAndMethods article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end; 
+}
+
+.valuesAndMethods a{
+    margin-top: var(--space-2xl);
+}
+.valuesAndMethods p{
     max-width: var(--character-counter-s);
     text-align: center;
 }
