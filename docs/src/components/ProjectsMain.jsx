@@ -14,15 +14,7 @@ const ProjectsMain = () => {
       <main id="ProjectsMain" className="ProjectsMain">
 
         <ul className="filtersMenuContainer">
-         {/*}
-          <li>
-            <button className="iconTextBtn">
-              <span
-                className="icon iconBackup"
-              ></span>
-            </button>
-          </li>
-          {*/}
+
           <li key="resetButton" className="filtersItem resetButton">
             <FilterResetButton />
           </li>

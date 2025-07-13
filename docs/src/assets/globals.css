@@ -50,30 +50,11 @@ html {
     display: flex;
     justify-self: center;
     */
-}                                               
+}     
+
 
 
 /* elements */
-span.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        /* 0=outlined; 1=filled; */
-        'wght' 400,
-        /* weight */
-        'GRAD' 0,
-        /* grade */
-        'opsz' 24,
-        /* size */
-    ;
-
-
-    background-color: yellow;
-}
-
-.logo {
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-2xl);
-}
 
 section {
     display: flex;
@@ -92,13 +73,24 @@ section {
 
 }
 
-.btn {
-    text-transform: uppercase;
-    font-weight: var(--font-weight-l);
-    background-color: red;
+.logo {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-2xl);
 }
 
-/* ------------ */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        /* 0=outlined; 1=filled; */
+        'wght' 400,
+        /* weight */
+        'GRAD' 0,
+        /* grade */
+        'opsz' 24,
+        /* size */
+    ;
+}
+
 .icon {
     width: var(--font-size-3xl);
     height: var(--font-size-3xl);
@@ -110,8 +102,6 @@ section {
     justify-content: center;
 
     text-align: center;
-
-    background-color: red;
 }
 
 /*
@@ -143,19 +133,101 @@ section {
 }
 */
 
+/* buttons ----------------------------------- */
+.btn {
+    text-transform: uppercase;
+    font-weight: var(--font-weight-l);
+
+    position: relative;    
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: var(--space-xs);
+  width: 0%;
+  background-color: currentColor;
+  transition: width var(--time-m) ease-in-out;
+}
+
+.btn:hover::after, .btn:focus::after {
+  width: 100%;
+}
+
+.btn:active {
+  color: var(--shade01);
+  background-color: var(--shade06);
+}
+
+.btn:disabled {
+  background-color: var(--shade03);
+}
+
+.btn:disabled::after {
+  width: 0;
+}
+
+
+/* ------------ */
+
 .iconTextBtn {
     display: flex;
     align-items: center;
+    gap: var(--space-xs);
 
     flex-direction: row;
-    gap: var(--space-xs);
+
+    color: var(--shade06);
+
+    position: relative; 
+
+    padding: var(--space-xs) var(--space-m) var(--space-xs) var(--space-xs);
+    transition: text-shadow var(--time-s) ease-in-out;
 }
 
+.iconTextBtn:hover{  
+    color: var(--shade06);
+    text-shadow: 1px 0 currentColor;
+}
+
+.iconTextBtn:hover img{  
+    background-color: var(--shade01);
+}
+
+.iconTextBtn:hover .material-symbols-outlined{
+  font-variation-settings: 
+    'FILL' 1, 
+    'wght' 800, 
+    'GRAD' 0, 
+    'opsz' 24;    
+}
+
+.active{
+    color: var(--shade10);
+    text-shadow: 1px 0  var(--shade10);  
+}
+
+.active .material-symbols-outlined{
+  font-variation-settings: 
+    'FILL' 1, 
+    'wght' 800, 
+    'GRAD' 0, 
+    'opsz' 24;
+}
+
+.active img{  
+    background-color: var(--shade02);
+}
+
+/* ---------------------------- */ 
 .iconTextBtnReversed {
     flex-direction: row-reverse;
 }
 
-/* specs */
+/* specs ---------------------- */
+
 
 .clickable:hover{
     cursor: pointer;

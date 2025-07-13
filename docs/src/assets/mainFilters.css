@@ -9,18 +9,63 @@
     position: sticky;
 
     top: var(--space-4xl);
-    background-color: orange;
+    background-color: var(--shade00);
 
     z-index: 3;
 }
 
 
+.filtersContainer .iconTextBtn{
+    color: var(--shade04);
+}
+
+.filtersContainer .iconTextBtn:hover{  
+    color: var(--shade06);
+    text-shadow: 1px 0 currentColor;
+}
+
+.filtersContainer .active{
+    color: var(--shade10);
+    text-shadow: 1px 0  var(--shade10);
+  
+}
+
+
+@media (max-width: 768px) {
+    .filtersMenuContainer {
+        justify-content: space-between;
+        top: var(--space-4xl);
+    }
+
+    .filtersMenuContainer button {
+        background-color: var(--shade00);
+    }
+
+    .filtersContainer ul {
+        display: flex;
+        flex-direction: column;
+
+        gap: var(--space-s);
+   
+        width: 100%;        
+    }
+
+    .filtersContainer li{    
+        width: 100%;
+    }
+
+    .filtersContainer button{
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+}  
+
 /* breakpoint: tablet */
 @media (min-width: 1024px) {
     .filtersMenuContainer {
         flex-direction: row-reverse;
-        justify-content: left;
-        
+        justify-content: left;        
     }
 }
 
@@ -30,7 +75,10 @@
 .filtersGroup {
     display: flex;
     flex-direction: column;
+
+    gap: var(--space-m);
 }
+
 
 /* breakpoint: tablet */
 /*
@@ -70,9 +118,10 @@
 
 .filtersContainer {
     display: flex;
-    flex-direction: column;
-    background-color: green;
+    flex-direction: column;   
+
 }
+
 
 /* breakpoint: tablet */
 @media (min-width: 768px) {
@@ -89,8 +138,6 @@
     font-size: var(--font-size-s);
 
     padding: var(--space-s);
-
-    background-color: red;
 }
 
 /* breakpoint: tablet */
@@ -102,6 +149,7 @@
 
 .filtersContainer>ul {
     flex-direction: column;
+    
 }
 
 /* breakpoint: tablet */
@@ -117,17 +165,18 @@
 .filters {
     display: none;
 
-    background-color: blue;
 
     z-index: 2;
     transform: translateX(-100%);
+
+    background-color: var(--shade00);
 
 }
 
 .filters.open {
     display: flex;
 
-    top: calc(var(--space-4xl)* 1.6);
+    top: calc(var(--space-3xl)* 1.88);
 
     transform: translateX(0);
     position: static;
