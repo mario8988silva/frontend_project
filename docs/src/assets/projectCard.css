@@ -17,7 +17,7 @@
 
     padding: var(--space-l);
 
-    background-color: var(--shade00);
+    background-color: var(--shade07);
 }
 
 .projectCard>*:not(.pMainImage) {

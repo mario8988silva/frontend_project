@@ -3,6 +3,8 @@ import projects from '../data/projects.json';
 import icons from '../data/icons.json';
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 console.log(projects);
 console.log(icons);
 
@@ -16,7 +18,7 @@ const ProjectCard = ({ projects }) => {
 
     return (
         <>
-            {projects.map(({ id, pName, pDescription, pInnerLink, pTools, pFilters, pImages }) => {
+            {projects.map(({ id, pName, pSlug, pStatus, pDescription, pInnerLink, pTools, pFilters, pImages }) => {
 
                 const mainImage = pImages?.[0] || null;
                 const isOpen = openCardId === id;
@@ -38,9 +40,11 @@ const ProjectCard = ({ projects }) => {
                         <figure className="pMainImage">
                             {mainImage && <img src={mainImage} alt={`${pName} main`} />}
                         </figure>
-                        
-                        {pInnerLink ? (
+
+                        {pStatus === "ready" ? (
+                            /*
                             <a
+
                                 href={pInnerLink}
                                 className="btn"
                                 target="_blank"
@@ -48,6 +52,16 @@ const ProjectCard = ({ projects }) => {
                             >
                                 {pName}
                             </a>
+                            */
+                            <Link
+
+                                to={`/projects/${pSlug}`}
+                                className="btn"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                {pName}
+                            </Link>
+
                         ) : (
                             <a
                                 className="btn disabled"
@@ -57,7 +71,7 @@ const ProjectCard = ({ projects }) => {
                         )}
 
                         <p className="pDescription">{pDescription}</p>
-                        
+
                         {/*}
                         <div className="pTools">
                             {toolsIcons.map(({ id, value, label, type }) =>
