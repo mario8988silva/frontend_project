@@ -302,7 +302,6 @@
     
     display: flex;
     gap: var(--space-s);
-    background-color: green;
     
 }
 
@@ -313,7 +312,6 @@
 .pFilters {
     display: flex;
     gap: var(--space-s);
-    background-color: blue;
 }
 
 .pFilters *{
@@ -406,36 +404,4 @@
 .projectCard a.btn{
     display: flex;
 }
-
-.pTools {
-    
-    display: none;
-    gap: var(--space-s);
-    
-}
-
-.projectCard:hover .pTools{
-    display: flex;
-}
-
-.pTools *{
-   padding: 0;    
-}
-
-.pFilters {
-    display: none;
-    gap: var(--space-s);
-}
-
-.projectCard:hover .pFilters{
-    display: flex;
-}
-
-
-.pFilters *{
-    
-    padding: var(--space-xs); 
-}
-
-
 }

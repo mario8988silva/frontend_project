@@ -5,12 +5,12 @@
         "pSlug": "afghan-girl",
         "pStatus": "ready",
         "pDescription": "Portrait Vectorization using Adobe Flash. \n Sharbat Gula, photo by Steve McCurry.",
-        "pBriefingProblem": "In the 2D animation module, we were assigned a facial vectorization project to be developed throughout the course and delivered before its end.",
-        "pBriefingSolution": "I chose the iconic photograph by Steve McCurry to take on this challenge.",
+        "pBriefingProblem": "During the 2D animation module, we were assigned a facial vectorization project to be developed throughout the course and delivered before its end.",
+        "pBriefingSolution": "I've choosen the iconic photograph by Steve McCurry to take on this challenge.",
         "pRole": null,
         "pProcess": "Given that we had nearly a year to work on this project, it was expected that we would achieve something visually compelling. Eventually, just weeks after the assignment was submitted, we entered lockdown due to COVID-19, and the course was put on hold for several weeks. This was one of the projects I dedicated myself to throughout that entire period of isolation.",
         "pAnalysisAndNotes": null,
-        "pInnerLink": "",
+        "pInnerLink": null,
         "pOutLink": null,
         "pClientName": ["IEFP Setubal"],
         "pClientLink": "https://www.iefp.pt/",
@@ -24,14 +24,14 @@
             "projects/afghan-girl/images/2.jpg",
             "projects/afghan-girl/images/3.jpg",
             "projects/afghan-girl/images/4.jpg",
-            "projects/afghan-girl/images/1.jpg"
+            "projects/afghan-girl/images/5.jpg"
         ]
     },
     {
         "id": 1,
         "pName": "Amazon In Flames",
         "pSlug": "amazon-in-flames",
-        "pStatus": "ready",
+        "pStatus": null,
         "pDescription": "Photomontage using three images and the necessary adjustments.",
         "pBriefingProblem": null,
         "pBriefingSolution": null,
@@ -77,7 +77,6 @@
         "pImages": [
             "projects/jaco-pastorius/images/1.jpg",
             "projects/jaco-pastorius/images/2.jpg",
-            "projects/jaco-pastorius/images/3.jpg",
             "projects/jaco-pastorius/images/4.jpg"
         ]
     },

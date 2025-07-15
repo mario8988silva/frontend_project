@@ -250,3 +250,151 @@ section {
     display: none;
 }
 
+/*------------------------------*/
+
+
+
+.pIconsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-s);
+    padding:  var(--space-l);
+}
+
+.pIconsContainer >*{
+    margin: 0;
+}
+
+.pIcons{
+    display: flex;
+
+    align-items: center;
+    gap: var(--space-s);
+}
+
+.pTools {
+    
+    display: flex;
+    gap: var(--space-s);
+    
+}
+
+.projectCard:hover .pTools{
+    display: flex;
+}
+
+.pTools *{
+   padding: 0;    
+}
+
+.pFilters {
+    display: flex;
+    gap: var(--space-s);
+}
+
+.projectCard:hover .pFilters{
+    display: flex;
+}
+
+
+.pFilters *{    
+    padding: var(--space-xs); 
+}
+
+.currentPath{
+    display: flex;
+    justify-content:space-between;
+    gap: var(--space-s);
+    padding:  var(--space-l);
+}
+
+/* ---------------------- */
+
+.pGridGalleryContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 400px;
+    gap: var(--space-xs);
+}
+
+.pGalleryItem {
+  position: relative;
+  overflow: hidden;
+}
+
+.pGalleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galleryItem:hover img {
+  transform: scale(1.05);
+}
+/* --------- */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: var(--radius-s);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* ------------- */
+
+.pX {
+    
+    min-height: 500px;
+    height: 100vh;
+    /*
+    padding: 
+    var(--space-4xl) 
+    clamp(var(--space-xl), 1.5vw, var(--space-3xl))
+    calc(var(--space-4xl) * 2);
+    */
+
+    background-color: var(--shade00);    
+}
+
+.pX article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end; 
+}
+
+.pX a{
+    margin-top: var(--space-2xl);
+}
+
+.pX p{
+    max-width: var(--character-counter-s);
+    text-align: center;
+}
+
+/* ---- */
+
+.pYear{
+    text-align: center;
+
+    margin: var(--space-m) 0 var(--space-s);
+}

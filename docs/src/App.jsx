@@ -44,10 +44,10 @@ function App() {
   return (
     <>
       {/* conteúdo comum */}
-      {showLayout && <Header />}
-
+      <Header />
 
       <Routes>
+
         {/* main page */}
         <Route
           path="/"
@@ -67,15 +67,10 @@ function App() {
           element={<ProjectPage />}
         />
 
-        {/* error page */}
-        <Route
-          path="*"
-          element={<ErrorPage />}
-        />
-
       </Routes>
+
       {/* conteúdo comum */}
-      {showLayout && <Footer />}
+      <Footer />
     </>
   );
 }

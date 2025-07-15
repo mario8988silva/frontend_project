@@ -6,7 +6,6 @@ import FilterGroup from "./FilterGroup";
 import { revelantIcons } from "../utils/filters";
 import useToggle from "../hooks/useToggle";
 
-console.log("icons.json: ", icons);
 
 const ProjectsFilters = ({ isOpen }) => {
 

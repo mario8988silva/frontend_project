@@ -5,9 +5,6 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-console.log(projects);
-console.log(icons);
-
 const ProjectCard = ({ projects }) => {
 
     const [openCardId, setOpenCardId] = useState(null);

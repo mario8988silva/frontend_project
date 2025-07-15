@@ -1,7 +1,7 @@
 /* banner ------------------------------------- */
 .banner {
 
-    color: var(--shade01);
+
 
     gap: var(--space-3xl);
 
@@ -21,15 +21,29 @@
     max-height: var(--total-height);
 */
 
-  background: linear-gradient(-45deg, var(--shade09), var(--shade07), var(--shade05));
-  background-size: 400% 400%;
-  animation: gradientShift 30s ease infinite;
+
+}
+
+.bannerMain{
+
+        color: var(--shade01);
+
+      background: linear-gradient(-45deg, var(--shade09), var(--shade07), var(--shade05));
+    background-size: 400% 400%;
+    animation: gradientShift 30s ease infinite;
 }
 
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+.bannerProject{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--shade01);
 }
 
 .banner *{

@@ -9,14 +9,8 @@ import { useFilters } from '../app/store';
 import { groupFiltersByCategory, projectMatchesFilters } from "../utils/filters";
 import CourseArticle from "./CourseArticle";
 
-console.log("courses: ", courses);
-console.log("projects: ", projects);
-
 const coursesData = courses;
 const projectsData = projects;
-
-console.log("courses variable: ", coursesData);
-console.log("projects variable: ", projectsData);
 
 
 const ProjectsResults = () => {

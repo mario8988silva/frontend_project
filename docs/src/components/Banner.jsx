@@ -5,7 +5,7 @@ const Banner = () => {
 
     return (       
 
-        <section className="banner">
+        <section className="banner bannerMain">
 
             <article className="bannerGreetings">
                 <h1>{message}</h1>
