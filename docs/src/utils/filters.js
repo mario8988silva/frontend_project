@@ -1,6 +1,6 @@
 import icons from "../data/icons.json";
 import projects from "../data/projects.json";
-
+console.log("total de filtros: ", icons);
 /* botões de filtragem */
 /* construcção da secção de botões */
 export const groupFiltersByCategory = (activeLabels) => {
@@ -15,7 +15,10 @@ export const groupFiltersByCategory = (activeLabels) => {
     categoryMap[cat].push(label);
   });
   return categoryMap;
+
+  
 };
+
 
 
 /* lógica da função de filtragem */
@@ -35,8 +38,6 @@ export const projectMatchesFilters = (project, filterByCategory) => {
     }
 
     return labels.every((label) => field.includes(label));
-
-
   });
   
 }
@@ -54,6 +55,8 @@ const usedLabels = new Set(
 export const revelantIcons = icons.filter(icon =>
   usedLabels.has(icon.label)
 );
+
+console.log("FILTROS EM USO: ", usedLabels);
 
 
 /* lógica para inserir projectos nos devidos cursos */
