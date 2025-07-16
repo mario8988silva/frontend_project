@@ -1,44 +1,33 @@
-/* banner ------------------------------------- */
+/* Banner ------------------------------------- */
 .banner {
-
-
-
     gap: var(--space-3xl);
 
-    /* a lembrar! deve respeitar grid de 12 colunas */
-
-
-    /* PERCEBER COMPORTAMENTO E AJUSTAR MEDIANTE */
-
     padding-top: calc(var(--space-4xl)*2);
-
-    /*
-    min-height: calc(var(--banner-height));  
-    */
     
     height: clamp(60vh, 7.5vh, 100vh);
-    /*
-    max-height: var(--total-height);
-*/
-
-
 }
 
+/* Banner contents ---------------- */
+.banner *{
+    cursor: default;
+}
+
+/* main page background ---------------- */
 .bannerMain{
+    color: var(--shade01);
 
-        color: var(--shade01);
-
-      background: linear-gradient(-45deg, var(--shade09), var(--shade07), var(--shade05));
+    background: linear-gradient(-45deg, var(--shade09), var(--shade07), var(--shade05));
     background-size: 400% 400%;
     animation: gradientShift 30s ease infinite;
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
+/* project page background ---------------- */
 .bannerProject{
   background-size: cover;
   background-position: center;
@@ -46,18 +35,15 @@
   color: var(--shade01);
 }
 
-.banner *{
-    cursor: default;
-}
-
+/* title ----------- */
 .banner h1{
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-2xl);
     
     line-height: var(--line-height-s);   
-    
 }
 
+/* text ----------- */
 .banner article.bannerGreetings p{
     font-size: var(--font-size-xl);
     /*
@@ -67,19 +53,17 @@
 
 .banner article p {
     max-width: var(--character-counter-xs);
-
 }
-
-.banner aside.currentPath {
-    width: var(--component-width-3xl);
-    text-align: right;
-
-}
-
 
 /* breakpoint: tablet */
 @media (min-width: 768px) {
     .banner article p {
         max-width: var(--character-counter-s);
     }
+}
+
+/* aside note ----------- */
+.banner aside.currentPath {
+    width: var(--component-width-3xl);
+    justify-content: right;
 }

@@ -1,0 +1,185 @@
+
+/* DEFINIR ICONES EM PX, JÁ COM RESIZE PARA OS VARIOS BREAKPOINTS */
+
+
+/* main -------------------------------------------- */
+/* filtersMenuContainer ------------------------------------------*/
+.filtersMenuContainer {
+    display: flex;
+    justify-content: space-between;
+
+    position: sticky;
+
+    top: var(--space-4xl);
+    background-color: var(--shade00);
+
+    border-top: 2px solid var(--shade01) ;
+    z-index: 3;
+}
+
+@media (min-width: 1024px) {
+    .filtersMenuContainer {
+        flex-direction: row-reverse;
+        justify-content: left;  
+
+        top: calc(var(--space-3xl) + var(--space-s));
+
+        padding-right: 10.5vw;
+        padding-left: 9.5vw;
+    }
+}
+
+
+/* toogle button */
+.buttonToogleLegend{
+    display: none;    
+}
+
+@media (min-width: 1024px){
+    .buttonToogleLegend
+        {
+            display: inline-flex;    
+        }
+}
+
+/* Section Filters ------------------------------------------*/
+.filters {
+    display: none;
+
+    z-index: 2;
+    transform: translateX(-100%);
+
+    background-color: var(--shade00);
+
+    transition: transform var(--time-m) ease-in-out;
+}
+
+
+/* Section Filters open ------------------------------------------*/
+.filters.open {
+    display: flex;
+
+    top: calc(var(--space-3xl)* 1.88);
+
+    transform: translateX(0);
+    position: static;
+    overflow-y: auto;
+    touch-action: cross-slide-y;
+
+    transition: display var(--time-m) ease-in-out;  /* SEM EFEITO!! */
+}
+
+
+@media (max-width: 768px){    
+.filters.open{    
+    display: block;
+    position: sticky;
+
+    width: 60vw;
+    height: 100vh;
+    }
+}
+
+
+/* ul filtersGroup ------------------------------------------*/
+.filtersGroup {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+    .filtersGroup {
+        gap: var(--space-l);
+    }
+}
+
+
+/* li filtersContainer ------------------------------------------*/
+.filtersContainer {
+    display: flex;
+    flex-direction: column; 
+}
+
+@media (min-width: 768px) {
+    .filtersContainer {
+        flex-direction: row;
+    }
+}
+
+/* filtersContainer h3 ------------------------------------------*/
+.filtersContainer h3 {
+    text-transform: uppercase;
+    text-align: left;
+
+    font-size: var(--font-size-s);
+
+    padding: var(--space-s);
+}
+
+
+@media (min-width: 768px) {
+    .filtersContainer h3 {
+        text-align: right;
+        width: var(--space-3xl);
+    }
+}
+
+
+/* filtersContainer > ul ------------------------------------------*/
+.filtersContainer > ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-s);
+   
+    width: 100%;        
+} 
+
+@media (min-width: 768px) {
+    .filtersContainer > ul{
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        padding: var(--space-xs) var(--space-s) var(--space-s);        
+    }
+}
+
+
+/* filtersContainer > li ------------------------------------------*/
+@media (max-width: 768px) {
+    .filtersContainer > li{    
+        width: 100%;
+    }
+}
+
+
+/* filtersContainer button ------------------------------------------*/
+.filtersContainer button{
+    background-color: var(--shade00);
+
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+/* filtersContainer button iconTextBtn ------------------------------------------*/
+.filtersContainer .iconTextBtn{
+    color: var(--shade04);
+}
+
+.filtersContainer .iconTextBtn:hover{  
+    color: var(--shade06);
+    text-shadow: 1px 0 currentColor;
+}
+
+.filtersContainer .iconTextBtn .active{
+    color: var(--shade10);
+    text-shadow: 1px 0  var(--shade10);  
+}
+

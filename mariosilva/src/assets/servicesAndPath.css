@@ -1,30 +1,6 @@
-/* servicesAndPath ---------------------------- */
 /* propósito é que as "letras" adoptem uma cor negativa mediante a cor do fundo */
 
-.servicesAndPath article{ 
-/* construir variaveis e estudar valores */
-    position: relative;
- 
-    background-color: rgba(255, 255, 255, .2);
-  backdrop-filter: var(--effect-blur-2xl); 
-
-  padding: 
-    var(--space-4xl) 
-    clamp(var(--space-xl), 1.5vw, var(--space-3xl))
-    calc(var(--space-4xl) * 2);
-}
-
-
-.servicesAndPath p {
-    color: var(--shade10);
-    
-    max-width: var(--character-counter-m);
-    /*
-    mix-blend-mode: difference;
-    */
-
-}
-
+/* servicesAndPath ---------------------------- */
 .servicesAndPath {
     background-color: var(--shade01);
 
@@ -44,26 +20,43 @@
     padding-bottom: var(--space-xl);
 }
 
-/* breakpoint: tablet */
 @media (min-width: 768px) {
     .servicesAndPath {
         background-position: 70% -120%;
 
         height: 350vh;
     }
-
-    .servicesAndPath article{ 
-  padding: 
-    calc(var(--space-4xl) * 3) 
-    clamp(var(--space-xl), 1.5vw, var(--space-3xl))
-    calc(var(--space-4xl) * 3);
-}
 }
 
-/*  breakpoint: laptop */
 @media (min-width: 1024px) {
     .servicesAndPath {
         background-position: 70% -150%;
     }
+}
+
+
+/* article ---------------------------- */
+.servicesAndPath article{ 
+/* construir variaveis e estudar valores */
+    position: relative;
+ 
+    background-color: rgba(255, 255, 255, .2);
+    backdrop-filter: var(--effect-blur-2xl); 
+
+    padding: 
+        var(--space-4xl) 
+        clamp(var(--space-xl), 1.5vw, var(--space-3xl))
+        calc(var(--space-4xl) * 2);
+}
+
+
+/* servicesAndPath p  ---------------------------- */
+.servicesAndPath p {
+    color: var(--shade10);
+    
+    max-width: var(--character-counter-m);
+    /*
+    mix-blend-mode: difference;
+    */
 }
 

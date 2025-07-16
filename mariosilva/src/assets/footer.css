@@ -1,5 +1,5 @@
 
-/* footer */
+/* footer -------------------------- */
 footer {
     background-color: var(--shade06);
 
@@ -13,10 +13,14 @@ footer {
     padding: var(--space-2xl) var(--space-xl);
 }
 
+
+/* footer contents -------------------------- */
 footer * {
     color: var(--shade01);
 }
 
+
+/* article -------------------------- */
 footer article{
     padding: 0 var(--space-xl);
 }
@@ -24,9 +28,37 @@ footer article{
 @media (min-width: 768px){
         footer article{
     padding: 0 var(--space-4xl);
-}
+    }
 }
 
+
+/* quote -------------------------- */
+footer h2 {
+    font-style: oblique;
+    font-weight: var(--font-weight-m);
+
+    text-align: center;
+    
+    width: clamp(var(--character-counter-xs), 2ch, var(--character-counter-l));  
+}
+
+
+/* contacts -------------------------- */
+footer address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-l);
+}
+
+ul.socialMediaContainer {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+
+/* links  -------------------------- */
 footer .iconTextBtn{
     color: var(--shade01);
 }
@@ -40,35 +72,13 @@ footer .iconTextBtn:active{
     text-shadow: 1px 0  var(--shade00); 
 }
 
-footer h2 {
-    font-style: oblique;
-    font-weight: var(--font-weight-m);
-
-    text-align: center;
-    
-    width: clamp(var(--character-counter-xs)), 2ch, (var(--character-counter-m)) ;
-}
-
-footer address {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-l);
-}
-
 footer address a {
     font-style: normal;
 }
 
-ul.socialMediaContainer {
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-}
 
-/* logo */
+/* logo -------------------------- */
 div.logoContainer {
-
     display: inline-block;
     justify-items: center;
 
@@ -89,3 +99,4 @@ div.logoContainer:hover  * {
     color: var(--shade00);
     text-shadow: .5px 0  var(--shade00); 
 }
+

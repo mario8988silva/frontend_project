@@ -1,0 +1,220 @@
+
+/* Project Card ---------------------------------------- */
+.projectCard {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    justify-content: end;
+
+    flex-shrink: 0;
+
+    width: calc(var(--space-2xl) * 4);
+    height: var(--space-2xl);
+
+    padding: var(--space-l);
+
+    background-color: var(--shade07);
+}
+
+@media (max-width: 767px) {
+    .projectCard {
+        width: 100%;
+
+        background-color: var(--shade01);
+
+        transition: height var(--time-l) ease-in-out;
+    }
+}
+
+@media (min-width: 768px){
+        .projectCard {
+        height: calc(var(--space-2xl) * 6);
+
+        background-color: var(--shade00);
+    }
+}
+
+/* card open ---- */
+@media (max-width: 767px) {
+
+    .projectCard.open {
+        width: 100%;
+
+        height: calc(var(--space-2xl) * 6);
+
+        background-color: var(--shade01);
+
+        transition: height var(--time-2xl) ease-in-out;
+    }
+}
+
+
+/* Project Card contents ------------------------------ */
+
+/* todo e qualquer elemento que não seja o .pMainImage, terá um z-index de 1, para se sobrepor a este */
+.projectCard>*:not(.pMainImage) {
+    display: none;
+    position: relative;
+
+    z-index: 1;
+    transition: display var(--time-2xl) ease-in-out; /* SEM EFEITO!! */
+}
+
+@media (max-width: 767px) {
+
+    .projectCard.open>*:not(.pMainImage) {
+        display: flex;
+    }
+}
+
+
+/* figure ------------------------------ */
+.projectCard figure {
+    position: absolute;
+
+    inset: 0; /* shorthand para top, right, bottom, left */
+    margin: 0; /* ignora o padding definido para a card */
+    z-index: 0;
+    opacity: .4;
+    filter: var(--effect-blur-s);    
+}
+
+@media (max-width: 767px) {
+    .projectCard figure {        
+        opacity: .6;
+        filter: none;    
+    }
+
+    .projectCard:hover figure{
+        opacity: .6;
+        filter: none;    
+    }
+    
+    .projectCard.open figure {    
+        opacity: .6;
+        filter: none;    
+    }
+}
+
+@media (min-width: 768px){
+                   
+    .projectCard figure {
+        position: absolute;
+
+        opacity: .6;
+        filter: none;
+    }
+}
+
+
+/* img ------------------------------ */
+.pMainImage img{
+    width: 120%;
+    height: 120%;
+    margin-top: -45%;
+    margin-left: -10%;
+
+    transition: transform var(--time-l) ease ;
+}
+
+@media (max-width: 767px) {
+    .pMainImage img{
+        height: auto;
+    }
+
+    .projectCard.open .pMainImage img{
+        width: 120%;
+        height: auto;
+        margin-top: -10%;
+        margin-left: -10%;
+    }
+}
+
+@media (min-width: 768px){
+                   
+    .pMainImage img{
+        width: auto;
+
+        margin-top: -10%;
+        margin-left: -10%;
+        /* perceber que funcionalidades existem para que se possa editar a imagem */
+    }
+
+    .projectCard:hover .pMainImage img{
+        transform: var(--effect-scale-m);
+    }
+}
+
+
+/* description ------------------------------ */
+.pDescription {
+    padding: var(--space-s);
+    
+    display: none;
+
+    color: var(--shade10);
+
+    backdrop-filter:  var(--effect-blur-m);
+
+    transition: display var(--time-xs) ease-in-out;  /* SEM EFEITO!! */
+}    
+
+@media (min-width: 1024px){
+.projectCard:hover .pDescription{
+    display: flex;    
+    }
+}
+
+/* button ------------------------------ */
+.projectCard a.btn{
+    display: none;
+    background-color: var(--shade01);
+
+    color: var(--shade06);
+
+    transition: background-color var(--time-s) ease-in-out;    
+}
+
+.projectCard a.btn:hover{
+    background-color: var(--shade00);
+}
+
+.projectCard a.btn:active{
+    background-color: var(--shade00);
+    text-shadow: 1px 0 currentColor;
+}
+
+@media (min-width: 768px){
+                   
+    .projectCard a.btn{
+        display: flex;
+    }
+}
+
+/* icons ------------------------*/
+/*
+@media (min-width: 768px){
+
+    .pTools {        
+        display: flex;
+        gap: var(--space-s);
+    }
+
+    .pTools *{
+    padding: 0;    
+    }
+
+    .pFilters {
+        display: flex;
+        gap: var(--space-s);
+    }
+
+    .pFilters *{        
+        padding: var(--space-xs); 
+    }
+}
+*/
+
