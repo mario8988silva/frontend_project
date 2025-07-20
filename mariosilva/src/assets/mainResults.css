@@ -1,25 +1,29 @@
 /* main -------------------------------------------- */
-/* results -------------------------------------------- */
+/* section.results -------------------------------------------- */
 .results{
     padding-bottom: calc(var(--space-3xl) * 2);
     
 }
-.projectsSchools .iconTextBtn{
-    background-color: transparent;
-    cursor: default;
 
-}
-.projectsSchools .iconTextBtn:hover{
-    text-shadow: none;
-}
-
-/* breakpoint: tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     .results {
         padding-right: 0;
     }
 }
 
+
+/* article.projectsSchools -------------------------------------------- */
+.projectsSchools .iconTextBtn{
+    background-color: transparent;
+    cursor: default;
+}
+
+.projectsSchools .iconTextBtn:hover{
+    text-shadow: none;
+}
+
+
+/* div.timeline -------------------------------------------- */
 div.timeline {
     position: absolute;
     top: var(--font-size-3xl);
@@ -32,15 +36,28 @@ div.timeline {
     z-index: 0;
 }
 
-/* esconde a timeline no ultimo curso */
+
 .projectsSchools:not(:last-child) .timeline {
     display: block;
 }
 
+
+/* esconde a timeline no ultimo curso */
 .projectsSchools:last-child .timeline {
     display: none;
 }
 
+
+/* header.schoolContainer -------------------------------------------- */
+.projectsSchools header.schoolContainer {
+    gap: var(--space-m);
+    justify-content: left;
+
+    display: flex;
+}
+
+
+/* span.timelineDot -------------------------------------------- */
 span.timelineDot {
     background-color: var(--shade05);
 
@@ -50,49 +67,22 @@ span.timelineDot {
 
     flex-shrink: 0;
     flex-grow: 0;
-
 }
 
+
+/* article.projectsSchools -------------------------------------------- */
+article.projectsSchools {
+    position: relative;
+}
+
+
+/* header.iconTextBtn-------------------------------------------- */
 header.iconTextBtn {
     padding-top: 0;
 }
 
-.projectsSchools header.schoolContainer {
-    gap: var(--space-m);
-    justify-content: left;
 
-    display: flex;
-
-    
-
-
-
-    /*
-    position: sticky;
-
-    top: calc(var(--space-2xl) * 4);
-
-    */
-}
-
-
-
-/*
-.projectCardMinimal{
-    height: 158px;
-    width:  158px;
-
-    background-color: red;
-    
-}
-*/
-
-article.projectsSchools {
-    position: relative;
-    
-
-}
-
+/* nav.projectCardContainer -------------------------------------------- */
 nav.projectCardContainer {
     display: flex;
     flex-direction: row;
@@ -100,28 +90,22 @@ nav.projectCardContainer {
     gap: var(--space-xl);
 
     padding: 0 var(--space-2xl) var(--space-2xl) ;
-    /* padding com 0 de altura, dado que o header.iconTextBtn já tem uma "margem/line-height" considerável */
-
-    
-
+    /* padding com 0 de altura, dado que o header.iconTextBtn já tem uma "margem/line-height" considerável */  
 }
 
-/* breakpoint: tablet */
 @media (min-width: 768px) {
     nav.projectCardContainer {
-
         flex-wrap: nowrap;
 
         overflow-x: auto;
         overflow-y: hidden;
     }
 
-    .projectCardContainer::-webkit-scrollbar {
+    nav.projectCardContainer::-webkit-scrollbar {
         display: none;
     }
 }
 
-/*  breakpoint: laptop */
 @media (min-width: 1024px) {
     nav.projectCardContainer {
         flex-wrap: wrap;

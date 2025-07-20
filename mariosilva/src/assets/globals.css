@@ -1,3 +1,5 @@
+
+/* -------------------------------------------- */
 a,
 button,
 address {
@@ -25,14 +27,17 @@ ul{
     padding-left: 0;
 }
 
+/* -------------------------------------------- */
 .disabled{
     color: var(--shade02);
 }
 
+/* -------------------------------------------- */
 .iconBackup{
     background-color: var(--shade04);
     border-radius: 100px;
 }
+
 /* html */
 html {
     margin: 0;
@@ -54,6 +59,7 @@ html {
     */
 }  
 
+/* -------------------------------------------- */
 @media (min-width: 1024px){
     section:not(.banner){
 
@@ -63,7 +69,6 @@ html {
 }
 
 /* elements */
-
 section {
     display: flex;
     flex-direction: column;
@@ -80,6 +85,7 @@ section {
     height: fit-content;
 }
 
+/* -------------------------------------------- */
 .logo {
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-2xl);
@@ -217,11 +223,14 @@ section {
     'opsz' 24;    
 }
 
+
+/* -------------------------------------------- */
 .active{
     color: var(--shade10);
     text-shadow: 1px 0  var(--shade10);  
 }
 
+/* -------------------------------------------- */
 .active .material-symbols-outlined{
   font-variation-settings: 
     'FILL' 1, 
@@ -230,6 +239,7 @@ section {
     'opsz' 24;
 }
 
+/* -------------------------------------------- */
 .active img{  
     background-color: var(--shade02);
 }
@@ -240,8 +250,6 @@ section {
 }
 
 /* specs ---------------------- */
-
-
 .clickable:hover{
     cursor: pointer;
 }
@@ -251,9 +259,6 @@ section {
 }
 
 /*------------------------------*/
-
-
-
 .pIconsContainer{
     display: flex;
     flex-direction: column;
@@ -266,6 +271,7 @@ section {
     margin: 0;
 }
 
+/* -------------------------------------------- */
 .pIcons{
     display: flex;
 
@@ -273,11 +279,10 @@ section {
     gap: var(--space-s);
 }
 
-.pTools {
-    
+/* -------------------------------------------- */
+.pTools {    
     display: flex;
-    gap: var(--space-s);
-    
+    gap: var(--space-s);    
 }
 
 .projectCard:hover .pTools{
@@ -297,11 +302,11 @@ section {
     display: flex;
 }
 
-
 .pFilters *{    
     padding: var(--space-xs); 
 }
 
+/* -------------------------------------------- */
 .currentPath{
     display: flex;
     justify-content:space-between;
@@ -310,7 +315,6 @@ section {
 }
 
 /* ---------------------- */
-
 .pGridGalleryContainer{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -318,11 +322,13 @@ section {
     gap: var(--space-xs);
 }
 
+/* -------------------------------------------- */
 .pGalleryItem {
   position: relative;
   overflow: hidden;
 }
 
+/* -------------------------------------------- */
 .pGalleryItem img {
   width: 100%;
   height: 100%;
@@ -333,11 +339,12 @@ section {
   transition: transform 0.3s ease;
 }
 
+/* -------------------------------------------- */
 .galleryItem:hover img {
   transform: scale(1.05);
 }
-/* --------- */
 
+/* --------- */
 .lightbox {
   position: fixed;
   top: 0;
@@ -360,7 +367,6 @@ section {
 }
 
 /* ------------- */
-
 .pX {
     
     min-height: 500px;
@@ -392,7 +398,6 @@ section {
 }
 
 /* ---- */
-
 .pYear{
     text-align: center;
 

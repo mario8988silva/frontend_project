@@ -1,4 +1,4 @@
-/* valuesAndMethods ------------------------------ */
+/* section valuesAndMethods ------------------------------ */
 .valuesAndMethods {
     min-height: 500px;
     height: 100vh;
@@ -11,6 +11,8 @@
     background-color: var(--shade00); 
 }
 
+
+/* article ------------------------------ */
 .valuesAndMethods article{
     display: flex;
     flex-direction: column;
@@ -18,11 +20,16 @@
     justify-content: end; 
 }
 
-.valuesAndMethods a{
-    margin-top: var(--space-2xl);
-}
+
+/* paragraph ------------------------------ */
 .valuesAndMethods p{
     max-width: var(--character-counter-s);
     text-align: center;
+}
+
+
+/* anchor (curriculum vitae download) ------------------------------ */
+.valuesAndMethods a{
+    margin-top: var(--space-2xl);
 }
 
