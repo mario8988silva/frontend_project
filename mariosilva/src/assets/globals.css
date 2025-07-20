@@ -1,44 +1,5 @@
 
-/* -------------------------------------------- */
-a,
-button,
-address {
-    text-decoration: none;
-    color: var(--shade10);
-
-    font-size: var(--font-size-l);
-
-    display: inline-flex;
-    justify-content: center;
-    align-content: center;
-
-    padding: var(--space-m) var(--space-l);
-    border: none;
-
-    cursor: pointer;
-}
-
-a{
-    text-align: center;
-}
-
-ul{
-    list-style: none;
-    padding-left: 0;
-}
-
-/* -------------------------------------------- */
-.disabled{
-    color: var(--shade02);
-}
-
-/* -------------------------------------------- */
-.iconBackup{
-    background-color: var(--shade04);
-    border-radius: 100px;
-}
-
-/* html */
+/* semantic elements -------------------------------------------- */
 html {
     margin: 0;
     padding: 0;
@@ -59,16 +20,6 @@ html {
     */
 }  
 
-/* -------------------------------------------- */
-@media (min-width: 1024px){
-    section:not(.banner){
-
-    width: 80vw;
-    margin: 0 auto;
-    }
-}
-
-/* elements */
 section {
     display: flex;
     flex-direction: column;
@@ -85,26 +36,43 @@ section {
     height: fit-content;
 }
 
-/* -------------------------------------------- */
-.logo {
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-2xl);
+@media (min-width: 1024px){
+    section:not(.banner){
 
-    transition: color var(--time-xl) ease-in-out;
-    transition: text-shadow var(--time-m) ease-in-out;
+    width: 80vw;
+    margin: 0 auto;
+    }
 }
 
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        /* 0=outlined; 1=filled; */
-        'wght' 400,
-        /* weight */
-        'GRAD' 0,
-        /* grade */
-        'opsz' 24,
-        /* size */
-        ;
+
+/* strutural ------------------------------*/
+
+/* icons -------------------------------------------- */
+a{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+a,
+button,
+address {
+    text-decoration: none;
+    color: var(--shade10);
+
+    font-size: var(--font-size-l);
+
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+
+    padding: var(--space-m) var(--space-l);
+    border: none;
+
+    cursor: pointer;
 }
 
 .icon {
@@ -149,6 +117,87 @@ section {
 }
 */
 
+.pIcons{
+    display: flex;
+
+    align-items: center;
+    gap: var(--space-s);
+}
+
+.pTools {    
+    display: flex;
+    gap: var(--space-s);    
+}
+
+.projectCard:hover .pTools{
+    display: flex;
+}
+
+.pTools *{
+   padding: 0;    
+}
+
+.pFilters {
+    display: flex;
+    gap: var(--space-s);
+}
+
+.projectCard:hover .pFilters{
+    display: flex;
+}
+
+.pFilters *{    
+    padding: var(--space-xs); 
+}
+
+/* -------------------------------------------- */
+/*.iconBackup{
+    background-color: var(--shade04);
+    border-radius: 100px;
+}
+*/
+
+
+/* .material-symbols (google icons) ---------- */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        /* 0=outlined; 1=filled; */
+        'wght' 400,
+        /* weight */
+        'GRAD' 0,
+        /* grade */
+        'opsz' 24;
+        /* size */        
+}
+
+.iconTextBtn:hover .material-symbols-outlined{
+  font-variation-settings: 
+    'FILL' 1, 
+    'wght' 800, 
+    'GRAD' 0, 
+    'opsz' 24;    
+}
+
+.active .material-symbols-outlined{
+  font-variation-settings: 
+    'FILL' 1, 
+    'wght' 800, 
+    'GRAD' 0, 
+    'opsz' 24;
+}
+
+
+/* logo Ø -------------------------------------------- */
+.logo {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-2xl);
+
+    transition: color var(--time-xl) ease-in-out;
+    transition: text-shadow var(--time-m) ease-in-out;
+}
+
+
 /* buttons ----------------------------------- */
 .btn {
     text-transform: uppercase;
@@ -185,8 +234,7 @@ section {
 }
 
 
-/* ------------ */
-
+/* icons/buttons containers ------------ */
 .iconTextBtn {
     display: flex;
     align-items: center;
@@ -215,50 +263,13 @@ section {
     background-color: var(--shade01);
 }
 
-.iconTextBtn:hover .material-symbols-outlined{
-  font-variation-settings: 
-    'FILL' 1, 
-    'wght' 800, 
-    'GRAD' 0, 
-    'opsz' 24;    
-}
-
-
-/* -------------------------------------------- */
-.active{
-    color: var(--shade10);
-    text-shadow: 1px 0  var(--shade10);  
-}
-
-/* -------------------------------------------- */
-.active .material-symbols-outlined{
-  font-variation-settings: 
-    'FILL' 1, 
-    'wght' 800, 
-    'GRAD' 0, 
-    'opsz' 24;
-}
-
-/* -------------------------------------------- */
-.active img{  
-    background-color: var(--shade02);
-}
-
-/* ---------------------------- */ 
+/* --------- */
 .iconTextBtnReversed {
     flex-direction: row-reverse;
 }
 
-/* specs ---------------------- */
-.clickable:hover{
-    cursor: pointer;
-}
 
-.close {
-    display: none;
-}
 
-/*------------------------------*/
 .pIconsContainer{
     display: flex;
     flex-direction: column;
@@ -271,135 +282,29 @@ section {
     margin: 0;
 }
 
-/* -------------------------------------------- */
-.pIcons{
-    display: flex;
+/* state classes -------------------------------------------- */
 
-    align-items: center;
-    gap: var(--space-s);
+.close {
+    display: none;
 }
 
-/* -------------------------------------------- */
-.pTools {    
-    display: flex;
-    gap: var(--space-s);    
+.disabled{
+    color: var(--shade02);
 }
 
-.projectCard:hover .pTools{
-    display: flex;
+.active{
+    color: var(--shade10);
+    text-shadow: 1px 0  var(--shade10);  
 }
 
-.pTools *{
-   padding: 0;    
+.clickable:hover{
+    cursor: pointer;
 }
 
-.pFilters {
-    display: flex;
-    gap: var(--space-s);
+/* --------------- */
+.active img{  
+    background-color: var(--shade02);
 }
 
-.projectCard:hover .pFilters{
-    display: flex;
-}
 
-.pFilters *{    
-    padding: var(--space-xs); 
-}
 
-/* -------------------------------------------- */
-.currentPath{
-    display: flex;
-    justify-content:space-between;
-    gap: var(--space-s);
-    padding:  var(--space-l);
-}
-
-/* ---------------------- */
-.pGridGalleryContainer{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-auto-rows: 400px;
-    gap: var(--space-xs);
-}
-
-/* -------------------------------------------- */
-.pGalleryItem {
-  position: relative;
-  overflow: hidden;
-}
-
-/* -------------------------------------------- */
-.pGalleryItem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-/* -------------------------------------------- */
-.galleryItem:hover img {
-  transform: scale(1.05);
-}
-
-/* --------- */
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  cursor: pointer;
-}
-
-.lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: var(--radius-s);
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-/* ------------- */
-.pX {
-    
-    min-height: 500px;
-    height: 100vh;
-    /*
-    padding: 
-    var(--space-4xl) 
-    clamp(var(--space-xl), 1.5vw, var(--space-3xl))
-    calc(var(--space-4xl) * 2);
-    */
-
-    background-color: var(--shade00);    
-}
-
-.pX article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end; 
-}
-
-.pX a{
-    margin-top: var(--space-2xl);
-}
-
-.pX p{
-    max-width: var(--character-counter-s);
-    text-align: center;
-}
-
-/* ---- */
-.pYear{
-    text-align: center;
-
-    margin: var(--space-m) 0 var(--space-s);
-}

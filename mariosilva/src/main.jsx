@@ -16,6 +16,9 @@ import './assets/servicesAndPath.css';
 import './assets/valuesAndMethods.css';
 import './assets/footer.css';
 
+import './assets/projectPage.css';
+
+
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
