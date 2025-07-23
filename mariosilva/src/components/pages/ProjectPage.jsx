@@ -5,6 +5,8 @@ import { useState } from "react";
 import projects from "../../data/projects.json";
 import icons from "../../data/icons.json";
 
+import OpenImage from "../OpenImage";
+
 
 function ProjectPage() {
 
@@ -71,7 +73,6 @@ function ProjectPage() {
                         <a href={pInnerLink} target="_blank" className="pInnerLink">{pInnerLink}</a>
                         <a href={pOutLink} target="_blank" className="pOutLink">{pOutLink}</a>
                     </article>
-
                 </section>
 
                 <section className="pGridGalleryContainer">
@@ -142,11 +143,8 @@ function ProjectPage() {
                 </nav>
             </section>
 
-            {openImage && (
-                <div className="openImg" onClick={() => setOpenImage(null)}>
-                    <img src={openImage} alt="Full-size view" />
-                </div>
-            )}
+            <OpenImage src={openImage} onClose={() => setOpenImage(null)}/>
+
         </>
     )
 }
