@@ -45,8 +45,31 @@ section {
 }
 
 
-/* strutural ------------------------------*/
+/* state classes -------------------------------------------- */
+.close {
+    display: none;
+}
 
+.disabled{
+    color: var(--shade02);
+}
+
+.active{
+    color: var(--shade10);
+    text-shadow: 1px 0  var(--shade10);  
+}
+
+.clickable:hover{
+    cursor: pointer;
+}
+
+/* --------------- */
+.active img{  
+    background-color: var(--shade02);
+}
+
+
+/* strutural ------------------------------*/
 /* icons -------------------------------------------- */
 a{
     text-align: center;
@@ -235,6 +258,7 @@ address {
 
 
 /* icons/buttons containers ------------ */
+/* iconTextBtn --------- */
 .iconTextBtn {
     display: flex;
     align-items: center;
@@ -263,13 +287,13 @@ address {
     background-color: var(--shade01);
 }
 
-/* --------- */
+/* iconTextBtnReversed --------- */
 .iconTextBtnReversed {
     flex-direction: row-reverse;
 }
 
 
-
+/* pIconsContainer -------------- */
 .pIconsContainer{
     display: flex;
     flex-direction: column;
@@ -280,30 +304,6 @@ address {
 
 .pIconsContainer >*{
     margin: 0;
-}
-
-/* state classes -------------------------------------------- */
-
-.close {
-    display: none;
-}
-
-.disabled{
-    color: var(--shade02);
-}
-
-.active{
-    color: var(--shade10);
-    text-shadow: 1px 0  var(--shade10);  
-}
-
-.clickable:hover{
-    cursor: pointer;
-}
-
-/* --------------- */
-.active img{  
-    background-color: var(--shade02);
 }
 
 

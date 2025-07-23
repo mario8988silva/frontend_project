@@ -1,6 +1,7 @@
 
-/* APLICAR NUM NOVO FICHEIRO ------------- */
-.pX {
+/* project page main ------------- */
+.pOverviewContainer {
+    background-color: var(--shade00);  
     
     min-height: 500px;
     height: 100vh;
@@ -9,28 +10,23 @@
     var(--space-4xl) 
     clamp(var(--space-xl), 1.5vw, var(--space-3xl))
     calc(var(--space-4xl) * 2);
-    */
-
-    background-color: var(--shade00);    
+    */      
 }
 
-.pX article{
+.pOverviewContainer article{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: end; 
 }
 
-.pX a{
+.pOverviewContainer a{
     margin-top: var(--space-2xl);
 }
 
 
-
-
-
 /* --------- */
-.lightbox {
+.openImg {
   position: fixed;
   top: 0;
   left: 0;
@@ -66,7 +62,7 @@
   transform: scale(1.05);
 }
 
-.lightbox img {
+.openImg img {
   max-width: 90vw;
   max-height: 90vh;
   border-radius: var(--radius-s);
@@ -92,7 +88,7 @@
 }
 
 
-.pX p{
+.pOverviewContainer p{
     max-width: var(--character-counter-s);
     text-align: center;
 }

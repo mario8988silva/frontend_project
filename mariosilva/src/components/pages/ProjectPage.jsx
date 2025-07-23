@@ -61,7 +61,7 @@ function ProjectPage() {
             </section>
 
             <main>
-                <section className="pX">
+                <section className="pOverviewContainer">
                     <article className="pOverview">
                         <p className="pBriefingProblem">{pBriefingProblem}</p>
                         <p className="pBriefingSolution">{pBriefingSolution}</p>
@@ -143,7 +143,7 @@ function ProjectPage() {
             </section>
 
             {openImage && (
-                <div className="lightbox" onClick={() => setOpenImage(null)}>
+                <div className="openImg" onClick={() => setOpenImage(null)}>
                     <img src={openImage} alt="Full-size view" />
                 </div>
             )}
