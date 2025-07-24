@@ -8,6 +8,8 @@ import icons from "../../data/icons.json";
 import Banner from "../Banner";
 import ProjectOverview from "../ProjectOverview";
 import ProjectGallery from "../ProjectGallery";
+import ProjectClient from "../ProjectClient";
+import ProjectClosure from "../ProjectClosure";
 import OpenImage from "../OpenImage";
 
 function ProjectPage() {
@@ -64,36 +66,7 @@ function ProjectPage() {
         currentPath={`projects / ${pName}`}
       />
 
-      {/*}
-            <section
-                className="banner bannerProject"
-                style={{ backgroundImage: `url(/${pImages?.[0]})` }}>
-                <article className="bannerGreetings">
-                    <h1>{pName}</h1>
-                    <p>{pDescription}</p>
-                    <aside className="currentPath">{`projects / ${pName}`}</aside>
-                </article>
-            </section>
-{*/}
-
       <main>
-        {/*}
-        <section className="pOverviewContainer">
-          <article className="pOverview">
-            <p className="pBriefingProblem">{pBriefingProblem}</p>
-            <p className="pBriefingSolution">{pBriefingSolution}</p>
-            <p className="pRole">{pRole}</p>
-            <p className="pProcess">{pProcess}</p>
-            <p className="pClienpAnalysisAndNotestName">{pAnalysisAndNotes}</p>
-            <a href={pInnerLink} target="_blank" className="pInnerLink">
-              {pInnerLink}
-            </a>
-            <a href={pOutLink} target="_blank" className="pOutLink">
-              {pOutLink}
-            </a>
-          </article>
-        </section>
-{*/}
         <ProjectOverview
           pBriefingProblem={pBriefingProblem}
           pBriefingSolution={pBriefingSolution}
@@ -103,79 +76,22 @@ function ProjectPage() {
           pInnerLink={pInnerLink}
           pOutLink={pOutLink}
         />
-        {/*}
-        <section className="pGridGalleryContainer">
-          {pImages?.map((src, index) => (
-            <figure
-              key={index}
-              className="pGalleryItem"
-              onClick={() => setOpenImage(`/${src}`)}
-            >
-              <img src={`/${src}`} alt={`Project Image ${index + 1}`} />
-            </figure>
-          ))}
-        </section>
-{*/}
-        <ProjectGallery 
-          pImages={pImages} 
-          setOpenImage={setOpenImage} 
-        />
+
+        <ProjectGallery pImages={pImages} setOpenImage={setOpenImage} />
       </main>
 
-      <section className="pClient">
-        <article>
-          <h2 className="pClientName">{pClientName}</h2>
-          <a href={pClientLink} className="pClientLink">
-            {pClientLink}
-          </a>
-          <p className="pClientDescription">{pClientDescription}</p>
-          <p className="pCourse">Course: {pCourse}</p>
-        </article>
-      </section>
+      <ProjectClient
+        pClientName={pClientName}
+        pClientLink={pClientLink}
+        pClientDescription={pClientDescription}
+        pCourse={pCourse}
+      />
 
-      <section className="pClosure">
-        <article className="pIconsContainer">
-          <p>Tools Used:</p>
-          <figure className="pIcons">
-            <div className="pTools">
-              {toolsIcons.map(({ id, value, label, type }) =>
-                type === "fonts-google" ? (
-                  <span key={id} className="material-symbols-outlined">
-                    {value}
-                  </span>
-                ) : (
-                  <img key={id} src={value} alt={label} className="icon" />
-                )
-              )}
-            </div>
-
-            <div className="pFilters">
-              {filterIcons.map(({ id, value, label, type }) =>
-                type === "fonts-google" ? (
-                  <span key={id} className="material-symbols-outlined">
-                    {value}
-                  </span>
-                ) : (
-                  <img key={id} src={value} alt={label} className="icon" />
-                )
-              )}
-            </div>
-          </figure>
-        </article>
-
-        <aside className="pYear">{pDuration}</aside>
-
-        <nav className="currentPath">
-          <a href="" className="iconTextBtn">
-            <span className="icon material-symbols-outlined">west</span>
-            Previous Project
-          </a>
-          <a href="" className="iconTextBtn">
-            Next Project
-            <span className="icon material-symbols-outlined">east</span>
-          </a>
-        </nav>
-      </section>
+      <ProjectClosure
+        toolsIcons={toolsIcons}
+        filterIcons={filterIcons}
+        pDuration={pDuration}
+      />
 
       <OpenImage src={openImage} onClose={() => setOpenImage(null)} />
     </>

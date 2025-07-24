@@ -1,11 +1,6 @@
 import React from "react";
 
 const ProjectOverview = ({
-  id,
-  pName,
-  pSlug,
-
-  pDescription,
   pBriefingProblem,
   pBriefingSolution,
   pRole,
@@ -13,18 +8,6 @@ const ProjectOverview = ({
   pAnalysisAndNotes,
   pInnerLink,
   pOutLink,
-
-  pClientName,
-  pClientLink,
-  pClientDescription,
-
-  pCourse,
-  pTools,
-  pFilters,
-  pDuration,
-  pYear,
-
-  pImages,
 }) => {
   return (
     <section className="pOverviewContainer">
