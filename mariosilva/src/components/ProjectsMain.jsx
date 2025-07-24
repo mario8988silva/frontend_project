@@ -29,7 +29,7 @@ const ProjectsMain = () => {
               </span>
 
               <span
-                className="buttonToogleLegend"
+                className="buttonToggleLabel"
               >
                 {isActive ? "Close Filters" : "Open Filters"}
               </span>

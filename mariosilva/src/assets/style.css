@@ -528,13 +528,13 @@ header a {
 }
 */
 
-.buttonToogleLegend{
+.buttonToggleLabel{
     display: none;
 }
 
 /* breakpoint: tablet */
 @media (min-width: 1024px){
-.buttonToogleLegend
+.buttonToggleLabel
 {
     display: inline-flex;    
 }

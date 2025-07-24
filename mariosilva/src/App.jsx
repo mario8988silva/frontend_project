@@ -47,7 +47,6 @@ function App() {
       <Header />
 
       <Routes>
-
         {/* main page */}
         <Route
           path="/"
