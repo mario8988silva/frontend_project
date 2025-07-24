@@ -5,53 +5,66 @@ import { useState } from "react";
 import projects from "../../data/projects.json";
 import icons from "../../data/icons.json";
 
+import Banner from "../Banner";
+import ProjectOverview from "../ProjectOverview";
+import ProjectGallery from "../ProjectGallery";
 import OpenImage from "../OpenImage";
 
-
 function ProjectPage() {
+  const { slug } = useParams();
+  const project = projects.find((p) => p.pSlug === slug);
 
-    const { slug } = useParams();
-    const project = projects.find(p => p.pSlug === slug);
+  const {
+    id,
+    pName,
+    pSlug,
 
-    const {
-        id,
-        pName,
-        pSlug,
+    pDescription,
+    pBriefingProblem,
+    pBriefingSolution,
+    pRole,
+    pProcess,
+    pAnalysisAndNotes,
+    pInnerLink,
+    pOutLink,
 
-        pDescription,
-        pBriefingProblem,
-        pBriefingSolution,
-        pRole,
-        pProcess,
-        pAnalysisAndNotes,
-        pInnerLink,
-        pOutLink,
+    pClientName,
+    pClientLink,
+    pClientDescription,
 
-        pClientName,
-        pClientLink,
-        pClientDescription,
+    pCourse,
+    pTools,
+    pFilters,
+    pDuration,
+    pYear,
 
-        pCourse,
-        pTools,
-        pFilters,
-        pDuration,
-        pYear,
+    pImages,
+  } = project;
 
-        pImages
+  const [openImage, setOpenImage] = useState(null);
 
-    } = project;
+  const toolsIcons = icons.filter((icon) =>
+    pTools?.some(
+      (tool) => tool.trim().toLowerCase() === icon.label.trim().toLowerCase()
+    )
+  );
+  const filterIcons = icons.filter((icon) =>
+    pFilters?.some(
+      (filters) =>
+        filters.trim().toLowerCase() === icon.label.trim().toLowerCase()
+    )
+  );
 
-    const [openImage, setOpenImage] = useState(null);
+  return (
+    <>
+      <Banner
+        title={pName}
+        description={pDescription}
+        bgImage={`/${pImages?.[0]}`}
+        currentPath={`projects / ${pName}`}
+      />
 
-    const toolsIcons = icons.filter(icon =>
-        pTools?.some(tool => tool.trim().toLowerCase() === icon.label.trim().toLowerCase())
-    );
-    const filterIcons = icons.filter(icon =>
-        pFilters?.some(filters => filters.trim().toLowerCase() === icon.label.trim().toLowerCase())
-    );
-
-    return (
-        <>
+      {/*}
             <section
                 className="banner bannerProject"
                 style={{ backgroundImage: `url(/${pImages?.[0]})` }}>
@@ -61,92 +74,112 @@ function ProjectPage() {
                     <aside className="currentPath">{`projects / ${pName}`}</aside>
                 </article>
             </section>
+{*/}
 
-            <main>
-                <section className="pOverviewContainer">
-                    <article className="pOverview">
-                        <p className="pBriefingProblem">{pBriefingProblem}</p>
-                        <p className="pBriefingSolution">{pBriefingSolution}</p>
-                        <p className="pRole">{pRole}</p>
-                        <p className="pProcess">{pProcess}</p>
-                        <p className="pClienpAnalysisAndNotestName">{pAnalysisAndNotes}</p>
-                        <a href={pInnerLink} target="_blank" className="pInnerLink">{pInnerLink}</a>
-                        <a href={pOutLink} target="_blank" className="pOutLink">{pOutLink}</a>
-                    </article>
-                </section>
+      <main>
+        {/*}
+        <section className="pOverviewContainer">
+          <article className="pOverview">
+            <p className="pBriefingProblem">{pBriefingProblem}</p>
+            <p className="pBriefingSolution">{pBriefingSolution}</p>
+            <p className="pRole">{pRole}</p>
+            <p className="pProcess">{pProcess}</p>
+            <p className="pClienpAnalysisAndNotestName">{pAnalysisAndNotes}</p>
+            <a href={pInnerLink} target="_blank" className="pInnerLink">
+              {pInnerLink}
+            </a>
+            <a href={pOutLink} target="_blank" className="pOutLink">
+              {pOutLink}
+            </a>
+          </article>
+        </section>
+{*/}
+        <ProjectOverview
+          pBriefingProblem={pBriefingProblem}
+          pBriefingSolution={pBriefingSolution}
+          pRole={pRole}
+          pProcess={pProcess}
+          pAnalysisAndNotes={pAnalysisAndNotes}
+          pInnerLink={pInnerLink}
+          pOutLink={pOutLink}
+        />
+        {/*}
+        <section className="pGridGalleryContainer">
+          {pImages?.map((src, index) => (
+            <figure
+              key={index}
+              className="pGalleryItem"
+              onClick={() => setOpenImage(`/${src}`)}
+            >
+              <img src={`/${src}`} alt={`Project Image ${index + 1}`} />
+            </figure>
+          ))}
+        </section>
+{*/}
+        <ProjectGallery 
+          pImages={pImages} 
+          setOpenImage={setOpenImage} 
+        />
+      </main>
 
-                <section className="pGridGalleryContainer">
-                    {pImages?.map((src, index) => (
-                        <figure
-                            key={index}
-                            className="pGalleryItem"
-                            onClick={() => setOpenImage(`/${src}`)}
-                        >
-                            <img src={`/${src}`} alt={`Project Image ${index + 1}`} />
-                        </figure>
-                    ))}
-                </section>
-            </main>
+      <section className="pClient">
+        <article>
+          <h2 className="pClientName">{pClientName}</h2>
+          <a href={pClientLink} className="pClientLink">
+            {pClientLink}
+          </a>
+          <p className="pClientDescription">{pClientDescription}</p>
+          <p className="pCourse">Course: {pCourse}</p>
+        </article>
+      </section>
 
-            <section className="pClient">
-                <article>
-                    <h2 className="pClientName">{pClientName}</h2>
-                    <a href={pClientLink} className="pClientLink">{pClientLink}</a>
-                    <p className="pClientDescription">{pClientDescription}</p>
-                    <p className="pCourse">Course: {pCourse}</p>
-                </article>
-            </section>
+      <section className="pClosure">
+        <article className="pIconsContainer">
+          <p>Tools Used:</p>
+          <figure className="pIcons">
+            <div className="pTools">
+              {toolsIcons.map(({ id, value, label, type }) =>
+                type === "fonts-google" ? (
+                  <span key={id} className="material-symbols-outlined">
+                    {value}
+                  </span>
+                ) : (
+                  <img key={id} src={value} alt={label} className="icon" />
+                )
+              )}
+            </div>
 
-            <section className="pClosure">
+            <div className="pFilters">
+              {filterIcons.map(({ id, value, label, type }) =>
+                type === "fonts-google" ? (
+                  <span key={id} className="material-symbols-outlined">
+                    {value}
+                  </span>
+                ) : (
+                  <img key={id} src={value} alt={label} className="icon" />
+                )
+              )}
+            </div>
+          </figure>
+        </article>
 
-                <article className="pIconsContainer">
-                    <p>Tools Used:</p>
-                    <figure className="pIcons">
-                        <div className="pTools">
-                            {toolsIcons.map(({ id, value, label, type }) =>
-                                type === "fonts-google" ? (
-                                    <span key={id}
-                                        className="material-symbols-outlined">{value}</span>
-                                ) : (
-                                    <img key={id} src={value} alt={label} className="icon" />
-                                )
-                            )}
-                        </div>
+        <aside className="pYear">{pDuration}</aside>
 
-                        <div className="pFilters">
-                            {filterIcons.map(({ id, value, label, type }) =>
-                                type === "fonts-google" ? (
-                                    <span key={id}
-                                        className="material-symbols-outlined">{value}</span>
-                                ) : (
-                                    <img key={id} src={value} alt={label} className="icon" />
-                                )
-                            )}
-                        </div>
-                    </figure>
-                    
-                </article>
+        <nav className="currentPath">
+          <a href="" className="iconTextBtn">
+            <span className="icon material-symbols-outlined">west</span>
+            Previous Project
+          </a>
+          <a href="" className="iconTextBtn">
+            Next Project
+            <span className="icon material-symbols-outlined">east</span>
+          </a>
+        </nav>
+      </section>
 
-                <aside className="pYear">{pDuration}</aside>
-
-                
-
-                <nav className="currentPath">
-                    <a href="" className="iconTextBtn">
-                        <span className="icon material-symbols-outlined">west</span>
-                        Previous Project
-                    </a>
-                    <a href="" className="iconTextBtn">
-                        Next Project
-                        <span className="icon material-symbols-outlined">east</span>
-                    </a>
-                </nav>
-            </section>
-
-            <OpenImage src={openImage} onClose={() => setOpenImage(null)}/>
-
-        </>
-    )
+      <OpenImage src={openImage} onClose={() => setOpenImage(null)} />
+    </>
+  );
 }
 
 export default ProjectPage;
