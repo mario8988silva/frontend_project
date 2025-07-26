@@ -1,6 +1,9 @@
 import icons from "../data/icons.json";
 import projects from "../data/projects.json";
+
+
 console.log("total de filtros: ", icons);
+
 /* botões de filtragem */
 /* construcção da secção de botões */
 export const groupFiltersByCategory = (activeLabels) => {
@@ -52,11 +55,12 @@ const usedLabels = new Set(
     ...(p.pTools || [])
   ])
 );
+
 export const revelantIcons = icons.filter(icon =>
   usedLabels.has(icon.label)
 );
 
-console.log("FILTROS EM USO: ", usedLabels);
+console.log("FILTROS EM USO: ", revelantIcons);
 
 
 /* lógica para inserir projectos nos devidos cursos */

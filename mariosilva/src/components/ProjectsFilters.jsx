@@ -1,10 +1,10 @@
 
 import React, { useState } from "react";
-import icons from '../data/icons.json';
+
 import { useFilters } from '../app/store';
-import FilterGroup from "./FilterGroup";
 import { revelantIcons } from "../utils/filters";
-import useToggle from "../hooks/useToggle";
+
+import FilterGroup from "./FilterGroup";
 
 
 const ProjectsFilters = ({ isOpen }) => {
@@ -29,8 +29,7 @@ const ProjectsFilters = ({ isOpen }) => {
         : [...prev, label]
     });
   };
-
-
+  
 
   /* lógica para listar conteudos por categoria */
   const filtersGrouped = /*icons*/revelantIcons.reduce((acc, icon) => {

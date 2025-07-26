@@ -1,12 +1,11 @@
 import React from "react";
+
 import courses from '../data/courses.json';
 import projects from '../data/projects.json';
 
-import ProjectCard from "./ProjectCard";
 import { useFilters } from '../app/store';
-
-
 import { groupFiltersByCategory, projectMatchesFilters } from "../utils/filters";
+
 import CourseArticle from "./CourseArticle";
 
 const coursesData = courses;
