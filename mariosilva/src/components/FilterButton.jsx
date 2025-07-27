@@ -13,8 +13,7 @@ const FilterButton = ({icon, isActive, onToggle }) => {
                 <Icon
                     type={type}
                     value={value}
-                    label={label}
-                    
+                    label={label}                    
                 />
                 {label}
             </button>

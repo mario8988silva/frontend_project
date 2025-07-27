@@ -5,44 +5,19 @@ import { useFilters } from '../app/store';
 import { revelantIcons } from "../utils/filters";
 
 import FilterGroup from "./FilterGroup";
+import { useToggleFilter } from "../hooks/useToggleFilter.js";
+import { groupingFilters } from "../utils/groupingFilters.js";
+
 
 
 const ProjectsFilters = ({ isOpen }) => {
 
-  /* toogle para botões */
-  const { activeFilters, setActiveFilters } = useFilters();
-
-  const toggleFilter = (label) => {
-    const icon = revelantIcons.find((icon) => icon.label === label);
-    const category = icon?.category;
-
-
-    setActiveFilters((prev) => {
-      const isActive = prev.includes(label);
-
-      if (category === "schools") {
-        return isActive ? [] : [label];
-      }
-
-      return isActive
-        ? prev.filter((f) => f !== label)
-        : [...prev, label]
-    });
-  };
-  
+ /* toogle para botões */
+ const { activeFilters, setActiveFilters } = useFilters();
+ const toggleFilter = useToggleFilter(setActiveFilters);
 
   /* lógica para listar conteudos por categoria */
-  const filtersGrouped = /*icons*/revelantIcons.reduce((acc, icon) => {
-    /* selecciona aqueles que contenham category:"contact" */
-    if (icon.category === "contact") return acc;
-
-    /* todos aqueles que não sejam "contact" */
-    if (!acc[icon.category]) {
-      acc[icon.category] = [];
-    }
-    acc[icon.category].push(icon);
-    return acc;
-  }, {});
+  const filtersGrouped = groupingFilters;
   console.log("filtersGrouped: ", filtersGrouped);
 
   /* faz renderização */

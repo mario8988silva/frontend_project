@@ -4,7 +4,8 @@ import courses from '../data/courses.json';
 import projects from '../data/projects.json';
 
 import { useFilters } from '../app/store';
-import { groupFiltersByCategory, projectMatchesFilters } from "../utils/filters";
+import { groupFiltersByCategory } from "../utils/filters";
+import { getFilteredCourses } from "../utils/getFilteredCourses";
 
 import CourseArticle from "./CourseArticle";
 
@@ -24,17 +25,7 @@ const ProjectsResults = () => {
 
   const { activeFilters } = useFilters();
   const filtersByCategory = groupFiltersByCategory(activeFilters);
-
-  const filteredCourses = coursesData.map((course) => {
-    const courseProjects = projectsData
-      .filter((p) => p.pCourse === course.cCourse)
-      .filter((p) => projectMatchesFilters(p, filtersByCategory));
-
-    return {
-      ...course,
-      projects: courseProjects,
-    };
-  })
+  const filteredCourses = getFilteredCourses(coursesData, projectsData, filtersByCategory);
 
   /* esconde todos os cursos que não constenham projectos resultantes */
     //.filter((course) => course.projects.length > 0);
