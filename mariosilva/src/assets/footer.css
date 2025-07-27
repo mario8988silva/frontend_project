@@ -56,6 +56,9 @@ ul.socialMediaContainer {
     justify-items: center;
 }
 
+ul.socialMediaContainer svg:hover{
+        fill: var(--shade00);
+}
 
 /* links  -------------------------- */
 footer .iconTextBtn{
@@ -86,8 +89,9 @@ div.logoContainer {
     margin-top: var(--space-fixed-l);
 }
 
-div.logoContainer a.logo {
-    padding-bottom: var(--space-xs);    
+div.logoContainer button.logo {
+    padding-bottom: var(--space-xs); 
+    background-color: var(--shade06);   
 }
 
 div.logoContainer * {
@@ -99,6 +103,4 @@ div.logoContainer:hover  * {
     text-shadow: .5px 0  var(--shade00);
 }
 
-ul.socialMediaContainer svg:hover{
-        fill: var(--shade00);
-}
+

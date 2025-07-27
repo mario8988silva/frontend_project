@@ -1,0 +1,24 @@
+/* Error Page ------------------------------------- */
+.errorPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--section-height);
+    text-align: center;
+    padding: var(--space-l);
+}
+
+.errorPage section{
+    max-width: 500px;
+    padding: var(--space-l);
+}
+
+.errorPage h1 {
+    font-size: calc(var(--font-size-4xl) * 2);
+    margin-bottom: var(--space-xs);
+}
+
+.errorPage p {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-xl);
+}

@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import useToggle from "../hooks/useToggle";
+import Logo from "./Logo";
 
 const Header = () => {
   const { isActive, toggle, close } = useToggle();
@@ -12,8 +13,7 @@ const Header = () => {
     if (location.pathname !== "/") {
       navigate("/", { replace: false });
 
-      
-    setTimeout(() => {
+      setTimeout(() => {
         const section = document.getElementById(sectionId);
         section?.scrollIntoView({ behavior: "smooth" });
       }, 100);
@@ -28,9 +28,13 @@ const Header = () => {
       id="headerNav"
       className={`${isActive ? "openedHeader" : "closedHeader"}`}
     >
+      {/*}
       <a href="#" className="logo" onClick={close}>
         Ø
       </a>
+      {*/}
+
+      <Logo scrollTarget="top" shouldNavigateHome={true} />
 
       <ul className={`navMenu ${isActive ? "open" : "closed"}`}>
         <li>

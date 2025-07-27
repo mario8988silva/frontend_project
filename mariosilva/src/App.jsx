@@ -38,13 +38,17 @@ function App() {
   const isMainPage = location.pathname === "/";
   const isProjectPage = location.pathname.startsWith("/projects/");
   /*const isErrorPage = location.pathname !== '/' && !location.pathname.startsWith('/projects/');*/
-
+/*
   const showLayout = isMainPage || isProjectPage;
+  */
+
+  const isErrorPage = !isMainPage && !isProjectPage;
+const showLayout = !isErrorPage;
 
   return (
     <>
       {/* conteúdo comum */}
-      <Header />
+      {showLayout && <Header />}
 
       <Routes>
         {/* main page */}
@@ -66,11 +70,18 @@ function App() {
           element={<ProjectPage />}
         />
 
+        <Route path="*" element={<ErrorPage />} />
+
       </Routes>
 
       {/* conteúdo comum */}
-      <Footer />
+      {showLayout && <Footer />}
+
+      
+
+      
     </>
+    
   );
 }
 

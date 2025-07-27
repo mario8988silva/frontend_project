@@ -3,6 +3,7 @@ import { getQuote } from "../api/quote";
 import footer from "../data/footer.json";
 import icons from "../data/icons.json";
 import Icon from "./Icon";
+import Logo from "./Logo";
 
 const contactLinks = footer.flatMap(
   (block) => block.content?.map((item) => item.target).filter(Boolean) || []
@@ -64,9 +65,7 @@ const Footer = () => {
       </address>
 
       <div className="logoContainer">
-        <a href="#" className="logo">
-          Ø
-        </a>
+        <Logo scrollTarget="top" shouldNavigateHome={true} />
         <aside>2025</aside>
       </div>
     </footer>

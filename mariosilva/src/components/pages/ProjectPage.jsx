@@ -2,6 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 
+import ErrorPage from "./ErrorPage";
+
 import projects from "../../data/projects.json";
 import icons from "../../data/icons.json";
 
@@ -15,6 +17,10 @@ import OpenImage from "../OpenImage";
 function ProjectPage() {
   const { slug } = useParams();
   const project = projects.find((p) => p.pSlug === slug);
+
+if (!project) {
+  return <ErrorPage />;
+}
 
   const {
     id,

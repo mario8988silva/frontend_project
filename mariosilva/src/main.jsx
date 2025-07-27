@@ -17,6 +17,7 @@ import './assets/valuesAndMethods.css';
 import './assets/footer.css';
 
 import './assets/projectPage.css';
+import './assets/errorPage.css';
 
 
 import App from './App.jsx'
