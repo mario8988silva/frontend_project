@@ -1,212 +1,230 @@
 [
-    {
-        "id": 0,
-        "label": "Flash",
-        "category": "tools",
-        "type": "local-svg",
-        "value": "/src/assets/icons/tools/adobe-flash.svg"
-    },
-    {
-        "id": 1,
-        "label": "Illustrator",
-        "category": "tools",
-        "type": "local-svg",
-        "value": "/src/assets/icons/tools/adobe-illustrator.svg"
-    },
-    {
-        "id": 2,
-        "label": "InDesign",
-        "category": "tools",
-        "type": "local-svg",
-        "value": "/src/assets/icons/tools/adobe-indesign.svg"
-    },
-    {
-        "id": 3,
-        "label": "Photoshop",
-        "category": "tools",
-        "type": "local-svg",
-        "value": "/src/assets/icons/tools/adobe-photoshop.svg"
-    },
-    {
-        "id": 4,
-        "label": "Premier",
-        "category": "tools",
-        "type": "local-svg",
-        "value": "/src/assets/icons/tools/adobe-premierpro.svg"
-    },
-    {
-        "id": 5,
-        "label": "CSS",
-        "category": "tools",
-        "type": "local-svg",
-        "value": "/src/assets/icons/tools/css3.svg"
-    },
-    {
-        "id": 6,
-        "label": "Figma",
-        "category": "tools",
-        "type": "local-svg",
-        "value": "/src/assets/icons/tools/figma.svg"
-    },
-    {
-        "id": 7,
-        "label": "HTML",
-        "category": "tools",
-        "type": "local-svg",
-        "value": "/src/assets/icons/tools/html5.svg"
-    },
-    {
-        "id": 8,
-        "label": "JavaScript",
-        "category": "tools",
-        "type": "local-svg",
-        "value": "/src/assets/icons/tools/javascript.svg"
-    },
-    {
-        "id": 9,
-        "label": "PHP",
-        "category": "tools",
-        "type": "local-svg",
-        "value": "/src/assets/icons/tools/php.svg"
-    },
-    {
-        "id": 10,
-        "label": "React",
-        "category": "tools",
-        "type": "local-svg",
-        "value": "/src/assets/icons/tools/react.svg"
-    },
-    {
-        "id": 11,
-        "label": "Photography",
-        "category": "fields",
-        "type": "fonts-google",
-        "value": "photo_camera"
-    },
-    {
-        "id": 12,
-        "label": "Packaging",
-        "category": "fields",
-        "type": "fonts-google",
-        "value": "package_2"
-    },
-    {
-        "id": 13,
-        "label": "Illustration",
-        "category": "fields",
-        "type": "fonts-google",
-        "value": "palette"
-    },
-    {
-        "id": 14,
-        "label": "Branding",
-        "category": "fields",
-        "type": "fonts-google",
-        "value": "kid_star"
-    },
-    {
-        "id": 15,
-        "label": "Communication Design",
-        "category": "fields",
-        "type": "fonts-google",
-        "value": "chat_bubble"
-    },
-    {
-        "id": 16,
-        "label": "Editorial Design",
-        "category": "fields",
-        "type": "fonts-google",
-        "value": "import_contacts"
-    },
-    {
-        "id": 17,
-        "label": "UX/UI Design",
-        "category": "fields",
-        "type": "fonts-google",
-        "value": "stylus_note"
-    },
-    {
-        "id": 18,
-        "label": "Web Development",
-        "category": "fields",
-        "type": "fonts-google",
-        "value": "code"
-    },
-    {
-        "id": 19,
-        "label": "IEFP Setubal",
-        "category": "schools",
-        "type": "fonts-google",
-        "value": "school"
-    },
-    {
-        "id": 20,
-        "label": "Flag",
-        "category": "schools",
-        "type": "fonts-google",
-        "value": "school"
-    },
-    {
-        "id": 21,
-        "label": "Edit",
-        "category": "schools",
-        "type": "fonts-google",
-        "value": "school"
-    },
-    {
-        "id": 22,
-        "label": "Work",
-        "category": "context",
-        "type": "fonts-google",
-        "value": "work"
-    },
-    {
-        "id": 23,
-        "label": "Academic",
-        "category": "context",
-        "type": "fonts-google",
-        "value": "school"
-    },
-    {
-        "id": 24,
-        "label": "Side Project",
-        "category": "context",
-        "type": "fonts-google",
-        "value": "person"
-    },
-    {
-        "id": 25,
-        "label": "Internship",
-        "category": "context",
-        "type": "fonts-google",
-        "value": "badge"
-    },
-    {
-        "id": 26,
-        "label": "Behance",
-        "category": "contact",
-        "type": "local-svg",
-        "value": "/src/assets/icons/contact/behance.svg"
-    },
-    {
-        "id": 27,
-        "label": "Instagram",
-        "category": "contact",
-        "type": "local-svg",
-        "value": "/src/assets/icons/contact/instagram.svg"
-    },
-    {
-        "id": 28,
-        "label": "LinkedIn",
-        "category": "contact",
-        "type": "local-svg",
-        "value": "/src/assets/icons/contact/linkedin.svg"
-    },
-    {
-        "id": 29,
-        "label": "Reset Selecion",
-        "category": "system",
-        "type": "fonts-google",
-        "value": "replay"
-    }
+  {
+    "id": 0,
+    "label": "Flash",
+    "category": "tools",
+    "type": "local-svg",
+    "value": "/src/assets/icons/tools/adobe-flash.svg"
+  },
+  {
+    "id": 1,
+    "label": "Illustrator",
+    "category": "tools",
+    "type": "local-svg",
+    "value": "/src/assets/icons/tools/adobe-illustrator.svg"
+  },
+  {
+    "id": 2,
+    "label": "InDesign",
+    "category": "tools",
+    "type": "local-svg",
+    "value": "/src/assets/icons/tools/adobe-indesign.svg"
+  },
+  {
+    "id": 3,
+    "label": "Photoshop",
+    "category": "tools",
+    "type": "local-svg",
+    "value": "/src/assets/icons/tools/adobe-photoshop.svg"
+  },
+  {
+    "id": 4,
+    "label": "Premier",
+    "category": "tools",
+    "type": "local-svg",
+    "value": "/src/assets/icons/tools/adobe-premierpro.svg"
+  },
+  {
+    "id": 5,
+    "label": "CSS",
+    "category": "tools",
+    "type": "local-svg",
+    "value": "/src/assets/icons/tools/css3.svg"
+  },
+  {
+    "id": 6,
+    "label": "Figma",
+    "category": "tools",
+    "type": "local-svg",
+    "value": "/src/assets/icons/tools/figma.svg"
+  },
+  {
+    "id": 7,
+    "label": "HTML",
+    "category": "tools",
+    "type": "local-svg",
+    "value": "/src/assets/icons/tools/html5.svg"
+  },
+  {
+    "id": 8,
+    "label": "JavaScript",
+    "category": "tools",
+    "type": "local-svg",
+    "value": "/src/assets/icons/tools/javascript.svg"
+  },
+  {
+    "id": 9,
+    "label": "PHP",
+    "category": "tools",
+    "type": "local-svg",
+    "value": "/src/assets/icons/tools/php.svg"
+  },
+  {
+    "id": 10,
+    "label": "React",
+    "category": "tools",
+    "type": "local-svg",
+    "value": "/src/assets/icons/tools/react.svg"
+  },
+  {
+    "id": 11,
+    "label": "Photography",
+    "category": "fields",
+    "type": "fonts-google",
+    "value": "photo_camera"
+  },
+  {
+    "id": 12,
+    "label": "Packaging",
+    "category": "fields",
+    "type": "fonts-google",
+    "value": "package_2"
+  },
+  {
+    "id": 13,
+    "label": "Illustration",
+    "category": "fields",
+    "type": "fonts-google",
+    "value": "palette"
+  },
+  {
+    "id": 14,
+    "label": "Branding",
+    "category": "fields",
+    "type": "fonts-google",
+    "value": "kid_star"
+  },
+  {
+    "id": 15,
+    "label": "Communication Design",
+    "category": "fields",
+    "type": "fonts-google",
+    "value": "chat_bubble"
+  },
+  {
+    "id": 16,
+    "label": "Editorial Design",
+    "category": "fields",
+    "type": "fonts-google",
+    "value": "import_contacts"
+  },
+  {
+    "id": 17,
+    "label": "UX/UI Design",
+    "category": "fields",
+    "type": "fonts-google",
+    "value": "stylus_note"
+  },
+  {
+    "id": 18,
+    "label": "Web Development",
+    "category": "fields",
+    "type": "fonts-google",
+    "value": "code"
+  },
+  {
+    "id": 19,
+    "label": "IEFP Setubal",
+    "category": "schools",
+    "type": "fonts-google",
+    "value": "school",
+
+    "viewBox": "0 0 800 600",
+    "path": "M363.5449,58.96733c-86.03761,8.7733 -75.088,140.40688 12.69047,133.69128c87.55339,-6.69839 76.94105,-142.83105 -12.69047,-133.69128z M274.74417,321.65403l-173.77724,129.73529l-0.70808,17.27645l79.53554,54.4659l11.25526,0.34128c32.88339,-26.6061 68.32837,-50.21157 101.17421,-76.82673c13.58326,-11.00658 36.9629,-29.46727 44.34682,-44.65318c8.75405,-18.00373 7.50558,-40.51455 8.13957,-59.86043c1.28913,-39.3371 6.88184,-91.63336 -25.48875,-120.42877c-24.38648,-21.69311 -87.68359,-70.66315 -116.1124,-82.8876c-29.00967,-12.47423 -68.79615,5.57062 -72.23454,38.48067c-3.22475,30.86522 6.00324,39.5908 27.98055,56.77333c36.0702,28.20076 78.25988,54.00739 112.81093,83.18904c1.3902,1.17415 3.38971,2.31033 3.07812,4.39473z M464.75909,321.65373l2.52404,-3.94841c37.08505,-28.70325 76.50847,-54.67684 113.38307,-83.61675c21.80675,-17.11436 31.15875,-26.20525 27.96223,-56.79165c-2.97013,-28.42015 -33.65043,-45.63353 -60.26946,-42.51548c-14.72728,1.7251 -43.02524,23.01522 -55.92451,32.07538c-22.19964,15.59253 -46.44043,33.42299 -67.14096,50.85904c-22.09336,18.60922 -27.62,33.6376 -30.5334,62.4666c-2.73489,27.06261 -3.15,98.4405 8.17217,121.81063c7.42591,15.32785 30.68056,33.57871 44.34687,44.65313c32.8464,26.61689 68.20801,50.33144 101.18669,76.81425l11.24278,-0.32881l79.53274,-54.46465c1.34011,-2.42143 -0.25438,-17.07576 -1.96015,-19.02285l-172.5221,-127.99044z M363.5449,58.96733c89.63152,-9.13977 100.24387,126.99289 12.69047,133.69128c-87.77847,6.71561 -98.72809,-124.91798 -12.69047,-133.69128z"
+  },
+  {
+    "id": 20,
+    "label": "Flag",
+    "category": "schools",
+    "type": "fonts-google",
+    "value": "school",
+
+    "viewBox": "0 0 160 30",
+    "path": "M117.00374,16.27631c1.69046-.66746,1.0235-4.19839,1.92315-6.57653,1.10064-2.90946,7.89325-9.42347,10.57685-9.42347h22.5l-1.10524,7.89102c-4.8328,1.02154-19.81824-1.61078-22.90158,1.60215-1.69252,3.57687-3.54885,9.54902-.49318,12.50684h18c.43243,0,3.37005-3.23578,2.49498-3.99474l-7.99051-.01074.99553-7.99452h17c.2824,8.82368-3.94285,18.54717-13.58704,19.91296-3.77547.53467-18.13463.62847-21.363-.46292-6.08268-2.05633-5.67211-8.4671-6.04996-13.45004l-3.09888,13.89826-8.90052.09198.9994-5.99023h-23l.0051,6.00534-9.00649-.01c1.61808-9.57081,1.72083-27.10148,13.71176-29.78496,3.4469-.77139,21.05874-.65233,24.03154.54771,6.68952,2.70038,4.85258,9.89423,5.25809,15.24191ZM108.00374,16.27631c-.06427-2.76847,1.55038-5.40187-.98408-7.51156-7.66085-.05216-22.37778-4.40332-22.01592,7.51156h23Z M40.00374.27631l-1.04944,7.94664c-.94583.92285-20.47419-.89087-24.25763.2463-2.30114.69164-3.97803,4.50344-3.69293,6.80706h22l-1.10524,7.89102-22.88813.11481-1.14754,6.85644-7.86283.13679C1.47233,21.94222,1.23059,9.65993,7.97061,3.74319c.77589-.68112,5.10651-3.46687,5.53313-3.46687h26.5Z M73.00374,22.27631l-1.61462,8.06055c-27.76775,1.38289-36.81612.88255-28.43538-29.4224l9.04647-.63133-2.83297,20.82493c.72036.15158,1.97097,1.16826,2.33651,1.16826h21.5Z"
+  },
+  {
+    "id": 21,
+    "label": "Edit",
+    "category": "schools",
+    "type": "fonts-google",
+    "value": "school",
+
+    "viewBox": "0 0 336 336",
+    "path": "M336,0v336H0V0h336ZM326,10H10v99l316-1V10ZM217,119H10v98h207v-98ZM326,119h-99v98h99v-98ZM326,326v-97.5l-1.5-1.5H11.5l-1.5,1.5v97.5h316Z M294,249l.00518,9.00515-13.00518-.00515v46.5l-1.6566,1.33959c-1.26486.28241-2.55614.22214-3.8434.22214-2.04965,0-4.23176.33352-5.5-1.56173v-45c-1.75152-3.18215-13.05845-.55106-14.0052-1.49484l.0052-9.00516h38Z M71 32v10H45v13h22v10H45v14h26v10H35V32h36Z M145,196v-56h27.5c.34557,0,5.47135,2.14075,6.40605,2.59395,19.94552,9.6707,20.50599,40.32614.62603,50.43814-1.02201.51985-6.6275,2.96791-7.03209,2.96791h-27.5ZM156.63816,149.14228l-1.20165.79375.00009,36.12788c35.52264,6.99404,37.16177-41.16314,1.20156-36.92163Z M271 140h11v56h-11z"
+  },
+  {
+    "id": 22,
+    "label": "Work",
+    "category": "context",
+    "type": "fonts-google",
+    "value": "work"
+  },
+  {
+    "id": 23,
+    "label": "Academic",
+    "category": "context",
+    "type": "fonts-google",
+    "value": "school"
+  },
+  {
+    "id": 24,
+    "label": "Side Project",
+    "category": "context",
+    "type": "fonts-google",
+    "value": "person"
+  },
+  {
+    "id": 25,
+    "label": "Internship",
+    "category": "context",
+    "type": "fonts-google",
+    "value": "badge"
+  },
+  {
+    "id": 26,
+    "label": "Behance",
+    "category": "contact",
+    "type": "inline-svg",
+    "value": "/src/assets/icons/contact/behance.svg",
+
+    "viewBox": "0 0 512 512",
+    "path": "M344.1,244.5c-4.9-4.2-11-6.3-18.2-6.3c-7.8,0-13.9,2.2-18.3,6.7c-4.3,4.5-7,10.5-8.2,18.1h52.7C351.7,254.9,348.9,248.8,344.1,244.5z M214.3,266.1c-3.8-1.7-9-2.6-15.8-2.7h-39v42.2H198c6.9,0,12.2-0.9,16-2.8c7-3.5,10.4-10,10.4-19.7C224.4,274.9,221,269.2,214.3,266.1z M256,0C114.6,0,0,114.6,0,256s114.6,256,256,256s256-114.6,256-256S397.4,0,256,0z M291.6,182.3h67.8V202h-67.8L291.6,182.3L291.6,182.3z M250.7,310.6c-3,4.9-6.7,9.1-11.2,12.4c-5,3.9-11,6.5-17.9,8c-6.9,1.4-14.3,2.1-22.4,2.1H128V174.9h76.5c19.3,0.3,33,5.9,41,16.9c4.8,6.7,7.2,14.8,7.2,24.2c0,9.6-2.4,17.4-7.3,23.3c-2.7,3.3-6.8,6.3-12.1,9c8.1,3,14.2,7.6,18.3,14s6.2,14.1,6.2,23.2C257.8,294.7,255.4,303.1,250.7,310.6z M384,283.2h-85.2c0.5,11.7,4.5,20,12.2,24.7c4.7,2.9,10.3,4.4,16.9,4.4c6.9,0,12.6-1.8,17-5.4c2.4-1.9,4.5-4.6,6.3-8.1h31.2c-0.8,6.9-4.6,14-11.3,21.2c-10.5,11.4-25.1,17.1-44,17.1c-15.6,0-29.3-4.8-41.2-14.4c-11.9-9.6-17.9-25.2-17.9-46.8c0-20.3,5.4-35.8,16.1-46.6c10.8-10.8,24.7-16.2,41.8-16.2c10.2,0,19.4,1.8,27.5,5.5c8.2,3.6,14.9,9.4,20.2,17.3c4.8,6.9,7.9,15,9.3,24.2C383.8,265.4,384.1,273.1,384,283.2z M214.8,233.3c4.3-2.6,6.4-7.3,6.4-13.9c0-7.4-2.8-12.2-8.5-14.6c-4.9-1.6-11.1-2.5-18.7-2.5h-34.4v34.9H198C204.9,237.3,210.4,236,214.8,233.3z"
+  },
+  {
+    "id": 27,
+    "label": "Instagram",
+    "category": "contact",
+    "type": "inline-svg",
+    "value": "/src/assets/icons/contact/instagram.svg",
+
+    "viewBox": "0 0 800 800",
+    "path": "M234.78659,4.90285c-65.11597,2.94922-121.55396,18.86719-167.12646,64.23828C21.9277,114.76613,6.20627,171.42629,3.26071,235.85988c-1.83105,40.21484-12.53784,344.0625,18.5083,423.75,20.93506,53.75,62.16919,95.09766,116.41846,116.09375,25.31372,9.84375,54.21021,16.52344,96.59912,18.45703,354.43237,16.03516,485.81665,7.30469,541.2207-134.55078,9.83154-25.25391,16.5979-54.12109,18.46802-96.40625,16.19873-355.33203-2.62695-432.36328-64.39819-494.0625C681.08053,20.27394,623.4487-12.98777,234.78659,4.90285M238.04953,722.69582c-38.80615-1.73828-59.86084-8.22266-73.91113-13.65234-35.34302-13.73047-61.89087-40.17578-75.54321-75.3125-23.64258-60.54688-15.80078-348.125-13.69141-394.64844,2.06909-45.58594,11.30371-87.22656,43.46313-119.39453,39.80103-39.70703,91.22559-59.16016,441.35864-43.35938,45.69214,2.07031,87.44385,11.28906,119.68384,43.35938,39.80103,39.70703,59.54346,91.52344,43.46313,440.3125-1.75171,38.71094-8.23853,59.70703-13.69141,73.73047-36.02051,92.30469-118.88794,105.13672-471.13159,88.96484M563.58664,187.57863c0,26.28906,21.37329,47.65625,47.76245,47.65625s47.80151-21.36719,47.80151-47.65625c0-26.26953-21.41357-47.63672-47.80151-47.63672s-47.76245,21.36719-47.76245,47.63672M194.50705,399.51223c0,112.59766,91.50391,203.88672,204.3811,203.88672s204.3811-91.28906,204.3811-203.88672-91.50391-203.82812-204.3811-203.82812-204.3811,91.23047-204.3811,203.82812M266.22946,399.51223c0-73.04688,59.38354-132.32422,132.65869-132.32422s132.65869,59.27734,132.65869,132.32422c0,73.10547-59.38477,132.38281-132.65869,132.38281s-132.65869-59.27734-132.65869-132.38281"
+  },
+  {
+    "id": 28,
+    "label": "LinkedIn",
+    "category": "contact",
+    "type": "inline-svg",
+    "value": "/src/assets/icons/contact/linkedin.svg",
+
+    "viewBox": "0 0 24 24",
+    "path": "M22.2857 0H1.70893C0.766071 0 0 0.776786 0 1.73036V22.2696C0 23.2232 0.766071 24 1.70893 24H22.2857C23.2286 24 24 23.2232 24 22.2696V1.73036C24 0.776786 23.2286 0 22.2857 0ZM7.25357 20.5714H3.69643V9.11786H7.25893V20.5714H7.25357ZM5.475 7.55357C4.33393 7.55357 3.4125 6.62679 3.4125 5.49107C3.4125 4.35536 4.33393 3.42857 5.475 3.42857C6.61071 3.42857 7.5375 4.35536 7.5375 5.49107C7.5375 6.63214 6.61607 7.55357 5.475 7.55357ZM20.5875 20.5714H17.0304V15C17.0304 13.6714 17.0036 11.9625 15.1821 11.9625C13.3286 11.9625 13.0446 13.4089 13.0446 14.9036V20.5714H9.4875V9.11786H12.9V10.6821H12.9482C13.425 9.78214 14.5875 8.83393 16.3179 8.83393C19.9179 8.83393 20.5875 11.2071 20.5875 14.2929V20.5714Z"
+  },
+  {
+    "id": 29,
+    "label": "Reset Selecion",
+    "category": "system",
+    "type": "fonts-google",
+    "value": "replay"
+  }
 ]

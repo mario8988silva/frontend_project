@@ -105,7 +105,8 @@
             "projects/pothos/images/2.jpg",
             "projects/pothos/images/3.jpg",
             "projects/pothos/images/4.jpg",
-            "projects/pothos/images/5.jpg"
+            "projects/pothos/images/5.jpg",
+            "projects/pothos/images/6.jpg"
         ]
     },
     {
@@ -213,7 +214,8 @@
             "projects/reativ/images/6.jpg",
             "projects/reativ/images/7.jpg",
             "projects/reativ/images/8.jpg",
-            "projects/reativ/images/9.jpg"
+            "projects/reativ/images/9.jpg",
+            "projects/reativ/images/10.jpg"
         ]
     },
     {
@@ -270,7 +272,8 @@
             "projects/vinhos-e-adegas/images/3.jpg",
             "projects/vinhos-e-adegas/images/4.jpg",
             "projects/vinhos-e-adegas/images/5.jpg",
-            "projects/vinhos-e-adegas/images/6.jpg"
+            "projects/vinhos-e-adegas/images/6.jpg",
+            "projects/vinhos-e-adegas/images/7.jpg"
         ]
     },
     {
@@ -294,7 +297,8 @@
         "pFilters": ["UX/UI Design", "Edit", "Academic"],
         "pDuration": "2023",
         "pImages": [
-            "projects/cookidoo/images/1.png"
+            "projects/cookidoo/images/1.jpg",
+            "projects/cookidoo/images/2.jpg"
         ]
     }
 ]
