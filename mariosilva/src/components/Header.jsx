@@ -1,49 +1,80 @@
+import { useLocation, useNavigate } from "react-router-dom";
 import useToggle from "../hooks/useToggle";
 
-
-
 const Header = () => {
+  const { isActive, toggle, close } = useToggle();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-    const { isActive, toggle, close } = useToggle();
-/*
-    let headerBehaviour = window.scrollY;
-    const header = document.querySelector("header");
+  const handleNavClick = (sectionId) => {
+    close();
 
-    window.addEventListener("scroll", () => {
-        if (window.innerWidth >= 1024) {
-            if (window.scrollY > headerBehaviour) {
-                header.classList.add("closeInLaptop");
-            } else {
-                header.classList.remove("closeInLaptop");
-            }
-            headerBehaviour = window.scrollY;
-        }
-    });
-*/
-    return (
-        <header
-            id="headerNav"
-            className={`${isActive ? "openedHeader" : "closedHeader"}`}
-        >
-            <a href="#" className="logo" onClick={close}>Ø</a>
+    if (location.pathname !== "/") {
+      navigate("/", { replace: false });
 
-            <ul className={`navMenu ${isActive ? "open" : "closed"}`}>
+      
+    setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        section?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const section = document.getElementById(sectionId);
+      section?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-                <li><a href="#ProjectsMain" className="btn" onClick={close}>projects</a></li>
-                <li><a href="#servicesAndPath" className="btn" onClick={close}>about</a></li>
-                <li><a href="#valuesAndMethods" className="btn" onClick={close}>values & methods</a></li>
-                <li><a href="#footer" className="btn" onClick={close}>contact</a></li>
-            </ul>
+  return (
+    <header
+      id="headerNav"
+      className={`${isActive ? "openedHeader" : "closedHeader"}`}
+    >
+      <a href="#" className="logo" onClick={close}>
+        Ø
+      </a>
 
-            <ul className="headerMenuToogle">
-                <li>
-                    <button onClick={toggle} className="navOpen">
-                        <span className="icon material-symbols-outlined ">{isActive ? "close" : "menu"}</span>
-                    </button>
-                </li>
-            </ul>
-        </header>
-    )
-}
+      <ul className={`navMenu ${isActive ? "open" : "closed"}`}>
+        <li>
+          <button
+            onClick={() => handleNavClick("ProjectsMain")}
+            className="btn"
+          >
+            projects
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => handleNavClick("servicesAndPath")}
+            className="btn"
+          >
+            about
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => handleNavClick("valuesAndMethods")}
+            className="btn"
+          >
+            values & methods
+          </button>
+        </li>
+        <li>
+          <button onClick={() => handleNavClick("footer")} className="btn">
+            contact
+          </button>
+        </li>
+      </ul>
+
+      <ul className="headerMenuToogle">
+        <li>
+          <button onClick={toggle} className="navOpen">
+            <span className="icon material-symbols-outlined ">
+              {isActive ? "close" : "menu"}
+            </span>
+          </button>
+        </li>
+      </ul>
+    </header>
+  );
+};
 
 export default Header;
