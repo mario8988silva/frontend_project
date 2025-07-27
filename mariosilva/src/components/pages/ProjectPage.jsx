@@ -18,9 +18,23 @@ function ProjectPage() {
   const { slug } = useParams();
   const project = projects.find((p) => p.pSlug === slug);
 
-if (!project) {
-  return <ErrorPage />;
-}
+  if (!project) {
+    return <ErrorPage />;
+  }
+
+  const projectList = projects
+    .filter((p) => p.pStatus?.toLowerCase() === "ready")
+    .map((p) => p.pSlug);
+
+  
+const currentIndex = projectList.findIndex((slugItem) => slugItem === slug);
+const totalProjects = projectList.length;
+
+const prevIndex = (currentIndex - 1 + totalProjects) % totalProjects;
+const nextIndex = (currentIndex + 1) % totalProjects;
+
+const prevSlug = projectList[prevIndex];
+const nextSlug = projectList[nextIndex];
 
   const {
     id,
@@ -97,6 +111,8 @@ if (!project) {
         toolsIcons={toolsIcons}
         filterIcons={filterIcons}
         pDuration={pDuration}
+        prevSlug={prevSlug}
+        nextSlug={nextSlug}
       />
 
       <OpenImage src={openImage} onClose={() => setOpenImage(null)} />

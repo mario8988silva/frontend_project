@@ -1,9 +1,13 @@
 import React from "react";
 
+
 import IconGroup from "./IconGroup";
 import ProjectNavButton from "./ProjectNavButton";
 
-const ProjectClosure = ({ toolsIcons, filterIcons, pDuration }) => {
+
+
+const ProjectClosure = ({ toolsIcons, filterIcons, pDuration, prevSlug,
+  nextSlug, }) => {
   return (
     <section className="pClosure">
       <article className="pIconsContainer">
@@ -17,19 +21,23 @@ const ProjectClosure = ({ toolsIcons, filterIcons, pDuration }) => {
       <aside className="pYear">{pDuration}</aside>
 
       <nav className="currentPath">
-        <ProjectNavButton
-          href=""
-          direction="prev"
-          icon="west"
-          label="Previous Project"
-        />
+         {prevSlug && (
+          <ProjectNavButton
+            href={`/projects/${prevSlug}`}
+            direction="prev"
+            icon="west"
+            label="Previous Project"
+          />
+        )}
 
-        <ProjectNavButton
-          href=""
-          direction="next"
-          icon="east"
-          label="Next Project"
-        />
+        {nextSlug && (
+          <ProjectNavButton
+            href={`/projects/${nextSlug}`}
+            direction="next"
+            icon="east"
+            label="Next Project"
+          />
+        )}
       </nav>
     </section>
   );
