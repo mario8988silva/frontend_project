@@ -29,7 +29,7 @@ const ProjectCard = ({ projects }) => {
                 return (
                     <article
                         key={id}
-                        className={`projectCard clickable ${isOpen ? "open" : ""}`}
+                        className={`projectCard ${isOpen ? "open" : ""} ${pStatus !== "ready" ? "inactive" : "clickable"}`}
                         onClick={() => handleToogle(id)}
                     >
 

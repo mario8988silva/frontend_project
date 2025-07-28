@@ -55,18 +55,20 @@
 /* Project Card contents ------------------------------ */
 
 /* todo e qualquer elemento que não seja o .pMainImage, terá um z-index de 1, para se sobrepor a este */
-.projectCard>*:not(.pMainImage) {
+.projectCard > *:not(.pMainImage) {
     display: none;
     position: relative;
+    opacity: 1;
 
     z-index: 1;
-    transition: display var(--time-2xl) ease-in-out; /* SEM EFEITO!! */
+    transition: opacity var(--time-2xl) ease-in-out; /* SEM EFEITO!! */
 }
 
 @media (max-width: 767px) {
 
-    .projectCard.open>*:not(.pMainImage) {
+    .projectCard.open > *:not(.pMainImage) {
         display: flex;
+        opacity: 1;
     }
 }
 
@@ -152,14 +154,16 @@
 /* description ------------------------------ */
 .pDescription {
     padding: var(--space-s);
-    
+    /*
     display: none;
+    */
+    opacity: 0;
 
     color: var(--shade10);
 
     backdrop-filter:  var(--effect-blur-m);
 
-    transition: display var(--time-xs) ease-in-out;  /* SEM EFEITO!! */
+    transition: opacity var(--time-l) ease-in-out;  /* SEM EFEITO!! */
 }    
 
 @media (min-width: 1024px){
@@ -192,6 +196,47 @@
     .projectCard a.btn{
         display: flex;
     }
+}
+
+/* REEDITAR !!! --------------------------- */
+.projectCard.inactive img {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  pointer-events: none;
+  transition: none;
+}
+
+.projectCard.inactive {
+  cursor: default;
+}
+
+.projectCard.inactive:hover .pMainImage img {
+  transform: none;
+}
+
+.projectCard a.btn:hover {
+  background-color: var(--shade00);
+}
+
+.projectCard.inactive a.btn {
+  pointer-events: none;
+  cursor: default;
+}
+
+.projectCard.inactive .pDescription {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.inactive .projectCard:not(.open) .pMainImage img {
+  filter: grayscale(100%);
+  cursor: default;
+  pointer-events: none;
+}
+
+.inactive .projectCard:not(.open):hover .pMainImage img {
+  transform: none;  
 }
 
 /* icons ------------------------*/

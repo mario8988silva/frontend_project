@@ -1,16 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Icon from "./Icon";
 
 const ProjectNavButton = ({href, direction, icon, label}) => {
   return (
     <Link to={href} className="iconTextBtn">
-      {direction === "prev" && (
-        <span className="icon material-symbols-outlined">{icon}</span>
-      )}
+      {direction === "prev" && <Icon {...icon} />}
       {label}
-      {direction === "next" && (
-        <span className="icon material-symbols-outlined">{icon}</span>
-      )}
+      {direction === "next" && <Icon {...icon} />}
     </Link>
   );
 };

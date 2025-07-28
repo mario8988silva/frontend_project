@@ -31,7 +31,7 @@
         "id": 1,
         "pName": "Amazon In Flames",
         "pSlug": "amazon-in-flames",
-        "pStatus": null,
+        "pStatus": "inactive",
         "pDescription": "Photomontage using three images and the necessary adjustments.",
         "pBriefingProblem": null,
         "pBriefingSolution": null,

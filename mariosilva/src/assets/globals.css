@@ -102,7 +102,7 @@ address {
     width: var(--font-size-3xl);
     height: var(--font-size-3xl);
 
-    padding: var(--space-s);
+    padding: var(--space-xs);
 
     display: inline-flex;
     align-items: center;
@@ -262,7 +262,7 @@ address {
 .iconTextBtn {
     display: flex;
     align-items: center;
-    gap: var(--space-xs);
+    
 
     flex-direction: row;
 

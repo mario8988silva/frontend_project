@@ -3,7 +3,7 @@ import icons from '../data/icons.json';
 
 const FilterResetButton = () => {
     const { activeFilters, setActiveFilters } = useFilters();
-    const resetItem = icons.find(f => f.label === "Reset Selecion" && f.type === "fonts-google");
+    const resetItem = icons.find(f => f.label === "Reset Selection" && f.type === "fonts-google");
 
     if (!activeFilters.length) return null;
 

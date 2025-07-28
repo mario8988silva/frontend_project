@@ -1,19 +1,14 @@
 import React from "react";
+import Icon from "./Icon";
 
-const IconGroup = ({ iconStyle, icons}) => {
-    return (
-        <div className={iconStyle}>
-            {icons.map(({ id, value, label, type }) =>
-              type === "fonts-google" ? (
-                <span key={id} className="material-symbols-outlined">
-                  {value}
-                </span>
-              ) : (
-                <img key={id} src={value} alt={label} className="icon" />
-              )
-            )}
-          </div>
-    );
+const IconGroup = ({ iconStyle, icons }) => {
+  return (
+    <div className={iconStyle}>
+      {icons.map((iconProps) => (
+        <Icon key={iconProps.id} {...iconProps} />
+      ))}
+    </div>
+  );
 };
 
 export default IconGroup;

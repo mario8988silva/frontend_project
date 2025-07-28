@@ -37,7 +37,7 @@ const Footer = () => {
           target="_blank"
           className="iconTextBtn"
         >
-          <span className="icon material-symbols-outlined">mail</span>
+          <Icon type="fonts-google" value="mail" />
           Contact Me
         </a>
 
