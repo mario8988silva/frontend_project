@@ -26,15 +26,14 @@ function ProjectPage() {
     .filter((p) => p.pStatus?.toLowerCase() === "ready")
     .map((p) => p.pSlug);
 
-  
-const currentIndex = projectList.findIndex((slugItem) => slugItem === slug);
-const totalProjects = projectList.length;
+  const currentIndex = projectList.findIndex((slugItem) => slugItem === slug);
+  const totalProjects = projectList.length;
 
-const prevIndex = (currentIndex - 1 + totalProjects) % totalProjects;
-const nextIndex = (currentIndex + 1) % totalProjects;
+  const prevIndex = (currentIndex - 1 + totalProjects) % totalProjects;
+  const nextIndex = (currentIndex + 1) % totalProjects;
 
-const prevSlug = projectList[prevIndex];
-const nextSlug = projectList[nextIndex];
+  const prevSlug = projectList[prevIndex];
+  const nextSlug = projectList[nextIndex];
 
   const {
     id,
@@ -93,8 +92,8 @@ const nextSlug = projectList[nextIndex];
           pRole={pRole}
           pProcess={pProcess}
           pAnalysisAndNotes={pAnalysisAndNotes}
-          pInnerLink={pInnerLink}
-          pOutLink={pOutLink}
+          pInnerLink={pInnerLink ?? []}
+          pOutLink={pOutLink ?? []}
         />
 
         <ProjectGallery pImages={pImages} setOpenImage={setOpenImage} />

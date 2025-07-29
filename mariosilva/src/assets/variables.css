@@ -116,6 +116,10 @@
     --effect-blur-s: blur(4px);
     --effect-blur-xs: blur(2px);
 
+    --effect-grayscale-xl: grayscale(100%);
+    --effect-grayscale-m: grayscale(50%);
+    --effect-grayscale-xs: grayscale(25%);
+
     --effect-scale-2xl: scale(2);
     --effect-scale-xl: scale(1.8);
     --effect-scale-l: scale(1.6);

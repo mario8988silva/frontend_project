@@ -40,7 +40,13 @@
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-2xl);
     
-    line-height: var(--line-height-s);   
+    line-height: var(--line-height-s);
+
+    text-shadow: 
+        1px 1px 0 var(--shade10),
+        -1px -1px 0 var(--shade10),
+        1px -1px 0 var(--shade10),
+        -1px 1px 0 var(--shade10);
 }
 
 /* text ----------- */
@@ -49,6 +55,12 @@
     /*
     line-height: var(--line-height-s);
     */
+    text-shadow: 
+        1px 1px 0 var(--shade10),
+        -1px -1px 0 var(--shade10),
+        1px -1px 0 var(--shade10),
+        -1px 1px 0 var(--shade10);    
+
 }
 
 .banner article p {

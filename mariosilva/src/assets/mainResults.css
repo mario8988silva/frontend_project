@@ -1,8 +1,7 @@
 /* main -------------------------------------------- */
 /* section.results -------------------------------------------- */
 .results{
-    padding-bottom: calc(var(--space-3xl) * 2);
-    
+    padding-bottom: calc(var(--space-3xl) * 2);    
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -31,7 +30,7 @@ div.timeline {
     /* distancia da esquerda = metade da largura do circulo (.timelineDot) -(menos) metade da largura da espessura da linha (para fazer o acerto ao centro desta); */
 
     width: var(--space-xs);
-    height: 105%;
+    height: 100%;
     background-color: var(--shade05);
     z-index: 0;
 }

@@ -6,7 +6,7 @@
         "container": "article",
         "containerClass": null,
         "element": "p",
-        "className": null,
+        "ariaLabel": "I explain how I approach projects from idea to delivery",
         "content": [
             {
                 "id": 0,
@@ -42,7 +42,7 @@
             {
                 "id": 0,
                 "value": "Download Resume",
-                "ariaLabel": null,
+                "ariaLabel": "Download my resume in PDF format",
                 "target": "/curriculum_a4_v6 - eng_dig.pdf"
             }
         ]

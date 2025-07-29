@@ -4,7 +4,7 @@
     background-color: var(--shade00);  
     
     min-height: 500px;
-    height: 100vh;
+    height: 100%;
     /*
     padding: 
     var(--space-4xl) 
@@ -17,11 +17,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end; 
+    justify-content: end;
 }
-
+/*
 .pOverviewContainer a{
-    margin-top: var(--space-2xl);
+  margin-top: var(--space-2xl);
+}
+*/
+.pInnerLinkContainer, .pOutLinkContainer{
+  margin-top: var(--space-2xl);
+  display: flex;
+  flex-direction: column;  
 }
 
 

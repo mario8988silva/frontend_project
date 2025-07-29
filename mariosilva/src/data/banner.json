@@ -44,7 +44,8 @@
                 "ariaLabel": null,
                 "type": "dynamicGreeting"
             }
-        ]
+        ],
+        "ariaLabel": "Dynamic heading displaying either a time-based greeting or the project title depending on the current page"
     },
     {
         "id": 3,
@@ -74,7 +75,8 @@
             {
                 "id": 0,
                 "value": "main page",
-                "ariaLabel": null
+                "ariaLabel": "Current location indicator showing the user is on the main page"
+
             }
         ]
     }

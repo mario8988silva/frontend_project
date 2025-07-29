@@ -11,8 +11,8 @@
             {
                 "id": 0,
                 "value": "Ø",
-                "ariaLabel": null,
-                "target": "#"
+                "ariaLabel": "Minimalist logo linking back to home",
+                "target": "top"
             }
         ]
     },
@@ -28,26 +28,26 @@
             {
                 "id": 0,
                 "value": "projects",
-                "ariaLabel": null,
-                "target": "#ProjectsMain"
+                "ariaLabel": "Navigate to the section showcasing featured projects",
+                "target": "ProjectsMain"
             },
             {
                 "id": 1,
                 "value": "about",
-                "ariaLabel": null,
-                "target": "#servicesAndPath"
+                "ariaLabel": "Navigate to the section sharing background and experience",
+                "target": "servicesAndPath"
             },
             {
                 "id": 2,
                 "value": "values & methods",
-                "ariaLabel": null,
-                "target": "#valuesAndMethods"
+                "ariaLabel": "Navigate to the section outlining design values and working methods",
+                "target": "valuesAndMethods"
             },
             {
                 "id": 3,
                 "value": "contact",
-                "ariaLabel": null,
-                "target": "#footer"
+                "ariaLabel": "Jump to contact section in the page footer",
+                "target": "footer"
             }
         ]
     }

@@ -198,45 +198,28 @@
     }
 }
 
-/* REEDITAR !!! --------------------------- */
-.projectCard.inactive img {
-  filter: grayscale(100%);
-  opacity: 0.6;
-  pointer-events: none;
-  transition: none;
-}
 
-.projectCard.inactive {
-  cursor: default;
+/* INACTIVE Project Card ------------------------------- */
+.projectCard.inactive img {
+    filter: var(--effect-blur-m);
+    opacity: 0.5;
+    pointer-events: none;
+    transition: none;
 }
 
 .projectCard.inactive:hover .pMainImage img {
-  transform: none;
+    transform: none;
 }
 
-.projectCard a.btn:hover {
-  background-color: var(--shade00);
+.projectCard.inactive:hover * {
+    cursor: default;
 }
 
 .projectCard.inactive a.btn {
-  pointer-events: none;
-  cursor: default;
-}
-
-.projectCard.inactive .pDescription {
-  display: none;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.inactive .projectCard:not(.open) .pMainImage img {
-  filter: grayscale(100%);
-  cursor: default;
-  pointer-events: none;
-}
-
-.inactive .projectCard:not(.open):hover .pMainImage img {
-  transform: none;  
+    color: var(--shade03);
+    background-color: var(--shade02);
+    pointer-events: none;
+    cursor: default;
 }
 
 /* icons ------------------------*/

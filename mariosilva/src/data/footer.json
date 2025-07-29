@@ -11,7 +11,7 @@
             {
                 "id": 0,
                 "value": "",
-                "ariaLabel": null,
+                "ariaLabel": "Explore inspirational quotes via API Ninjas",
                 "target": "https://api-ninjas.com/api/quotes",
                 "type": "link"
             }
@@ -29,21 +29,21 @@
             {
                 "id": 0,
                 "value": "Behance",
-                "ariaLabel": null,
+                "ariaLabel": "Link to Mario Silva's Behance profile showcasing design work",
                 "target": "https://www.behance.net/mariosilva36",
                 "type": "link"
             },
             {
                 "id": 1,
                 "value": "Instagram",
-                "ariaLabel": null,
+                "ariaLabel": "Link to Mario Silva's Instagram account featuring creative visuals",
                 "target": "https://www.instagram.com/mario8988silva/",
                 "type": "link"
             },
             {
                 "id": 2,
                 "value": "LinkedIn",
-                "ariaLabel": null,
+                "ariaLabel": "Link to Mario Silva's LinkedIn profile for professional information",
                 "target": "https://www.linkedin.com/in/mario-silva-297b17203/",
                 "type": "link"
             }
@@ -61,7 +61,7 @@
             {
                 "id": 0,
                 "value": "Contact Me",
-                "ariaLabel": null,
+                "ariaLabel": "Get in touch with Mario Silva via email",
                 "target": "mario8988silva@gmail.com",
                 "type": "email"
             }
@@ -79,7 +79,7 @@
             {
                 "id": 0,
                 "value": "Ø",
-                "ariaLabel": null,
+                "ariaLabel": "Link to homepage represented by site logo symbol Ø",
                 "target": "#"
             }
         ]
@@ -96,7 +96,7 @@
             {
                 "id": 0,
                 "value": "2025",
-                "ariaLabel": null
+                "ariaLabel": "Timestamp marking the site’s 2025 edition"
             }
         ]
     }
