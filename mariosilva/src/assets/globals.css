@@ -264,11 +264,17 @@ a, .iconTextBtn {
     color: var(--shade06);
 
     position: relative; 
-    /*
+
     padding: var(--space-xs) var(--space-m) var(--space-xs) var(--space-xs);
-    */
+    /*
     padding: var(--space-m) var(--space-l);
+    */
+    
     transition: text-shadow var(--time-s) ease-in-out;
+}
+
+article.projectCard a.iconTextBtn {
+    padding: var(--space-m) var(--space-l);
 }
 
 .iconTextBtn:hover img{
