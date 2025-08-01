@@ -42,7 +42,7 @@
             {
                 "id": 0,
                 "value": "Download Resume",
-                "ariaLabel": "Download my resume in PDF format",
+                "ariaLabel": "Feel free to download my resume in PDF format",
                 "target": "/curriculum_a4_v6 - eng_dig.pdf"
             }
         ]

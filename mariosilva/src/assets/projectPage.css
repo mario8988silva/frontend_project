@@ -48,6 +48,12 @@
 
 
 /* -------------------------------------------- */
+@media (max-width: 768px) {
+  section.pClosure nav.currentPath{
+    padding: 0;
+  }
+}
+
 .currentPath{
     display: flex;
     justify-content:space-between;
@@ -93,6 +99,14 @@
   transition: transform 0.3s ease;
 }
 
+/* -------------------------------------------- */
+.pClient article{
+  text-align: center;
+}
+
+.pClient article a{
+  display: inline;
+}
 
 .pOverviewContainer p{
     max-width: var(--character-counter-s);

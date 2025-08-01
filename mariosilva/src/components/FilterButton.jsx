@@ -9,6 +9,7 @@ const FilterButton = ({icon, isActive, onToggle }) => {
             <button
                 className={`iconTextBtn ${isActive ? "active" : ""}`}
                 onClick={() => onToggle(label)}
+                aria-label={`click to add ${label} to the filtering selection`}
             >
                 <Icon
                     type={type}

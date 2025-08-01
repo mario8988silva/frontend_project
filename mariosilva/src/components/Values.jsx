@@ -3,7 +3,11 @@ import DownloadButton from "./DownloadButton";
 
 const Values = () => {
     return (
-        <section id="valuesAndMethods" className="valuesAndMethods">
+        <section 
+        id="valuesAndMethods" 
+        className="valuesAndMethods"
+        aria-label="I explain how I approach projects from idea to delivery"
+        >
             <article>
                 <p>My process usually begins by understanding the core idea or challenge of a project.</p>
                 <p>From there, I break it down into key stages:
@@ -15,6 +19,7 @@ const Values = () => {
                 <DownloadButton
                 href="public/docs/curriculum_a4_v6-eng_dig.pdf"
                 label="Download Resume"
+                aria-label="Feel free to download my resume in PDF format"
                 icon={{
                     type: "fonts-google",
                     value: "download",

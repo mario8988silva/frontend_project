@@ -55,11 +55,12 @@ const ProjectCard = ({ projects }) => {
                   to={`/projects/${pSlug}`}
                   className="btn"
                   onClick={(e) => e.stopPropagation()}
+                  aria-label={`Click to enter the ${pName}'s page.`}
                 >
                   {pName}
                 </Link>
               ) : (
-                <a className="btn disabled">{pName}</a>
+                <a className="btn disabled" aria-label="Sorry, but this project is not available yet. Please, have a try someday soon.">{pName}</a>
               )}
 
 

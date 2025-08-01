@@ -10,15 +10,19 @@ const ProjectClosure = ({
   prevSlug,
   nextSlug,
 }) => {
-  return (
+  return (    
     <section className="pClosure">
+      
       <article className="pIconsContainer">
         <p>Tools Used:</p>
         <figure className="pIcons">
           <IconGroup iconStyle="pTools" icons={toolsIcons} />
+          {/*}
           <IconGroup iconStyle="pFilters" icons={filterIcons} />
+          {*/}
         </figure>
       </article>
+      
 
       <aside className="pYear">{pDuration}</aside>
 

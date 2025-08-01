@@ -10,10 +10,22 @@ const Banner = ({ title, description, bgImage, currentPath }) => {
             style={bgImage ? {backgroundImage: `url(${bgImage})`} : {}}
         >
             <article className="bannerGreetings">
-                <h1>{title || message}</h1>
-                <p>{description || "Welcome to my little corner of the web — a collection of projects I’ve crafted over the past few years."}</p>
+                <h1
+                aria-label="Dynamic heading displaying either a time-based greeting or the project title depending on the current page"
+                >
+                    {title || message}
+                </h1>
 
-                <aside className="currentPath">{currentPath || "main page"}</aside>
+                <p>
+                    {description || "Welcome to my little corner of the web — a collection of projects I’ve crafted over the past few years."}
+                </p>
+
+                <aside 
+                className="currentPath" 
+                aria-label="User current location on the website"
+                >
+                    {currentPath || "main page"}
+                </aside>
             </article>
         </section>
     )

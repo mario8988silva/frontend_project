@@ -1,6 +1,10 @@
 const About = () => {
     return (
-        <section id="servicesAndPath" className="servicesAndPath">
+        <section 
+        id="servicesAndPath" 
+        className="servicesAndPath"
+        aria-label="Section displaying a portrait of Mário Silva"
+        >
 
             <article>
                 <h2>Hello, my name is Mario</h2>

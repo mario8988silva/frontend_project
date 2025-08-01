@@ -22,7 +22,7 @@ const ProjectsFilters = ({ isOpen }) => {
 
   /* faz renderização */
   return (
-    <section className={`filters ${isOpen ? "open" : "closed"}`}>
+    <section className={`filters ${isOpen ? "open" : "closed"}`} aria-label="click here to open or close the filters tab">
 
       <ul className={"filtersGroup"}>
 

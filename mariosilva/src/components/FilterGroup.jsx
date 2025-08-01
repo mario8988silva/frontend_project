@@ -4,7 +4,7 @@ import FilterButton from './FilterButton';
 const FilterGroup = ({ category, items, activeFilters, onToggle }) => {
     return (
         <li key={category} className="filtersContainer">
-            <h3>{category}:</h3>
+            <h3 aria-label={`here you can find those filter buttons relative to ${category} category.`}>{category}:</h3>
             <ul>
                 {items.map((icon) => (
                     <FilterButton

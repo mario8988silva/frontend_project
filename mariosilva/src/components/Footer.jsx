@@ -27,7 +27,8 @@ const Footer = () => {
 
   return (
     <footer id="footer">
-      <article>
+      <article
+      aria-label="Explore inspirational quotes via Quotable">
         <h2>{quote ? `"${quote}"` : "Loading quote..."}</h2>
       </article>
 
@@ -36,6 +37,7 @@ const Footer = () => {
           href={`mailto:${footerLinks["Contact Me"]}`}
           target="_blank"
           className="iconTextBtn"
+          aria-label="x"
         >
           <Icon type="fonts-google" value="mail" />
           Contact Me
@@ -50,6 +52,7 @@ const Footer = () => {
                   href={footerLinks[label] || "#"}
                   target="_blank"
                   className="iconTextBtn"
+                  aria-label={`Link to my ${label} profile for professional information`}
                 >
                   <Icon
                     type={type}
@@ -65,8 +68,11 @@ const Footer = () => {
       </address>
 
       <div className="logoContainer">
-        <Logo scrollTarget="top" shouldNavigateHome={true} />
-        <aside>2025</aside>
+        <Logo 
+        scrollTarget="top" 
+        shouldNavigateHome={true} aria-label="Link to homepage represented by site logo symbol Ø"
+        />
+        <aside aria-label="Timestamp marking the site’s 2025 edition">2025</aside>
       </div>
     </footer>
   );

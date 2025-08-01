@@ -2,7 +2,15 @@
 .banner {
     gap: var(--space-3xl);
 
+    /*
     padding-top: calc(var(--space-4xl)*2);
+    padding-left: var(--space-4xl);
+    */
+    padding: 
+        calc(var(--space-4xl)*2)
+        var(--space-3xl)
+        var(--space-xl)
+    ;
     
     height: clamp(60vh, 7.5vh, 100vh);
 }
@@ -35,32 +43,27 @@
   color: var(--shade01);
 }
 
+/* project page article ---------------- */
+.banner article{
+        text-shadow: 
+        1px 1px 0 var(--shade10),
+        -1px -1px 0 var(--shade10),
+        1px -1px 0 var(--shade10),
+        -1px 1px 0 var(--shade10),
+        0 0 10px rgba(0, 0, 0, 1);
+
+}
 /* title ----------- */
 .banner h1{
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-2xl);
     
-    line-height: var(--line-height-s);
-
-    text-shadow: 
-        1px 1px 0 var(--shade10),
-        -1px -1px 0 var(--shade10),
-        1px -1px 0 var(--shade10),
-        -1px 1px 0 var(--shade10);
+    line-height: var(--line-height-s); 
 }
 
 /* text ----------- */
 .banner article.bannerGreetings p{
     font-size: var(--font-size-xl);
-    /*
-    line-height: var(--line-height-s);
-    */
-    text-shadow: 
-        1px 1px 0 var(--shade10),
-        -1px -1px 0 var(--shade10),
-        1px -1px 0 var(--shade10),
-        -1px 1px 0 var(--shade10);    
-
 }
 
 .banner article p {

@@ -11,8 +11,8 @@
             {
                 "id": 0,
                 "value": "",
-                "ariaLabel": "Explore inspirational quotes via API Ninjas",
-                "target": "https://api-ninjas.com/api/quotes",
+                "ariaLabel": "Explore inspirational quotes via Quotable",
+                "target": "https://api.quotable.io/random",
                 "type": "link"
             }
         ]
@@ -61,7 +61,7 @@
             {
                 "id": 0,
                 "value": "Contact Me",
-                "ariaLabel": "Get in touch with Mario Silva via email",
+                "ariaLabel": "Get in touch with me via email",
                 "target": "mario8988silva@gmail.com",
                 "type": "email"
             }

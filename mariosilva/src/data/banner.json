@@ -75,8 +75,7 @@
             {
                 "id": 0,
                 "value": "main page",
-                "ariaLabel": "Current location indicator showing the user is on the main page"
-
+                "ariaLabel": "User current location on the website"
             }
         ]
     }

@@ -12,7 +12,7 @@ const FilterResetButton = () => {
     */
 
     return (
-        <button className="iconTextBtn filterResetButton" onClick={ () => setActiveFilters([])}>
+        <button className="iconTextBtn filterResetButton" onClick={ () => setActiveFilters([])} aria-label='click here to reset your filtering selection'>
             <span className="icon material-symbols-outlined">{resetItem.value}</span>
             {`${resetItem.label} (${activeFilters.length})`}
           </button>

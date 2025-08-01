@@ -26,12 +26,8 @@ section {
     
     justify-content: end;
 
-
     padding: clamp(var(--space-xl), 1.5vw, var(--space-3xl));
     padding-bottom: var(--space-xl);
-    /*
-    min-height: var(--section-height);
-    */
 
     height: fit-content;
 }
@@ -259,18 +255,19 @@ address {
 
 /* icons/buttons containers ------------ */
 /* iconTextBtn --------- */
-.iconTextBtn {
+a, .iconTextBtn {
     display: flex;
-    align-items: center;
-    
+    align-items: center;    
 
     flex-direction: row;
 
     color: var(--shade06);
 
     position: relative; 
-
+    /*
     padding: var(--space-xs) var(--space-m) var(--space-xs) var(--space-xs);
+    */
+    padding: var(--space-m) var(--space-l);
     transition: text-shadow var(--time-s) ease-in-out;
 }
 
@@ -278,7 +275,7 @@ address {
     transition: background-color var(--time-m) ease-in-out;
 }
 
-.iconTextBtn:hover{  
+a:hover, .iconTextBtn:hover{  
     color: var(--shade06);
     text-shadow: 1px 0 currentColor;
 }
