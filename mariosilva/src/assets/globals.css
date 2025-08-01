@@ -273,7 +273,7 @@ a, .iconTextBtn {
     transition: text-shadow var(--time-s) ease-in-out;
 }
 
-article.projectCard a.iconTextBtn {
+article.projectCard a.btn {
     padding: var(--space-m) var(--space-l);
 }
 
