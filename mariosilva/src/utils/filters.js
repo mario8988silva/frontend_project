@@ -17,9 +17,7 @@ export const groupFiltersByCategory = (activeLabels) => {
     categoryMap[cat] = categoryMap[cat] || [];
     categoryMap[cat].push(label);
   });
-  return categoryMap;
-
-  
+  return categoryMap;  
 };
 
 

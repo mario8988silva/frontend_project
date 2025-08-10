@@ -300,5 +300,42 @@
             "projects/cookidoo/images/1.jpg",
             "projects/cookidoo/images/2.jpg"
         ]
+    },
+    {
+        "id": 11,
+        "pName": "Mario Silva - Portfolio",
+        "pSlug": "mariosilva-portfolio",
+        "pStatus": "ready",
+        "pDescription": "Design and development of a personal portfolio website to showcase academic and professional projects.",
+        "pBriefingProblem": "As a Final Project for the Front End chapter in Fullstack Web Development Course, we were asked to create a website. I decided to create from root a portfolio to shocase those projects I have been doing along these last years.",
+        "pBriefingSolution": null,
+        "pRole": null,
+        "pProcess": "This is the result of several months of research, design, and code. As soon as January 2025 I started a random research about portfolio around awwwards website. Then analyzed just a few to understand patterns and common implementation. Then I started to sketch this project, based on those same patterns and typical components. Refined the wireframes every loop and by late May I had a couple of wireframes for both the main page and a model project page in three viewports. By early June we started the  officially dedicated buildind phase of the project, and so I started to refine some styles and implementing the code for a dumb HTML page. Then refined the code through React Components and implemented the logic. The main tool of this site bases itself on the searching tool for projects per course: For every course, there a couple projects available inside, which may be refined by toogling button filters about tools, fileds and context.",
+        "pAnalysisAndNotes": null,
+        "pInnerLink": [
+            "projects/mariosilva-portfolio/docs/01-discovery.pdf",
+            "projects/mariosilva-portfolio/docs/02-strategy.pdf",
+            "projects/mariosilva-portfolio/docs/03-design.pdf",
+            "projects/mariosilva-portfolio/docs/04-development.pdf",
+            "projects/mariosilva-portfolio/docs/05-delivery.pdf"
+        ],
+        "pOutLink": ["https://mariosilva.onrender.com/"],
+        "pClientName": ["Flag"],
+        "pClientLink": "https://flag.pt/",
+        "pClientDescription": "A market leader in training for individuals and companies, FLAG specializes in technologies related to the development of visual and interactive arts/media across print, web, and motion fields in Portugal. With facilities in Lisbon and Porto, and over 30 years of experience, it offers one of the most up-to-date and comprehensive training programs available today.",
+        "pCourse": "Flagprofessional Fullstack Web Development",
+        "pTools": ["Figma", "HTML", "CSS", "JavaScript","React"],
+        "pFilters": ["UX/UI Design", "Web Development"],
+        "pDuration": "2025",
+        "pImages": [
+            "projects/mariosilva-portfolio/images/1.jpg",
+            "projects/mariosilva-portfolio/images/2.jpg",
+            "projects/mariosilva-portfolio/images/3.jpg",
+            "projects/mariosilva-portfolio/images/4.jpg",
+            "projects/mariosilva-portfolio/images/5.jpg",
+            "projects/mariosilva-portfolio/images/6.jpg",
+            "projects/mariosilva-portfolio/images/7.jpg",
+            "projects/mariosilva-portfolio/images/8.jpg"
+        ]
     }
 ]

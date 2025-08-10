@@ -37,7 +37,7 @@ const Footer = () => {
           href={`mailto:${footerLinks["Contact Me"]}`}
           target="_blank"
           className="iconTextBtn"
-          aria-label="x"
+          aria-label="Feel free to contact me via mail"
         >
           <Icon type="fonts-google" value="mail" />
           Contact Me
